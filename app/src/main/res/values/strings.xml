@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">FormacionDeportivaAndroid</string>
+    <string-array name="array_rutinas">
+        <item>Rutina 1</item>
+        <item>Rutina 2</item>
+        <item>Rutina 3</item>
+        <item>Rutina 4</item>
+        <item>Rutina 5</item>
+    </string-array>
+
+    <string name="action_agrega">Agregar Rutina</string>
+    <string name="crear">+</string>
+    <string name="guardar">Guardar</string>
+    <string name="series">Series:</string>
+    <string name="repeticiones">Repeticiones:</string>
+    <string name="titulo_ejercicio">Cross Over</string>
+    <string name="ejercicio_tipo">Tipo de Ejercicio</string>
+    <string name="regresar"> Regresar </string>
+    <string name="nombre_rutina">Agrega un nombre a la rutina</string>
+    <string name="titulo_rutina">Rutinas</string>
+    <string name="rut_seleccionada">Rutina 1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

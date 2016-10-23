@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="itesm.mx.formaciondeportivaandroid.Rutinas" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.TiposRutina" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.DescripcionRutina" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.Seleccion" />
     </application>
 
 </manifest>

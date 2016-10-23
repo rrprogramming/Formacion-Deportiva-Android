@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="array_rutinas">
+        <item>Rutina 1</item>
+        <item>Rutina 2</item>
+        <item>Rutina 3</item>
+        <item>Rutina 4</item>
+        <item>Rutina 5</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -213,8 +220,20 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="action_agrega">Agregar Rutina</string>
     <string name="app_name">FormacionDeportivaAndroid</string>
+    <string name="crear">+</string>
+    <string name="ejercicio_tipo">Tipo de Ejercicio</string>
+    <string name="guardar">Guardar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre_rutina">Agrega un nombre a la rutina</string>
+    <string name="regresar"> Regresar </string>
+    <string name="repeticiones">Repeticiones:</string>
+    <string name="rut_seleccionada">Rutina 1</string>
+    <string name="series">Series:</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="titulo_ejercicio">Cross Over</string>
+    <string name="titulo_rutina">Rutinas</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
