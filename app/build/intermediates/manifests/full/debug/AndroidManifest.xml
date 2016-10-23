@@ -15,6 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name="itesm.mx.formaciondeportivaandroid.MainActivity" >
+        </activity>
+        <activity android:name="itesm.mx.formaciondeportivaandroid.PerfilActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

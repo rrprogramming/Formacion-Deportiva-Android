@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">FormacionDeportivaAndroid</string>
+    <string name="nombre">Nombre</string>
+    <string name="matricula">Matricula</string>
+    <string name="perfil_title">Perfil</string>
+    <string name="guardar">Guardar</string>
+    <string name="genero_label">Genero</string>
+    <string name="nacimiento_label">Fecha de nacimiento</string>
+    <string name="pesoActual">Peso Actual</string>
+    <string name="pesoMeta">Peso Meta</string>
+    <string name="pesoMaximoPierna">Peso Máximo Pierna</string>
+    <string name="pesoMaximoBrazo">Peso Máximo Brazo</string>
+    <string name="tomarFoto">Tomar Foto</string>
 </resources>
