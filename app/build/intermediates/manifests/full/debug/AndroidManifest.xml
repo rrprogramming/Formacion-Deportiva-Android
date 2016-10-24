@@ -15,14 +15,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name="itesm.mx.formaciondeportivaandroid.MainActivity" >
-        </activity>
-        <activity android:name="itesm.mx.formaciondeportivaandroid.PerfilActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="itesm.mx.formaciondeportivaandroid.PerfilActivity" />
+        <activity
+            android:name="itesm.mx.formaciondeportivaandroid.DescripcionRutinaActivity"
+            android:label="@string/title_activity_descripcion_rutina"
+            android:theme="@style/AppTheme" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.RutinasActivity" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.SeleccionActivity" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.TiposRutinaActivity" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.EjercicioActivity" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.HistorialActivity" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.SesionActivity" />
     </application>
 
 </manifest>

@@ -11,4 +11,52 @@
     <string name="pesoMaximoPierna">Peso Máximo Pierna</string>
     <string name="pesoMaximoBrazo">Peso Máximo Brazo</string>
     <string name="tomarFoto">Tomar Foto</string>
+    <string name="title_activity_descripcion_rutina">DescripcionRutina</string>
+
+    <string-array name="array_rutinas">
+        <item>Rutina 1</item>
+        <item>Rutina 2</item>
+        <item>Rutina 3</item>
+        <item>Rutina 4</item>
+        <item>Rutina 5</item>
+    </string-array>
+
+    <string name="action_agrega">Agregar Rutina</string>
+    <string name="crear">+</string>
+    <string name="series">Series:</string>
+    <string name="repeticiones">Repeticiones:</string>
+    <string name="titulo_ejercicio">Cross Over</string>
+    <string name="ejercicio_tipo">Tipo de Ejercicio</string>
+    <string name="regresar"> Regresar </string>
+    <string name="nombre_rutina">Agrega un nombre a la rutina</string>
+    <string name="titulo_rutina">Rutinas</string>
+    <string name="rut_seleccionada">Rutina 1</string>
+
+    <string name="btn_historial">Enviar</string>
+    <string name="tv_historial">Historial</string>
+    <string name="tv_fechain">Fecha Inicial</string>
+    <string name="tv_fechafin">Fecha Final</string>
+    <string name="titulo_inicio">Bienvenido al Gimnasio de Pesas del Tecnologico de Monterrey, Campus Monterrey</string>
+    <string name="bienvenido_inicio">Bienvenido</string>
+    <string name="seleccion_sesion">Seleccciona una Rutina</string>
+    <string name="btn_comenzar">Comenzar</string>
+    <string name="rutina">Rutina 1</string>
+    <string name="nombre_ejercicio">Presa Horizontal</string>
+    <string name="musculo">Musculo: Pierna</string>
+    <string name="terminado">Terminado</string>
+    <string name="btn_listo">listo</string>
+    <string name="info_inicio">Horario \n
+        Horaio del gimnasio\n
+        Lunes - Viernes 06:00 - 21:00\n
+        Sábados 08:00 - 15:00\n
+        \n
+        Horario de los profesores:\n
+        Lunes - Viernes\n
+        Jorge Barrientos 07:00 - 15:00\n
+        Antonio Martínez 13:00 - 21:00\n
+        \n
+        Sábado:\n
+        Ariel Santos/Antonio Martínez\n
+        08:00 - 15:00
+    </string>
 </resources>

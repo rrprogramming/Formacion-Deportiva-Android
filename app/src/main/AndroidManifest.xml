@@ -9,14 +9,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".PerfilActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PerfilActivity" />
+        <activity
+            android:name=".DescripcionRutinaActivity"
+            android:label="@string/title_activity_descripcion_rutina"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".RutinasActivity" />
+        <activity android:name=".SeleccionActivity" />
+        <activity android:name=".TiposRutinaActivity" />
+        <activity android:name=".EjercicioActivity" />
+        <activity android:name=".HistorialActivity" />
+        <activity android:name=".SesionActivity"></activity>
     </application>
 
 </manifest>

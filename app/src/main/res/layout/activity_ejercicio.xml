@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itesm.mx.formaciondeportivaandroid.EjercicioActivity">
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seleccion_sesion"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rutina"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_ejercicio"
+        android:id="@+id/tv_nomEjercicio"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/musculo"
+        android:id="@+id/tv_musculo"
+        android:layout_below="@+id/tv_nomEjercicio"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="400px"
+        android:id="@+id/iv_ejercicio"
+        android:layout_below="@+id/tv_musculo"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/repeticiones"
+        android:id="@+id/tv_repeticiones"
+        android:layout_toStartOf="@+id/textView2"
+        android:layout_below="@+id/iv_ejercicio" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/series"
+        android:id="@+id/tv_series"
+        android:layout_alignTop="@+id/tv_repeticiones"
+        android:layout_alignEnd="@+id/textView" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terminado"
+        android:id="@+id/sw_terminado"
+        android:layout_below="@+id/tv_series"
+        android:layout_toStartOf="@+id/tv_series"
+        android:layout_marginTop="27dp"
+        android:checked="false" />
+
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/button_home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_icon"/>
+
+        <Button
+            android:id="@+id/button_rutinas"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/rutinas_icon"/>
+
+        <Button
+            android:id="@+id/button_sesion"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/sesion_icon"/>
+
+        <Button
+            android:id="@+id/button_history"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/history_icon"/>
+
+        <Button
+            android:id="@+id/button_perfil"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/perfil_icon"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_listo"
+        android:id="@+id/btn_listo"
+        android:layout_above="@id/menu_layout"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
