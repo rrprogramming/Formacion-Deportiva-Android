@@ -80,6 +80,10 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
                 Intent intent5 = new Intent(this,PerfilActivity.class);
                 startActivity(intent5);
                 break;
+
+            case R.id.btn_listo:
+                finish();
+                break;
         }
     }
 }

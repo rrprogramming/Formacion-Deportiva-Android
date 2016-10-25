@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".TiposRutinaActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/regresar"
-                android:id="@+id/button_rutinas"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/guardar"
-                android:id="@+id/button_guardar"/>
-        </LinearLayout>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_nomrut"
-            android:text="@string/rut_seleccionada"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-        <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@android:id/list" />
+            android:orientation="vertical">
 
-    </ScrollView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/regresar"
+                    android:id="@+id/button_rutinas"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guardar"
+                    android:id="@+id/button_guardar"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_nomrut"
+                android:text="@string/rut_seleccionada"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@android:id/list"
+                android:layout_weight="0.80"/>
+
+        </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -90,4 +92,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
