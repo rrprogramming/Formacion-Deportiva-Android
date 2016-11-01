@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="itesm.mx.formaciondeportivaandroid.HistorialActivity">
+    tools:context="itesm.mx.formaciondeportivaandroid.HistorialActivity"
+    android:background="@color/white">
 
     <DatePicker
         android:layout_width="wrap_content"
