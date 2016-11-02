@@ -6,14 +6,23 @@
     tools:context="itesm.mx.formaciondeportivaandroid.EjercicioActivity"
     android:background="@color/white">
 
-    <TextView
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/seleccion_sesion"
+    <RelativeLayout
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/seleccion_sesion"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
 
     <TextView
         style="@style/TextAppearance.AppCompat.Title"

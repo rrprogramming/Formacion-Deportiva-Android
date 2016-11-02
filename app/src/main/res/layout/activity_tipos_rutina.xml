@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,52 +7,52 @@
     tools:context=".TiposRutinaActivity"
     android:background="@color/white">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/button_rutinas"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="@string/regresar"
+            android:textColor="@color/white"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorPrimary"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_nomrut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/rut_seleccionada"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/regresar"
-                    android:id="@+id/button_rutinas"/>
+        <Button
+            android:id="@+id/button_guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/guardar"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorPrimary"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/guardar"
-                    android:id="@+id/button_guardar"/>
+    </RelativeLayout>
 
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_nomrut"
-                android:text="@string/rut_seleccionada"
-                android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@android:id/list"
-                android:layout_weight="0.80"/>
-
-        </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@android:id/list"
+        android:layout_weight="0.80"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
         android:orientation="horizontal"
         android:background="@color/white">
 
@@ -93,4 +93,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

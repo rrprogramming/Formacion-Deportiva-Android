@@ -7,31 +7,32 @@
     tools:context=".DescripcionRutinaActivity"
     android:background="@color/white">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_nomrut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/rut_seleccionada"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
 
         <Button
+            android:id="@+id/button_rutinas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/titulo_rutina"
-            android:id="@+id/button_rutinas"
-            android:layout_gravity="left"
-            android:layout_marginLeft="5dp"
-            />
-    </LinearLayout>
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorPrimary"/>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_nomrut"
-        android:text="@string/rut_seleccionada"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </RelativeLayout>
 
     <ListView
         android:layout_width="match_parent"
@@ -42,10 +43,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:layout_gravity="bottom">
 
         <Button
             android:id="@+id/button_home"
