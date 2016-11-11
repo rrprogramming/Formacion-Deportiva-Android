@@ -19,16 +19,44 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 public class Ejercicio {
+    private long id;
     private String sNombreEjer;
+    private String sTipoEjer;
     private int iSeries;
     private int iRepeticiones;
     private int idFotoE;
 
-    public Ejercicio(String sNombreEjer, int iSeries, int iRepeticiones, int idFotoE) {
+    public Ejercicio() {
+        this.sNombreEjer = null;
+        this.sTipoEjer = null;
+        this.iSeries = 0;
+        this.iRepeticiones = 0;
+        this.idFotoE = -1;
+    }
+
+    public Ejercicio(String sNombreEjer, String sTipoEjer, int iSeries, int iRepeticiones, int idFotoE) {
         this.sNombreEjer = sNombreEjer;
+        this.sTipoEjer = sTipoEjer;
         this.iSeries = iSeries;
         this.iRepeticiones = iRepeticiones;
         this.idFotoE = idFotoE;
+    }
+
+    public Ejercicio(long id, String sNombreEjer, String sTipoEjer, int iSeries, int iRepeticiones, int idFotoE) {
+        this.id = id;
+        this.sNombreEjer = sNombreEjer;
+        this.sTipoEjer = sTipoEjer;
+        this.iSeries = iSeries;
+        this.iRepeticiones = iRepeticiones;
+        this.idFotoE = idFotoE;
+    }
+
+    public long getId(){
+        return this.id;
+    }
+
+    public void setId(long id){
+        this.id = id;
     }
 
     public String getsNombreEjer() {
@@ -41,6 +69,14 @@ public class Ejercicio {
 
     public int getiSeries() {
         return iSeries;
+    }
+
+    public String getsTipoEjer(){
+        return this.sTipoEjer;
+    }
+
+    public void setsTipoEjer(String tipoEjer){
+        this.sTipoEjer = tipoEjer;
     }
 
     public void setiSeries(int iSeries) {

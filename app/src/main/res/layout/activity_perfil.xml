@@ -137,21 +137,21 @@
 
                 <Spinner
                     android:id="@+id/spinner_dia"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content">
 
                 </Spinner>
 
                 <Spinner
                     android:id="@+id/spinner_mes"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content">
 
                 </Spinner>
 
                 <Spinner
                     android:id="@+id/spinner_año"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content">
 
                 </Spinner>

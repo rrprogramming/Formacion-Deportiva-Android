@@ -18,17 +18,52 @@ package itesm.mx.formaciondeportivaandroid;
 * along with this program.  If not, see <http://www.gnu.org/licenses.
 */
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class Rutina {
+    private  long id;
     private String sNombre;
-    private ArrayList<Ejercicio> sEjercicio;
+    private ArrayList<TipoEjercicio> tipoEjercicio;
+    private ArrayList<Ejercicio> ejercicio;
     private int idFotoR;
 
-    public Rutina(String sNombre, ArrayList<Ejercicio> sEjercicio, int idFotoR) {
+    public Rutina(){
+        this.id = -1;
+        this.sNombre = null;
+        this.ejercicio = null;
+        this.idFotoR = -1;
+    }
+
+    public Rutina(long id, String sNombre, int idFotoR) {
         this.sNombre = sNombre;
-        this.sEjercicio = sEjercicio;
+        this.tipoEjercicio = tipoEjercicio;
+        this.ejercicio = ejercicio;
         this.idFotoR = idFotoR;
+    }
+
+    public Rutina(String sNombre, ArrayList<TipoEjercicio> tipoEjercicio, ArrayList<Ejercicio> ejercicio, int idFotoR) {
+        this.sNombre = sNombre;
+        this.tipoEjercicio = tipoEjercicio;
+        this.ejercicio = ejercicio;
+        this.idFotoR = idFotoR;
+    }
+
+    public Rutina(long id, String sNombre, ArrayList<TipoEjercicio> tipoEjercicio, ArrayList<Ejercicio> ejercicio, int idFotoR) {
+        this.id = id;
+        this.sNombre = sNombre;
+        this.tipoEjercicio = tipoEjercicio;
+        this.ejercicio = ejercicio;
+        this.idFotoR = idFotoR;
+    }
+
+    public Long getid(){
+        return this.id;
+    }
+
+    public void setId(long id){
+        this.id = id;
     }
 
     public String getsNombre() {
@@ -39,12 +74,20 @@ public class Rutina {
         this.sNombre = sNombre;
     }
 
-    public ArrayList<Ejercicio> getsEjercicio() {
-        return sEjercicio;
+    public ArrayList<TipoEjercicio> getTipoEjercicio(){
+        return this.tipoEjercicio;
     }
 
-    public void setsEjercicio(ArrayList<Ejercicio> sEjercicio) {
-        this.sEjercicio = sEjercicio;
+    public void setTipoEjercicio(ArrayList<TipoEjercicio> tipoEjercicio){
+        this.tipoEjercicio = tipoEjercicio;
+    }
+
+    public ArrayList<Ejercicio> getEjercicio() {
+        return ejercicio;
+    }
+
+    public void setEjercicio(ArrayList<Ejercicio> ejercicio) {
+        this.ejercicio = ejercicio;
     }
 
     public int getIdFotoR() {

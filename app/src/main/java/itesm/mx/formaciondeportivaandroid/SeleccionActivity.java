@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 public class SeleccionActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener{
 
-    ArrayList<RutinaT> listSelec;
+    ArrayList<TipoEjercicio> listSelec;
     RutinaAdapter adapterR;
     private Button btnRegresarAct;
     private Button btnGuardarAct;
@@ -47,7 +47,7 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         setContentView(R.layout.activity_seleccion);
         btnRegresarAct = (Button) findViewById(R.id.button_rutinasAct);
         btnGuardarAct = (Button) findViewById(R.id.button_guardarR);
-        ArrayList<RutinaT> arrayListEjercicio;
+        ArrayList<TipoEjercicio> arrayListEjercicio;
 
         arrayListEjercicio = getDataFotListView();
 
@@ -71,19 +71,19 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         perfil.setOnClickListener(this);
     }
 
-    public ArrayList<RutinaT> getDataFotListView() {
-        RutinaT arti;
+    public ArrayList<TipoEjercicio> getDataFotListView() {
+        TipoEjercicio arti;
 
-        listSelec = new ArrayList<RutinaT>();
-        arti = new RutinaT ("Dominadas\nEspalda", R.mipmap.ic_launcher);
+        listSelec = new ArrayList<TipoEjercicio>();
+        arti = new TipoEjercicio("Dominadas\nEspalda", R.mipmap.ic_launcher);
         listSelec.add(arti);
-        arti = new RutinaT ("Aperturas\nPecho", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Aperturas\nPecho", R.mipmap.ic_launcher);
         listSelec.add(arti);
-        arti = new RutinaT ("Jalon Frontal\nEspalda", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Jalon Frontal\nEspalda", R.mipmap.ic_launcher);
         listSelec.add(arti);
-        arti = new RutinaT ("Remo Sentado\nEspalda", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Remo Sentado\nEspalda", R.mipmap.ic_launcher);
         listSelec.add(arti);
-        arti = new RutinaT ("Empujones\nTriceps", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Empujones\nTriceps", R.mipmap.ic_launcher);
         listSelec.add(arti);
 
 

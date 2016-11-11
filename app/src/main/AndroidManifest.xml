@@ -25,7 +25,7 @@
         <activity android:name=".TiposRutinaActivity" />
         <activity android:name=".EjercicioActivity" />
         <activity android:name=".HistorialActivity" />
-        <activity android:name=".SesionActivity"></activity>
+        <activity android:name=".SesionActivity"/>
     </application>
 
 </manifest>

@@ -32,6 +32,7 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
     ArrayList<Ejercicio> listEjerc;
     EjerciciosAdapter adapterEjercicio;
     Button btnRegresaraRutina;
+    ListaEjercicios arti;
 
     Button home;
     Button rutinas;
@@ -80,21 +81,25 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
                 break;
             case R.id.button_home:
                 Intent intent2 = new Intent(this,MainActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent2);
                 break;
 
             case R.id.button_sesion:
                 Intent intent3 = new Intent(this,SesionActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent3);
                 break;
 
             case R.id.button_history:
                 Intent intent4 = new Intent(this,HistorialActivity.class);
+                intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent4);
                 break;
 
             case R.id.button_perfil:
                 Intent intent5 = new Intent(this,PerfilActivity.class);
+                intent5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent5);
                 break;
         }
@@ -106,17 +111,6 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
     }
 
     public ArrayList<Ejercicio> getDataFotListView() {
-        Ejercicio arti;
-
-        listEjerc = new ArrayList<Ejercicio>();
-        arti = new Ejercicio ("Aperturas \n Pecho", 3,10,R.mipmap.ic_launcher);
-        listEjerc.add(arti);
-        arti = new Ejercicio ("Jalon Frontal\n Espalda",4,12, R.mipmap.ic_launcher);
-        listEjerc.add(arti);
-        arti = new Ejercicio ("Dominadas \n Espalda",4,10, R.mipmap.ic_launcher);
-        listEjerc.add(arti);
-
-
-        return listEjerc;
+        return arti.getLista();
     }
 }

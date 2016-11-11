@@ -19,52 +19,98 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class PerfilActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Spinner genero;
-    Spinner dia;
-    Spinner año;
-    Spinner mes;
+    Spinner spGenero;
+    Spinner spDia;
+    Spinner spAño;
+    Spinner spMes;
 
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnSesion;
+    Button btnHistoria;
+    Button btnPerfil;
+    Button btnGuardar;
+
+    EditText etNombre;
+    EditText etMatricula;
+    EditText etPesoActual;
+    EditText etPesoMeta;
+    EditText etPesoMaximoPierna;
+    EditText etPesoMaximoBrazo;
+
+    Keys keys = new Keys();
+
 
     @Override
     public void onClick(View v){
+        Intent intent;
         switch (v.getId()){
             case R.id.button_home:
-                Intent intent = new Intent(this,MainActivity.class);
+                intent = new Intent(this,MainActivity.class);
+                finishAffinity();
                 startActivity(intent);
                 break;
 
             case R.id.button_rutinas:
-                Intent intent2 = new Intent(this,RutinasActivity.class);
-                startActivity(intent2);
+                intent = new Intent(this,RutinasActivity.class);
+                finishAffinity();
+                startActivity(intent);
                 break;
 
             case R.id.button_sesion:
-                Intent intent3 = new Intent(this,SesionActivity.class);
-                startActivity(intent3);
+                intent = new Intent(this,SesionActivity.class);
+                finishAffinity();
+                startActivity(intent);
                 break;
 
             case R.id.button_history:
-                Intent intent4 = new Intent(this,HistorialActivity.class);
-                startActivity(intent4);
+                intent = new Intent(this,HistorialActivity.class);
+                finishAffinity();
+                startActivity(intent);
                 break;
 
             case R.id.button_perfil:
-                Intent intent5 = new Intent(this,PerfilActivity.class);
-                startActivity(intent5);
+                intent = new Intent(this,PerfilActivity.class);
+                finishAffinity();
+                startActivity(intent);
+                break;
+
+            case R.id.button_guardar:
+                SharedPreferences settings = getPreferences(MODE_PRIVATE);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(keys.KEY_NOMBRE, etNombre.getText().toString());
+                editor.putString(keys.KEY_MATRICULA, etMatricula.getText().toString());
+                editor.putString(keys.KEY_GENERO, spGenero.getSelectedItem().toString());
+                editor.putString(keys.KEY_DIA, spDia.getSelectedItem().toString());
+                editor.putString(keys.KEY_MES, spMes.getSelectedItem().toString());
+                editor.putString(keys.KEY_AÑO, spAño.getSelectedItem().toString());
+                editor.putString(keys.KEY_PESO_ACTUAL, etPesoActual.getText().toString());
+                editor.putString(keys.KEY_PESO_META, etPesoMeta.getText().toString());
+                editor.putString(keys.KEY_PESO_MAXIMO_PIERNA, etPesoMaximoPierna.getText().toString());
+                editor.putString(keys.KEY_PESO_MAXIMO_BRAZO, etPesoMaximoBrazo.getText().toString());
+
+                editor.putString(keys.KEY_GENERO_POS, Integer.toString(spGenero.getSelectedItemPosition()));
+                editor.putString(keys.KEY_AÑO_POS, Integer.toString(spAño.getSelectedItemPosition()));
+                editor.putString(keys.KEY_MES_POS, Integer.toString(spMes.getSelectedItemPosition()));
+                editor.putString(keys.KEY_DIA_POS, Integer.toString(spDia.getSelectedItemPosition()));
+
+                editor.commit();
                 break;
         }
     }
@@ -74,33 +120,64 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        genero = (Spinner)findViewById(R.id.spinner_genero);
-        dia = (Spinner)findViewById(R.id.spinner_dia);
-        año = (Spinner)findViewById(R.id.spinner_año);
-        mes = (Spinner)findViewById(R.id.spinner_mes);
+        spGenero = (Spinner)findViewById(R.id.spinner_genero);
+        spDia = (Spinner)findViewById(R.id.spinner_dia);
+        spAño = (Spinner)findViewById(R.id.spinner_año);
+        spMes = (Spinner)findViewById(R.id.spinner_mes);
 
         ArrayAdapter<CharSequence> adapterGenero = ArrayAdapter.createFromResource(this,R.array.genero,R.layout.support_simple_spinner_dropdown_item);
-        genero.setAdapter(adapterGenero);
+        spGenero.setAdapter(adapterGenero);
 
         ArrayAdapter<CharSequence> adapterDia = ArrayAdapter.createFromResource(this,R.array.dia,R.layout.support_simple_spinner_dropdown_item);
-        dia.setAdapter(adapterDia);
+        spDia.setAdapter(adapterDia);
 
         ArrayAdapter<CharSequence> adapterMes = ArrayAdapter.createFromResource(this,R.array.mes,R.layout.support_simple_spinner_dropdown_item);
-        mes.setAdapter(adapterMes);
+        spMes.setAdapter(adapterMes);
 
         ArrayAdapter<CharSequence> adapterAño = ArrayAdapter.createFromResource(this,R.array.año,R.layout.support_simple_spinner_dropdown_item);
-        año.setAdapter(adapterAño);
+        spAño.setAdapter(adapterAño);
 
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
+        btnHome = (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnSesion = (Button) findViewById(R.id.button_sesion);
+        btnHistoria = (Button) findViewById(R.id.button_history);
+        btnPerfil = (Button) findViewById(R.id.button_perfil);
+        btnGuardar = (Button) findViewById(R.id.button_guardar);
 
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
+        etNombre = (EditText) findViewById(R.id.edit_nombre);
+        etMatricula = (EditText) findViewById(R.id.edit_matricula);
+        etPesoActual = (EditText) findViewById(R.id.edit_pesoActual);
+        etPesoMeta = (EditText) findViewById(R.id.edit_pesoMeta);
+        etPesoMaximoPierna = (EditText) findViewById(R.id.edit_pesoMaximoPierna);
+        etPesoMaximoBrazo = (EditText) findViewById(R.id.edit_pesoMaximoBrazo);
+
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnSesion.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnPerfil.setOnClickListener(this);
+        btnGuardar.setOnClickListener(this);
+
+        SharedPreferences settings = getPreferences(MODE_PRIVATE);
+
+        String nombre = settings.getString(keys.KEY_NOMBRE, null);
+        String matricula = settings.getString(keys.KEY_MATRICULA, null);
+        String pesoActual = settings.getString(keys.KEY_PESO_ACTUAL, null);
+        String pesoMeta = settings.getString(keys.KEY_PESO_META, null);
+        String pesoMaximoPierna = settings.getString(keys.KEY_PESO_MAXIMO_PIERNA, null);
+        String pesoMaximoBrazo = settings.getString(keys.KEY_PESO_MAXIMO_BRAZO, null);
+
+        /*
+        spGenero.setSelection(Integer.parseInt(settings.getString(keys.KEY_GENERO_POS, "0")));
+        spDia.setSelection(Integer.parseInt(settings.getString(keys.KEY_DIA_POS, "0")));
+        spMes.setSelection(Integer.parseInt(settings.getString(keys.KEY_MES_POS, "0")));
+        spAño.setSelection(Integer.parseInt(settings.getString(keys.KEY_AÑO_POS, "0")));*/
+
+        etNombre.setText(nombre);
+        etMatricula.setText(matricula);
+        etPesoActual.setText(pesoActual);
+        etPesoMeta.setText(pesoMeta);
+        etPesoMaximoPierna.setText(pesoMaximoPierna);
+        etPesoMaximoBrazo.setText(pesoMaximoBrazo);
     }
 }

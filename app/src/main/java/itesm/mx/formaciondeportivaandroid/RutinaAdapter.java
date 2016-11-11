@@ -28,13 +28,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class RutinaAdapter extends ArrayAdapter<RutinaT> {
-    public RutinaAdapter(Context context, ArrayList<RutinaT> rutina) {
+public class RutinaAdapter extends ArrayAdapter<TipoEjercicio> {
+    public RutinaAdapter(Context context, ArrayList<TipoEjercicio> rutina) {
         super(context, 0, rutina);
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        RutinaT rutin = getItem(position);
+        TipoEjercicio rutin = getItem(position);
 
         //convertview --> visita a reusar, si es nulo se crea
         if(convertView == null) {
@@ -44,7 +44,7 @@ public class RutinaAdapter extends ArrayAdapter<RutinaT> {
         TextView tvSerie = (TextView)convertView.findViewById(R.id.tv_tipo_ejercicio);
         ImageView ivArticulo = (ImageView)convertView.findViewById(R.id.image_tipo);
 
-        tvSerie.setText(String.valueOf(rutin.getsTipo()));
+        tvSerie.setText(String.valueOf(rutin.getTipo()));
         ivArticulo.setImageResource(rutin.getIdFotoRT());
 
         return convertView;

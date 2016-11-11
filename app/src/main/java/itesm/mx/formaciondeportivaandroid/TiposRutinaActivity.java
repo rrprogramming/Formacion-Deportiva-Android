@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 public class TiposRutinaActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
-    ArrayList<RutinaT> listRuti;
+    ArrayList<TipoEjercicio> listRuti;
     RutinaAdapter adapterRutina;
 
     Button btnRegresarR;
@@ -49,7 +49,7 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         getListView().setOnItemClickListener(this);
         btnRegresarR = (Button) findViewById(R.id.button_rutinas);
         btnGuardar = (Button) findViewById(R.id.button_guardar);
-        ArrayList<RutinaT> arrayListArticulo;
+        ArrayList<TipoEjercicio> arrayListArticulo;
 
         arrayListArticulo = getDataFotListView();
 
@@ -110,17 +110,17 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         }
     }
 
-    public ArrayList<RutinaT> getDataFotListView() {
-        RutinaT arti;
+    public ArrayList<TipoEjercicio> getDataFotListView() {
+        TipoEjercicio arti;
 
-        listRuti = new ArrayList<RutinaT>();
-        arti = new RutinaT ("Maquina Selectiva", R.mipmap.ic_launcher);
+        listRuti = new ArrayList<TipoEjercicio>();
+        arti = new TipoEjercicio("Maquina Selectiva", R.mipmap.ic_launcher);
         listRuti.add(arti);
-        arti = new RutinaT ("Cross Over", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Cross Over", R.mipmap.ic_launcher);
         listRuti.add(arti);
-        arti = new RutinaT ("Aparato Libre", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Aparato Libre", R.mipmap.ic_launcher);
         listRuti.add(arti);
-        arti = new RutinaT ("Torre Selectiva", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Torre Selectiva", R.mipmap.ic_launcher);
         listRuti.add(arti);
 
 
