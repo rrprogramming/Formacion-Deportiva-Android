@@ -47,6 +47,22 @@ public class DBHelper extends SQLiteOpenHelper {
                 ")";
         Log.i("ProductHelper onCreate", CREATE_TYPE_TABLE);
         db.execSQL(CREATE_TYPE_TABLE);
+
+        String CREATE_EJERCICIO_TABLE = "CREATE TABLE "+
+                DatabaseSchema.EjercicioTable.TABLE_NAME+
+                "("+
+                DatabaseSchema.EjercicioTable._ID+" INTEGER PRIMARY KEY, "+
+                DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+" INTEGER, "+
+                DatabaseSchema.EjercicioTable.COLUNM_NAME_NOMBRE+" TEXT, "+
+                DatabaseSchema.EjercicioTable.COLUMN_NAME_TIPO_EJERCICIO+" TEXT, "+
+                DatabaseSchema.EjercicioTable.COLUMN_NAME_MUSCULO+" TEXT, "+
+                DatabaseSchema.EjercicioTable.COLUMN_NAME_SERIES+" INTEGER, "+
+                DatabaseSchema.EjercicioTable.COLUMN_NAME_REPETICIONES+" INTEGER, "+
+                DatabaseSchema.EjercicioTable.COLUMN_NAME_FOTO+" INTEGER, "+
+                DatabaseSchema.EjercicioTable.COLUMN_NAME_FIN+" DATETIME "+
+                ")";
+        Log.i("ProductHelper onCreate", CREATE_EJERCICIO_TABLE);
+        db.execSQL(CREATE_EJERCICIO_TABLE);
     }
 
     @Override
@@ -61,6 +77,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String DELETE_TYPE_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.TypeTable.TABLE_NAME;
         db.execSQL(DELETE_TYPE_TABLE);
+        onCreate(db);
+
+        String DELETE_EJERCICIO_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.EjercicioTable.TABLE_NAME;
+        db.execSQL(DELETE_EJERCICIO_TABLE);
         onCreate(db);
     }
 

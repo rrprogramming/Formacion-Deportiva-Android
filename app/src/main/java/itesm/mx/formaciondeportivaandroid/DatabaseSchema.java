@@ -42,4 +42,17 @@ public class DatabaseSchema {
         public static final String COLUNM_NAME_RUTINA = "idRutina";
         public static final String COLUMN_NAME_TYPE = "idType";
     }
+
+    public static class EjercicioTable implements BaseColumns {
+        public static final String TABLE_NAME = "EjerciciosTable";
+        public static final String COLUNM_NAME_ID = "idEjercicio";
+        public static final String COLUNM_NAME_ID_RUTINA = "idRutina";
+        public static final String COLUNM_NAME_NOMBRE = "nombreEjercicio";
+        public static final String COLUMN_NAME_TIPO_EJERCICIO = "tipoEjercicio";
+        public static final String COLUMN_NAME_MUSCULO = "musculo";
+        public static final String COLUMN_NAME_SERIES = "series";
+        public static final String COLUMN_NAME_REPETICIONES = "repeticiones";
+        public static final String COLUMN_NAME_FOTO = "idFoto";
+        public static final String COLUMN_NAME_FIN = "fechaFin";
+    }
 }

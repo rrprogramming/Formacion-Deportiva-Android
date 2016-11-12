@@ -20,35 +20,47 @@ package itesm.mx.formaciondeportivaandroid;
 
 public class Ejercicio {
     private long id;
+    private long idRutina;
     private String sNombreEjer;
     private String sTipoEjer;
+    private String sMusculo;
     private int iSeries;
     private int iRepeticiones;
     private int idFotoE;
+    private String diaFin;
 
     public Ejercicio() {
         this.sNombreEjer = null;
         this.sTipoEjer = null;
+        this.sMusculo = null;
         this.iSeries = 0;
         this.iRepeticiones = 0;
         this.idFotoE = -1;
+        this.diaFin = null;
+        this.idRutina = -1;
     }
 
-    public Ejercicio(String sNombreEjer, String sTipoEjer, int iSeries, int iRepeticiones, int idFotoE) {
+    public Ejercicio(long idRutina, String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
+        this.idRutina = idRutina;
         this.sNombreEjer = sNombreEjer;
         this.sTipoEjer = sTipoEjer;
+        this.sMusculo = sMusculo;
         this.iSeries = iSeries;
         this.iRepeticiones = iRepeticiones;
         this.idFotoE = idFotoE;
+        this.diaFin = diaFin;
     }
 
-    public Ejercicio(long id, String sNombreEjer, String sTipoEjer, int iSeries, int iRepeticiones, int idFotoE) {
+    public Ejercicio(long id, long idRutina, String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
         this.id = id;
+        this.idRutina = idRutina;
         this.sNombreEjer = sNombreEjer;
         this.sTipoEjer = sTipoEjer;
+        this.sMusculo = sMusculo;
         this.iSeries = iSeries;
         this.iRepeticiones = iRepeticiones;
         this.idFotoE = idFotoE;
+        this.diaFin = diaFin;
     }
 
     public long getId(){
@@ -79,6 +91,14 @@ public class Ejercicio {
         this.sTipoEjer = tipoEjer;
     }
 
+    public String getsMusculo(){
+        return this.sMusculo;
+    }
+
+    public void setsMusculo(String sMusculo){
+        this.sMusculo = sMusculo;
+    }
+
     public void setiSeries(int iSeries) {
         this.iSeries = iSeries;
     }
@@ -98,4 +118,21 @@ public class Ejercicio {
     public void setIdFotoE(int idFotoE) {
         this.idFotoE = idFotoE;
     }
+
+    public String getDiaFin(){
+        return this.diaFin;
+    }
+
+    public void setDiaFin(String diaFin){
+        this.diaFin = diaFin;
+    }
+
+    public long getIdRutina(){
+        return this.idRutina;
+    }
+
+    public void setIdRutina(long idRutina){
+        this.idRutina = idRutina;
+    }
+
 }

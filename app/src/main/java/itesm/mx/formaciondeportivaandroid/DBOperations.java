@@ -29,12 +29,11 @@ import java.util.ArrayList;
 */
 public class DBOperations {
 
-    ListaEjercicios lista;
     ListaTipoEjercicios listaTipoEjercicios;
 
     private SQLiteDatabase db;
     private DBHelper dbHelper;
-    private ArrayList<Ejercicio> ejercicioArrayList = lista.getLista();
+    private ArrayList<Ejercicio> ejercicioArrayList;
     private ArrayList<TipoEjercicio> tipoEjercicioArrayList = listaTipoEjercicios.getLista();
 
     public DBOperations(Context context){
@@ -49,6 +48,7 @@ public class DBOperations {
         }
     }
 
+    //Esta clase recive un objeto de tipo Rutina para ingresarlo a la base de datos y regresar si id (AUTOINCREMENT)
     public long addRutina(Rutina rutina){
         long newRowId = 0;
         try {
@@ -69,6 +69,18 @@ public class DBOperations {
                 long relationId = db.insert(DatabaseSchema.RelationTable.TABLE_NAME, null, values);
             }
 
+            values.clear();
+
+            for (int i = 0; i < rutina.getTipoEjercicio().size(); i++){
+                values = new ContentValues();
+                values.put(DatabaseSchema.TypeTable.COLUNM_NAME_RUTINA, rutina.getid());
+                values.put(DatabaseSchema.TypeTable.COLUMN_NAME_TYPE, rutina.getTipoEjercicio().get(i).getId());
+
+                long relationId = db.insert(DatabaseSchema.TypeTable.TABLE_NAME, null, values);
+            }
+
+            values.clear();
+
         }catch (SQLException e){
             Log.e("SQLADD",e.toString());
         }
@@ -76,6 +88,7 @@ public class DBOperations {
         return newRowId;
     }
 
+    //Esta clase recive el id de Rutina para regresar un objeto de tipo Rutina
     public Rutina getRutina(long id){
         Rutina rutina = new Rutina();
         ArrayList<Ejercicio> listEjercicio = new ArrayList<>();
@@ -140,8 +153,10 @@ public class DBOperations {
         return rutina;
     }
 
+    //Esta clase regresa un arreglo de objetos de tipo Rutina
     public ArrayList<Rutina> getAllRutinas(){
         Rutina rutina;
+        Ejercicio ejercicio = new Ejercicio();
         ArrayList<Rutina> rutinaArrayList = new ArrayList<>();
         ArrayList<Ejercicio> listEjercicio = new ArrayList<>();
         ArrayList<TipoEjercicio> listTipoEjercicio = new ArrayList<>();
@@ -166,7 +181,31 @@ public class DBOperations {
                         if (cursor2.moveToFirst()){
                             do{
                                 int eId = Integer.parseInt(cursor2.getString(0));
-                                listEjercicio.add(ejercicioArrayList.get(eId));
+
+                                String subQuery = "Select * FROM "+
+                                        DatabaseSchema.RelationTable.TABLE_NAME+
+                                        " WHERE "+DatabaseSchema.RelationTable.COLUNM_NAME_RUTINA+
+                                        " = \""+rutina.getid()+"\"";
+
+                                try {
+                                    Cursor subCursor = db.rawQuery(subQuery, null);
+                                    if (subCursor.moveToFirst()){
+                                        do{
+                                            ejercicio = new Ejercicio(Integer.parseInt(subCursor.getString(0)),
+                                                    subCursor.getString(1),
+                                                    subCursor.getString(2),
+                                                    subCursor.getString(3),
+                                                    Integer.parseInt(subCursor.getString(4)),
+                                                    Integer.parseInt(subCursor.getString(5)),
+                                                    Integer.parseInt(subCursor.getString(6)),
+                                                    subCursor.getString(7));
+                                        }while (subCursor.moveToNext());
+                                    }
+                                }catch (SQLException e){
+                                    Log.e("SQL Get",e.toString());
+                                }
+
+                                listEjercicio.add(ejercicio);
                             }while (cursor2.moveToNext());
                         }
                     }catch (SQLException e){
@@ -204,4 +243,40 @@ public class DBOperations {
 
         return rutinaArrayList;
     }
+
+    //Esta clase recive un rango de fechas en formato 'YYYY-MM-DD' para regresar un objeto de tipo Ejercicio (ejercicio contiene el id de la Rutina a la que pertenece
+    public ArrayList<Ejercicio> getHistorial(String fechaInicio, String fechaFinal){
+        Ejercicio ejercicio;
+        ArrayList<Ejercicio> listEjercicio = new ArrayList<>();
+
+        String selectQuery = "SELECT * FROM "+DatabaseSchema.EjercicioTable.TABLE_NAME+
+                            " WHERE "+DatabaseSchema.EjercicioTable.COLUMN_NAME_FIN+
+                            " >= "+'\''+fechaInicio+'\''+" AND"+" <= "+'\''+fechaFinal+'\'';
+
+        Log.i("QUERY: ", selectQuery);
+
+        try {
+            Cursor cursor = db.rawQuery(selectQuery, null);
+            if(cursor.moveToFirst()) {
+                do{
+                    ejercicio = new Ejercicio(Integer.parseInt(cursor.getString(0)),
+                            cursor.getString(1),
+                            cursor.getString(2),
+                            cursor.getString(3),
+                            Integer.parseInt(cursor.getString(4)),
+                            Integer.parseInt(cursor.getString(5)),
+                            Integer.parseInt(cursor.getString(6)),
+                            cursor.getString(7));
+
+                    listEjercicio.add(ejercicio);
+                }while (cursor.moveToNext());
+            }
+            cursor.close();
+        }catch (SQLException e){
+            Log.e("SQL Get", e.toString());
+        }
+
+        return listEjercicio;
+    }
+
 }

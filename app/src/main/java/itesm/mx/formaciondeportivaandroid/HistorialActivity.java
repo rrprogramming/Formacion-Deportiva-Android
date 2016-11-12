@@ -32,6 +32,15 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
     Button historia;
     Button perfil;
 
+    /**
+     Guarda la fecha de esta forma
+
+     DateFormat df = new SimpleDateFormat("YYYY-MM-DD");
+     String date = df.format(Calendar.getInstance().getTime());
+
+     para la base de datos
+    */
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
