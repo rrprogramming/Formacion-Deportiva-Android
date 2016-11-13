@@ -42,10 +42,18 @@ public class RutinaAdapter extends ArrayAdapter<TipoEjercicio> {
         }
 
         TextView tvSerie = (TextView)convertView.findViewById(R.id.tv_tipo_ejercicio);
+        TextView tvMusculo = (TextView)convertView.findViewById(R.id.tv_tipo_musculo);
         ImageView ivArticulo = (ImageView)convertView.findViewById(R.id.image_tipo);
 
-        tvSerie.setText(String.valueOf(rutin.getTipo()));
-        ivArticulo.setImageResource(rutin.getIdFotoRT());
+        if(rutin.getTMusculo().length()==0) {
+            tvSerie.setText(String.valueOf(rutin.getTipo()));
+            ivArticulo.setImageResource(rutin.getIdFotoRT());
+        }
+        else{
+            tvSerie.setText(String.valueOf(rutin.getTipo()));
+            tvMusculo.setText(String.valueOf(rutin.getTMusculo()));
+            ivArticulo.setImageResource(rutin.getIdFotoRT());
+        }
 
         return convertView;
     }

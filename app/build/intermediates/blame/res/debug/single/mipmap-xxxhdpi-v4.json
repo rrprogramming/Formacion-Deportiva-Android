@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }

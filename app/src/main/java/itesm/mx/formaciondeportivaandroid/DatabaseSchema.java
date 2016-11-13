@@ -36,13 +36,6 @@ public class DatabaseSchema {
         public static final String COLUMN_NAME_EJERCICIO = "idEjercicio";
     }
 
-    public static class TypeTable implements BaseColumns {
-        public static final String TABLE_NAME = "TypeTable";
-        public static final String COLUNM_NAME_ID = "idType";
-        public static final String COLUNM_NAME_RUTINA = "idRutina";
-        public static final String COLUMN_NAME_TYPE = "idType";
-    }
-
     public static class EjercicioTable implements BaseColumns {
         public static final String TABLE_NAME = "EjerciciosTable";
         public static final String COLUNM_NAME_ID = "idEjercicio";

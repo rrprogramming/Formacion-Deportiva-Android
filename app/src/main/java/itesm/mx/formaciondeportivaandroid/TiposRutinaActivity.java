@@ -24,6 +24,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -41,6 +43,8 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
     Button sesion;
     Button historia;
     Button perfil;
+    TextView tvNom;
+    String nomRut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +69,16 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         sesion = (Button) findViewById(R.id.button_sesion);
         historia = (Button) findViewById(R.id.button_history);
         perfil = (Button) findViewById(R.id.button_perfil);
+        tvNom = (TextView) findViewById(R.id.tv_nomrut);
 
         home.setOnClickListener(this);
         rutinas.setOnClickListener(this);
         sesion.setOnClickListener(this);
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
+
+        nomRut=getIntent().getStringExtra("nombre");
+        tvNom.setText(nomRut);
 
     }
 
@@ -114,13 +122,13 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         TipoEjercicio arti;
 
         listRuti = new ArrayList<TipoEjercicio>();
-        arti = new TipoEjercicio("Maquina Selectiva", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Maquina Selectiva","", R.mipmap.ic_launcher);
         listRuti.add(arti);
-        arti = new TipoEjercicio("Cross Over", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Cross Over","", R.mipmap.ic_launcher);
         listRuti.add(arti);
-        arti = new TipoEjercicio("Aparato Libre", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Aparato Libre","", R.mipmap.ic_launcher);
         listRuti.add(arti);
-        arti = new TipoEjercicio("Torre Selectiva", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Torre Selectiva","", R.mipmap.ic_launcher);
         listRuti.add(arti);
 
 
@@ -129,8 +137,11 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        TipoEjercicio tipoejer = (TipoEjercicio) parent.getItemAtPosition(position);
         Toast.makeText(this, "Selecciona Ejercicios", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, SeleccionActivity.class);
+        intent.putExtra("tipo",tipoejer.getTipo());
+        intent.putExtra("nombre",nomRut);
         startActivity(intent);
     }
 }

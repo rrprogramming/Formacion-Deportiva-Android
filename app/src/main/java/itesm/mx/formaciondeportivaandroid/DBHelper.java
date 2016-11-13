@@ -38,16 +38,6 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.i("ProductHelper onCreate", CREATE_RELATION_TABLE);
         db.execSQL(CREATE_RELATION_TABLE);
 
-        String CREATE_TYPE_TABLE = "CREATE TABLE "+
-                DatabaseSchema.TypeTable.TABLE_NAME+
-                "("+
-                DatabaseSchema.TypeTable._ID+" INTEGER PRIMARY KEY, "+
-                DatabaseSchema.TypeTable.COLUNM_NAME_RUTINA+" INTEGER, "+
-                DatabaseSchema.TypeTable.COLUMN_NAME_TYPE+" INTEGER "+
-                ")";
-        Log.i("ProductHelper onCreate", CREATE_TYPE_TABLE);
-        db.execSQL(CREATE_TYPE_TABLE);
-
         String CREATE_EJERCICIO_TABLE = "CREATE TABLE "+
                 DatabaseSchema.EjercicioTable.TABLE_NAME+
                 "("+
@@ -73,10 +63,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String DELETE_RELATION_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.RelationTable.TABLE_NAME;
         db.execSQL(DELETE_RELATION_TABLE);
-        onCreate(db);
-
-        String DELETE_TYPE_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.TypeTable.TABLE_NAME;
-        db.execSQL(DELETE_TYPE_TABLE);
         onCreate(db);
 
         String DELETE_EJERCICIO_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.EjercicioTable.TABLE_NAME;

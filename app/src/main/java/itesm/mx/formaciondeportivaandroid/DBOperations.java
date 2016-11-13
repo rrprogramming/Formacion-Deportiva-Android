@@ -34,7 +34,7 @@ public class DBOperations {
     private SQLiteDatabase db;
     private DBHelper dbHelper;
     private ArrayList<Ejercicio> ejercicioArrayList;
-    private ArrayList<TipoEjercicio> tipoEjercicioArrayList = listaTipoEjercicios.getLista();
+   // private ArrayList<TipoEjercicio> tipoEjercicioArrayList = listaTipoEjercicios.getLista();
 
     public DBOperations(Context context){
         dbHelper = new DBHelper(context);
@@ -67,16 +67,19 @@ public class DBOperations {
                 values.put(DatabaseSchema.RelationTable.COLUMN_NAME_EJERCICIO, rutina.getEjercicio().get(i).getId());
 
                 long relationId = db.insert(DatabaseSchema.RelationTable.TABLE_NAME, null, values);
-            }
 
-            values.clear();
+                values.clear();
 
-            for (int i = 0; i < rutina.getTipoEjercicio().size(); i++){
-                values = new ContentValues();
-                values.put(DatabaseSchema.TypeTable.COLUNM_NAME_RUTINA, rutina.getid());
-                values.put(DatabaseSchema.TypeTable.COLUMN_NAME_TYPE, rutina.getTipoEjercicio().get(i).getId());
+                values.put(DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA, newRowId);
+                values.put(DatabaseSchema.EjercicioTable.COLUNM_NAME_NOMBRE, rutina.getEjercicio().get(i).getsNombreEjer());
+                values.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_TIPO_EJERCICIO, rutina.getEjercicio().get(i).getsNombreEjer());
+                values.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_MUSCULO, rutina.getEjercicio().get(i).getsMusculo());
+                values.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_SERIES, rutina.getEjercicio().get(i).getiSeries());
+                values.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_REPETICIONES, rutina.getEjercicio().get(i).getiRepeticiones());
+                values.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_FOTO, rutina.getEjercicio().get(i).getIdFotoE());
+                values.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_FIN, rutina.getEjercicio().get(i).getDiaFin());
 
-                long relationId = db.insert(DatabaseSchema.TypeTable.TABLE_NAME, null, values);
+                long ejercicioId = db.insert(DatabaseSchema.EjercicioTable.TABLE_NAME, null, values);
             }
 
             values.clear();
@@ -112,17 +115,26 @@ public class DBOperations {
             Log.e("SQL Get", e.toString());
         }
 
+        //Obtiene la lista de ejerccios relacionada con las Rutinas
         query = "Select * FROM "+
-                DatabaseSchema.RelationTable.TABLE_NAME+
-                " WHERE "+DatabaseSchema.RelationTable.COLUNM_NAME_RUTINA+
+                DatabaseSchema.EjercicioTable.TABLE_NAME+
+                " WHERE "+DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+
                 " = \""+rutina.getid()+"\"";
 
         try {
             Cursor cursor = db.rawQuery(query, null);
             if (cursor.moveToFirst()){
                 do{
-                    int eId = Integer.parseInt(cursor.getString(0));
-                    listEjercicio.add(ejercicioArrayList.get(eId));
+                    Ejercicio ejercicio = new Ejercicio(Integer.parseInt(cursor.getString(0)),
+                            cursor.getString(1),
+                            cursor.getString(2),
+                            cursor.getString(3),
+                            Integer.parseInt(cursor.getString(4)),
+                            Integer.parseInt(cursor.getString(5)),
+                            Integer.parseInt(cursor.getString(6)),
+                            cursor.getString(7));
+
+                    listEjercicio.add(ejercicio);
                 }while (cursor.moveToNext());
             }
         }catch (SQLException e){
@@ -130,25 +142,6 @@ public class DBOperations {
         }
 
         rutina.setEjercicio(listEjercicio);
-
-        query = "Select * FROM "+
-                DatabaseSchema.TypeTable.TABLE_NAME+
-                " WHERE "+DatabaseSchema.TypeTable.COLUNM_NAME_RUTINA+
-                " = \""+rutina.getid()+"\"";
-
-        try {
-            Cursor cursor = db.rawQuery(query, null);
-            if (cursor.moveToFirst()){
-                do{
-                    int eId = Integer.parseInt(cursor.getString(0));
-                    listTipoEjercicio.add(tipoEjercicioArrayList.get(eId));
-                }while (cursor.moveToNext());
-            }
-        }catch (SQLException e){
-            Log.e("SQL Get",e.toString());
-        }
-
-        rutina.setTipoEjercicio(listTipoEjercicio);
 
         return rutina;
     }
@@ -183,8 +176,8 @@ public class DBOperations {
                                 int eId = Integer.parseInt(cursor2.getString(0));
 
                                 String subQuery = "Select * FROM "+
-                                        DatabaseSchema.RelationTable.TABLE_NAME+
-                                        " WHERE "+DatabaseSchema.RelationTable.COLUNM_NAME_RUTINA+
+                                        DatabaseSchema.EjercicioTable.TABLE_NAME+
+                                        " WHERE "+DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+
                                         " = \""+rutina.getid()+"\"";
 
                                 try {
@@ -199,13 +192,13 @@ public class DBOperations {
                                                     Integer.parseInt(subCursor.getString(5)),
                                                     Integer.parseInt(subCursor.getString(6)),
                                                     subCursor.getString(7));
+
+                                            listEjercicio.add(ejercicio);
                                         }while (subCursor.moveToNext());
                                     }
                                 }catch (SQLException e){
                                     Log.e("SQL Get",e.toString());
                                 }
-
-                                listEjercicio.add(ejercicio);
                             }while (cursor2.moveToNext());
                         }
                     }catch (SQLException e){
@@ -213,25 +206,6 @@ public class DBOperations {
                     }
 
                     rutina.setEjercicio(listEjercicio);
-
-                    query = "Select * FROM "+
-                            DatabaseSchema.TypeTable.TABLE_NAME+
-                            " WHERE "+DatabaseSchema.TypeTable.COLUNM_NAME_RUTINA+
-                            " = \""+rutina.getid()+"\"";
-
-                    try {
-                        Cursor cursor2 = db.rawQuery(query, null);
-                        if (cursor2.moveToFirst()){
-                            do{
-                                int eId = Integer.parseInt(cursor2.getString(0));
-                                listTipoEjercicio.add(tipoEjercicioArrayList.get(eId));
-                            }while (cursor2.moveToNext());
-                        }
-                    }catch (SQLException e){
-                        Log.e("SQL Get",e.toString());
-                    }
-
-                    rutina.setTipoEjercicio(listTipoEjercicio);
 
                     rutinaArrayList.add(rutina);
                 } while (cursor.moveToNext());
@@ -270,6 +244,39 @@ public class DBOperations {
 
                     listEjercicio.add(ejercicio);
                 }while (cursor.moveToNext());
+            }
+            cursor.close();
+        }catch (SQLException e){
+            Log.e("SQL Get", e.toString());
+        }
+
+        return listEjercicio;
+    }
+
+    //Esta clase regresa un arreglo de objetos de tipo Ejercicio
+    public ArrayList<Ejercicio> getAllEjercicios(long rId){
+        Ejercicio ejercicio;
+        ArrayList<Ejercicio> listEjercicio = new ArrayList<>();
+
+        String selectQuery = "SELECT * FROM "+DatabaseSchema.EjercicioTable.TABLE_NAME+
+                " WHILE "+DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+
+                " = "+"\'"+rId+"\'";
+
+        try {
+            Cursor cursor = db.rawQuery(selectQuery, null);
+            if(cursor.moveToFirst()) {
+                do {
+                    ejercicio = new Ejercicio(Integer.parseInt(cursor.getString(0)),
+                            cursor.getString(1),
+                            cursor.getString(2),
+                            cursor.getString(3),
+                            Integer.parseInt(cursor.getString(4)),
+                            Integer.parseInt(cursor.getString(5)),
+                            Integer.parseInt(cursor.getString(6)),
+                            cursor.getString(7));
+
+                    listEjercicio.add(ejercicio);
+                } while (cursor.moveToNext());
             }
             cursor.close();
         }catch (SQLException e){

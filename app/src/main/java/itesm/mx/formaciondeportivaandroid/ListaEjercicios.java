@@ -25,19 +25,19 @@ public class ListaEjercicios {
         ArrayList<Ejercicio> ejercicioArrayList = new ArrayList<>();
         Ejercicio ejercicio;
 
-        ejercicio = new Ejercicio(0, "Ejemplo 1", "Ejemplo", 0, 0, 0);
+        ejercicio = new Ejercicio(0, "Ejemplo 1", "Ejemplo", "Musuclo", 0, 0, 0, null);
         ejercicioArrayList.add(ejercicio);
 
-        ejercicio = new Ejercicio(1, "Ejemplo 2", "Ejemplo", 0, 0, 0);
+        ejercicio = new Ejercicio(1, "Ejemplo 2", "Ejemplo", "Musculo", 0, 0, 0, null);
         ejercicioArrayList.add(ejercicio);
 
-        ejercicio = new Ejercicio(2, "Ejemplo 3", "Ejemplo", 0, 0, 0);
+        ejercicio = new Ejercicio(2, "Ejemplo 3", "Ejemplo", "Musculo", 0, 0, 0, null);
         ejercicioArrayList.add(ejercicio);
 
-        ejercicio = new Ejercicio(3, "Ejemplo 4", "Ejemplo", 0, 0, 0);
+        ejercicio = new Ejercicio(3, "Ejemplo 4", "Ejemplo","Musculo", 0, 0, 0, null);
         ejercicioArrayList.add(ejercicio);
 
-        ejercicio = new Ejercicio(4, "Ejemplo 5", "Ejemplo", 0, 0, 0);
+        ejercicio = new Ejercicio(4, "Ejemplo 5", "Ejemplo", "Musculo", 0, 0, 0, null);
         ejercicioArrayList.add(ejercicio);
 
         return ejercicioArrayList;

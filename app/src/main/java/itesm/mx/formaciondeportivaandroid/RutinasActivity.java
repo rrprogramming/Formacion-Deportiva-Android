@@ -18,34 +18,52 @@ package itesm.mx.formaciondeportivaandroid;
 * along with this program.  If not, see <http://www.gnu.org/licenses.
 */
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class RutinasActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     public String [] sRutinas;
     private Button btnAgregar;
+    final String KEY_NOMBRE = "nombre";
+    private DBOperations dao;
 
     Button home;
     Button rutinas;
     Button sesion;
     Button historia;
     Button perfil;
+    Rutina r;
+    //EditText etCrearRutina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rutinas);
-        sRutinas = new String[]{
+        dao = new DBOperations(this);
+        dao.open();
+        ArrayList<Rutina> arrayListRutina;
+        arrayListRutina=dao.getAllRutinas();
+        String [] sRutinas = new String[arrayListRutina.size()];
+        for(int i=0; i<arrayListRutina.size();i++){
+            sRutinas[i] = arrayListRutina.get(i).getsNombre();
+        }
+        /*sRutinas = new String[]{
                 "Rutina 1",
                 "Rutina 2",
-                "Rutina 3",};
+                "Rutina 3",};*/
         btnAgregar = (Button) findViewById(R.id.button_crear_rutina);
         ArrayAdapter<String> adapterRutinas = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,sRutinas);
@@ -98,17 +116,45 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                 break;
 
             case R.id.button_crear_rutina:
-                Toast.makeText(this, "Se vaa agregar una rutina", Toast.LENGTH_SHORT).show();
-                Intent intent6 = new Intent(this, TiposRutinaActivity.class);
-                startActivity(intent6);
+                //etCrearRutina.setText("Nombre de la rutina");
+                AlertDialog.Builder dialogorutina = new AlertDialog.Builder(this);
+                final EditText etCrearRutina = new EditText(this);
+                dialogorutina.setTitle("Crear Rutina");
+                etCrearRutina.setHint("Nombre de la rutina");
+                dialogorutina.setView(etCrearRutina);
+                dialogorutina.setPositiveButton("Crear", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplication(), "Se vaa agregar una rutina", Toast.LENGTH_SHORT).show();
+                        Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
+                        intent6.putExtra(KEY_NOMBRE,etCrearRutina.getText().toString());
+                        startActivity(intent6);
+                    }
+                });
+                dialogorutina.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                dialogorutina.show();
+                  //Toast.makeText(getApplication(), "Se vaa agregar una rutina", Toast.LENGTH_SHORT).show();
+                   // Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
+                   //startActivity(intent6);
+
+
                 break;
         }
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        //r=(Rutina) parent.getItemAtPosition(position);
+        //long rid = r.getid();
         Toast.makeText(this, "Se selecciono la rutina Rutina 1", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DescripcionRutinaActivity.class);
+        intent.putExtra("pos", position);
+        //intent.putExtra("idrutina",rid);
         startActivity(intent);
     }
 

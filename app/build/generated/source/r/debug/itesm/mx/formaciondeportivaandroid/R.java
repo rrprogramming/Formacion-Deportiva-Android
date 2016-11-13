@@ -2366,7 +2366,7 @@ containing a value of this type.
         public static final int icon=0x7f0d0042;
         public static final int ifRoom=0x7f0d0035;
         public static final int image=0x7f0d003f;
-        public static final int image_ejercicio=0x7f0d00b5;
+        public static final int image_ejercicio=0x7f0d00b6;
         public static final int image_perfil=0x7f0d0087;
         public static final int image_tipo=0x7f0d00b3;
         public static final int info=0x7f0d00b1;
@@ -2452,7 +2452,7 @@ containing a value of this type.
         public static final int topPanel=0x7f0d0047;
         public static final int touch_outside=0x7f0d009d;
         public static final int tv_bienvenido=0x7f0d0081;
-        public static final int tv_ejercicio=0x7f0d00b6;
+        public static final int tv_ejercicio=0x7f0d00b7;
         public static final int tv_fechafin=0x7f0d007f;
         public static final int tv_fechain=0x7f0d007d;
         public static final int tv_historial=0x7f0d007a;
@@ -2462,11 +2462,12 @@ containing a value of this type.
         public static final int tv_nomEjercicio=0x7f0d0071;
         public static final int tv_nomrut=0x7f0d0069;
         public static final int tv_repeticiones=0x7f0d0074;
-        public static final int tv_repeticionesH=0x7f0d00b8;
+        public static final int tv_repeticionesH=0x7f0d00b9;
         public static final int tv_series=0x7f0d0075;
-        public static final int tv_seriesH=0x7f0d00b7;
+        public static final int tv_seriesH=0x7f0d00b8;
         public static final int tv_sesion=0x7f0d009a;
         public static final int tv_tipo_ejercicio=0x7f0d00b4;
+        public static final int tv_tipo_musculo=0x7f0d00b5;
         public static final int up=0x7f0d0009;
         public static final int useLogo=0x7f0d0014;
         public static final int view_offset_helper=0x7f0d000a;

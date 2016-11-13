@@ -21,7 +21,7 @@ import java.util.ArrayList;
 */
 public class ListaTipoEjercicios {
 
-    public ArrayList<TipoEjercicio> getLista(){
+   /* public ArrayList<TipoEjercicio> getLista(){
         ArrayList<TipoEjercicio> tipoEjercicioArrayList = new ArrayList<>();
         TipoEjercicio tipoEjercicio;
 
@@ -47,5 +47,5 @@ public class ListaTipoEjercicios {
         tipoEjercicioArrayList.add(tipoEjercicio);
 
         return tipoEjercicioArrayList;
-    }
+    }*/
 }

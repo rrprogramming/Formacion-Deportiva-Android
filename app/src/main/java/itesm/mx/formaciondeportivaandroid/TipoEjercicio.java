@@ -21,23 +21,27 @@ package itesm.mx.formaciondeportivaandroid;
 public class TipoEjercicio {
     private long id;
     private String tipo;
+    private String musculo;
     private int idFotoRT;
 
     public TipoEjercicio() {
         this.id = -1;
         this.tipo = null;
+        this.musculo = null;
         this.idFotoRT = -1;
     }
 
-    public TipoEjercicio(String tipo, int idFotoRT) {
+    public TipoEjercicio(String tipo,String musculo, int idFotoRT) {
         this.tipo = tipo;
         this.idFotoRT = idFotoRT;
+        this.musculo = musculo;
     }
 
-    public TipoEjercicio(long id, String tipo, int idFotoRT) {
+    public TipoEjercicio(long id, String tipo,String musculo, int idFotoRT) {
         this.id = id;
         this.tipo = tipo;
         this.idFotoRT = idFotoRT;
+        this.musculo = musculo;
     }
 
     public long getId(){
@@ -63,4 +67,8 @@ public class TipoEjercicio {
     public void setIdFotoRT(int idFoto) {
         this.idFotoRT = idFoto;
     }
+
+    public String getTMusculo() { return musculo;}
+
+    public void setTMusculo(String musculo) {this.musculo = musculo;}
 }

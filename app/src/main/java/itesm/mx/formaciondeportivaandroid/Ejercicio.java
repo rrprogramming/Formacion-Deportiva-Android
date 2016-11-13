@@ -40,8 +40,7 @@ public class Ejercicio {
         this.idRutina = -1;
     }
 
-    public Ejercicio(long idRutina, String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
-        this.idRutina = idRutina;
+    public Ejercicio(String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
         this.sNombreEjer = sNombreEjer;
         this.sTipoEjer = sTipoEjer;
         this.sMusculo = sMusculo;
@@ -51,9 +50,19 @@ public class Ejercicio {
         this.diaFin = diaFin;
     }
 
-    public Ejercicio(long id, long idRutina, String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
+    public Ejercicio(String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE) {
+        this.id = -1;
+        this.sNombreEjer = sNombreEjer;
+        this.sTipoEjer = sTipoEjer;
+        this.sMusculo = sMusculo;
+        this.iSeries = iSeries;
+        this.iRepeticiones = iRepeticiones;
+        this.idFotoE = idFotoE;
+        this.diaFin = "0000-00-00";
+    }
+
+    public Ejercicio(int id,String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
         this.id = id;
-        this.idRutina = idRutina;
         this.sNombreEjer = sNombreEjer;
         this.sTipoEjer = sTipoEjer;
         this.sMusculo = sMusculo;

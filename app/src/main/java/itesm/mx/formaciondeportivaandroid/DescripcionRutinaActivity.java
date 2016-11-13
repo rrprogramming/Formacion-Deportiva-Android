@@ -30,7 +30,10 @@ import java.util.ArrayList;
 public class DescripcionRutinaActivity extends ListActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
 
     ArrayList<Ejercicio> listEjerc;
+    ArrayList<Rutina> listRuti;
     EjerciciosAdapter adapterEjercicio;
+    private DBOperations dao;
+    private int pos;
     Button btnRegresaraRutina;
     ListaEjercicios arti;
 
@@ -44,17 +47,28 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_descripcion_rutina);
-        btnRegresaraRutina = (Button) findViewById(R.id.button_rutinas);
 
-        getListView().setOnItemClickListener(this);
+        dao = new DBOperations(this);
+        dao.open();
 
-        ArrayList<Ejercicio> arrayListEjercicio;
+        pos = getIntent().getIntExtra("pos",-1);
+        listRuti = dao.getAllRutinas();
 
-        arrayListEjercicio = getDataFotListView();
+        Rutina rutinaDes = listRuti.get(pos);
 
-        adapterEjercicio = new EjerciciosAdapter(this, arrayListEjercicio);
+        listEjerc = rutinaDes.getEjercicio();
+        //listEjerc = dao.getAllEjercicios(getIntent().getLongExtra("idrutina",0));
+
+        if(listRuti.size()==0){
+            Intent intent1212 = new Intent(this,PerfilActivity.class);
+            intent1212.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent1212);
+        }
+
+        adapterEjercicio = new EjerciciosAdapter(this, listEjerc);
         setListAdapter(adapterEjercicio);
 
+        btnRegresaraRutina = (Button) findViewById(R.id.button_rutinas);
         btnRegresaraRutina.setOnClickListener(this);
         getListView().setOnItemClickListener(this);
 

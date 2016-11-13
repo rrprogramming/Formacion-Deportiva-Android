@@ -33,24 +33,22 @@ public class Rutina {
         this.id = -1;
         this.sNombre = null;
         this.ejercicio = null;
-        this.idFotoR = -1;
     }
 
     public Rutina(long id, String sNombre, int idFotoR) {
         this.sNombre = sNombre;
         this.tipoEjercicio = tipoEjercicio;
         this.ejercicio = ejercicio;
-        this.idFotoR = idFotoR;
     }
 
-    public Rutina(String sNombre, ArrayList<TipoEjercicio> tipoEjercicio, ArrayList<Ejercicio> ejercicio, int idFotoR) {
+    public Rutina(String sNombre, ArrayList<Ejercicio> ejercicio,int idFotoR) {
         this.sNombre = sNombre;
         this.tipoEjercicio = tipoEjercicio;
         this.ejercicio = ejercicio;
         this.idFotoR = idFotoR;
     }
 
-    public Rutina(long id, String sNombre, ArrayList<TipoEjercicio> tipoEjercicio, ArrayList<Ejercicio> ejercicio, int idFotoR) {
+    public Rutina(long id, String sNombre, ArrayList<Ejercicio> ejercicio, int idFotoR) {
         this.id = id;
         this.sNombre = sNombre;
         this.tipoEjercicio = tipoEjercicio;
@@ -90,11 +88,8 @@ public class Rutina {
         this.ejercicio = ejercicio;
     }
 
-    public int getIdFotoR() {
-        return idFotoR;
-    }
+    public int getIdFotoR() {return idFotoR;}
 
-    public void setIdFotoR(int idFotoR) {
-        this.idFotoR = idFotoR;
-    }
+    public void setIdFotoR(int idFotoR) {this.idFotoR = idFotoR;}
+
 }
