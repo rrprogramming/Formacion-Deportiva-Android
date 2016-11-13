@@ -24,6 +24,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -57,20 +58,13 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         ArrayList<Rutina> arrayListRutina;
         arrayListRutina=dao.getAllRutinas();
         Toast.makeText(this, "Rutinas guardadas "+arrayListRutina.size(), Toast.LENGTH_SHORT).show();
-        String [] sRutinas = new String[arrayListRutina.size()];
-        for(int i=0; i<arrayListRutina.size();i++){
-            sRutinas[i] = arrayListRutina.get(i).getsNombre();
-        }
-        /*sRutinas = new String[]{
-                "Rutina 1",
-                "Rutina 2",
-                "Rutina 3",};*/
-        btnAgregar = (Button) findViewById(R.id.button_crear_rutina);
-        ArrayAdapter<String> adapterRutinas = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,sRutinas);
 
-        setListAdapter(adapterRutinas);
+        btnAgregar = (Button) findViewById(R.id.button_crear_rutina);
+
+        RutinaAdapter rutinaAdapter = new RutinaAdapter(this,arrayListRutina);
+        setListAdapter(rutinaAdapter);
         getListView().setOnItemClickListener(this);
+
         btnAgregar.setOnClickListener(this);
 
         home = (Button) findViewById(R.id.button_home);
@@ -150,12 +144,11 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        //r=(Rutina) parent.getItemAtPosition(position);
-        //long rid = r.getid();
+        Rutina rutina = (Rutina)parent.getItemAtPosition(position);
         Toast.makeText(this, "Se selecciono una rutina", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DescripcionRutinaActivity.class);
-        intent.putExtra("pos", position);
-        //intent.putExtra("idrutina",rid);
+        intent.putExtra("ID", Long.toString(rutina.getid()));
+        Log.i("ID EXTRA", Long.toString(rutina.getid()));
         startActivity(intent);
     }
 

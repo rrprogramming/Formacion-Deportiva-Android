@@ -24,7 +24,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +32,7 @@ import java.util.ArrayList;
 public class TiposRutinaActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     ArrayList<TipoEjercicio> listRuti;
-    RutinaAdapter adapterRutina;
+    TipoEjercicioAdapter adapterRutina;
 
     Button btnRegresarR;
     Button btnGuardar;
@@ -43,7 +42,9 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
     Button sesion;
     Button historia;
     Button perfil;
+
     TextView tvNom;
+
     String nomRut;
 
     @Override
@@ -57,7 +58,7 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
 
         arrayListArticulo = getDataFotListView();
 
-        adapterRutina = new RutinaAdapter(this, arrayListArticulo);
+        adapterRutina = new TipoEjercicioAdapter(this, arrayListArticulo);
         setListAdapter(adapterRutina);
         btnRegresarR.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);

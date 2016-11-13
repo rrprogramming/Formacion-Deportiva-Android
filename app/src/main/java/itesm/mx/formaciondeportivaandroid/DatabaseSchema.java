@@ -29,13 +29,6 @@ public class DatabaseSchema {
         public static final String COLUMN_NAME_FOTO = "idFoto";
     }
 
-    public static class RelationTable implements BaseColumns {
-        public static final String TABLE_NAME = "RelationTable";
-        public static final String COLUNM_NAME_ID = "idRelation";
-        public static final String COLUNM_NAME_RUTINA = "idRutina";
-        public static final String COLUMN_NAME_EJERCICIO = "idEjercicio";
-    }
-
     public static class EjercicioTable implements BaseColumns {
         public static final String TABLE_NAME = "EjerciciosTable";
         public static final String COLUNM_NAME_ID = "idEjercicio";

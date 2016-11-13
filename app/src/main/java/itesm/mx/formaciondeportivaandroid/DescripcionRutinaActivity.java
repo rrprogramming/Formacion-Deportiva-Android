@@ -31,18 +31,18 @@ import java.util.ArrayList;
 public class DescripcionRutinaActivity extends ListActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
 
     ArrayList<Ejercicio> listEjerc;
-    ArrayList<Rutina> listRuti;
+    Rutina rutina;
     EjerciciosAdapter adapterEjercicio;
     private DBOperations dao;
-    private int pos;
+    private long id;
     Button btnRegresaraRutina;
     ListaEjercicios arti;
 
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnSesion;
+    Button btnHistoria;
+    Button btnPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +52,10 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
         dao = new DBOperations(this);
         dao.open();
 
-        pos = getIntent().getIntExtra("pos",-1);
-        listRuti = dao.getAllRutinas();
-        Toast.makeText(this, "Rutinas guardadas: "+listRuti.size(), Toast.LENGTH_SHORT).show();
-        Rutina rutinaDes = listRuti.get(pos);
-        Toast.makeText(this, "Rutinas nombre "+rutinaDes.getsNombre(), Toast.LENGTH_SHORT).show();
-        listEjerc = rutinaDes.getEjercicio();
-        Toast.makeText(this, "Cant ejercicios "+listEjerc.size(), Toast.LENGTH_SHORT).show();
-        //listEjerc = dao.getAllEjercicios(getIntent().getLongExtra("idrutina",0));
+        id = Long.parseLong(getIntent().getStringExtra("ID"));
+        rutina = dao.getRutina(id);
 
-        if(listEjerc.size()==0){
-            Toast.makeText(this, "posicion "+pos, Toast.LENGTH_SHORT).show();
-
-        }
+        listEjerc = rutina.getEjercicio();
 
         adapterEjercicio = new EjerciciosAdapter(this, listEjerc);
         setListAdapter(adapterEjercicio);
@@ -73,49 +64,50 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
         btnRegresaraRutina = (Button) findViewById(R.id.button_rutinas);
         btnRegresaraRutina.setOnClickListener(this);
 
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
+        btnHome= (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnSesion = (Button) findViewById(R.id.button_sesion);
+        btnHistoria = (Button) findViewById(R.id.button_history);
+        btnPerfil = (Button) findViewById(R.id.button_perfil);
 
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnSesion.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnPerfil.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()){
             case R.id.button_rutinas:
-                Intent intent = new Intent(this, RutinasActivity.class);
+                intent = new Intent(this, RutinasActivity.class);
                 startActivity(intent);
                 break;
             case R.id.button_home:
-                Intent intent2 = new Intent(this,MainActivity.class);
-                intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent2);
+                intent = new Intent(this,MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
 
             case R.id.button_sesion:
-                Intent intent3 = new Intent(this,SesionActivity.class);
-                intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent3);
+                intent = new Intent(this,SesionActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
 
             case R.id.button_history:
-                Intent intent4 = new Intent(this,HistorialActivity.class);
-                intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent4);
+                intent = new Intent(this,HistorialActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
 
             case R.id.button_perfil:
-                Intent intent5 = new Intent(this,PerfilActivity.class);
-                intent5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent5);
+                intent = new Intent(this,PerfilActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
         }
     }

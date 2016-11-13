@@ -25,8 +25,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -41,7 +41,7 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
 
     ArrayList<TipoEjercicio> listSelec;
     ArrayList<Ejercicio> listEjer = new ArrayList<Ejercicio>();
-    RutinaAdapter adapterR;
+    TipoEjercicioAdapter adapterR;
     Rutina rutina;
     private Button btnRegresarAct;
     private Button btnGuardarAct;
@@ -67,7 +67,7 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         sTipo=getIntent().getStringExtra("tipo");
         arrayListEjercicio = getDataFotListView();
 
-        adapterR = new RutinaAdapter(this, arrayListEjercicio);
+        adapterR = new TipoEjercicioAdapter(this, arrayListEjercicio);
         setListAdapter(adapterR);
         btnRegresarAct.setOnClickListener(this);
         btnGuardarAct.setOnClickListener(this);
@@ -352,6 +352,7 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                 ejer = new Ejercicio(nombreEjer.getTipo(),sTipo,nombreEjer.getTMusculo(),Integer.parseInt(etSeries.getText().toString()),
                         Integer.parseInt(etRepeticiones.getText().toString()),R.mipmap.ic_launcher);
                 listEjer.add(ejer);
+                Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
             }
         });
         dialogoSeRep.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

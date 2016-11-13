@@ -72,6 +72,18 @@ public class Ejercicio {
         this.diaFin = diaFin;
     }
 
+    public Ejercicio(int id, int idRutina,String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
+        this.id = id;
+        this.idRutina = idRutina;
+        this.sNombreEjer = sNombreEjer;
+        this.sTipoEjer = sTipoEjer;
+        this.sMusculo = sMusculo;
+        this.iSeries = iSeries;
+        this.iRepeticiones = iRepeticiones;
+        this.idFotoE = idFotoE;
+        this.diaFin = diaFin;
+    }
+
     public long getId(){
         return this.id;
     }
