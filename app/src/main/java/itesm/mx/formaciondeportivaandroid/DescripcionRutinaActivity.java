@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -59,10 +60,9 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
         listEjerc = rutinaDes.getEjercicio();
         //listEjerc = dao.getAllEjercicios(getIntent().getLongExtra("idrutina",0));
 
-        if(listRuti.size()==0){
-            Intent intent1212 = new Intent(this,PerfilActivity.class);
-            intent1212.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent1212);
+        if(listEjerc.size()==0){
+            Toast.makeText(this, "Se ha guardado la Rutina 1 "+pos, Toast.LENGTH_SHORT).show();
+
         }
 
         adapterEjercicio = new EjerciciosAdapter(this, listEjerc);
