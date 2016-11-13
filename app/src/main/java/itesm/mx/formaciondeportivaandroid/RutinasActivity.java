@@ -56,6 +56,7 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         dao.open();
         ArrayList<Rutina> arrayListRutina;
         arrayListRutina=dao.getAllRutinas();
+        Toast.makeText(this, "Rutinas guardadas "+arrayListRutina.size(), Toast.LENGTH_SHORT).show();
         String [] sRutinas = new String[arrayListRutina.size()];
         for(int i=0; i<arrayListRutina.size();i++){
             sRutinas[i] = arrayListRutina.get(i).getsNombre();
@@ -151,7 +152,7 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //r=(Rutina) parent.getItemAtPosition(position);
         //long rid = r.getid();
-        Toast.makeText(this, "Se selecciono la rutina Rutina 1", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Se selecciono una rutina", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DescripcionRutinaActivity.class);
         intent.putExtra("pos", position);
         //intent.putExtra("idrutina",rid);

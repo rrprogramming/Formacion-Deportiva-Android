@@ -54,23 +54,24 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
 
         pos = getIntent().getIntExtra("pos",-1);
         listRuti = dao.getAllRutinas();
-
+        Toast.makeText(this, "Rutinas guardadas: "+listRuti.size(), Toast.LENGTH_SHORT).show();
         Rutina rutinaDes = listRuti.get(pos);
-
+        Toast.makeText(this, "Rutinas nombre "+rutinaDes.getsNombre(), Toast.LENGTH_SHORT).show();
         listEjerc = rutinaDes.getEjercicio();
+        Toast.makeText(this, "Cant ejercicios "+listEjerc.size(), Toast.LENGTH_SHORT).show();
         //listEjerc = dao.getAllEjercicios(getIntent().getLongExtra("idrutina",0));
 
         if(listEjerc.size()==0){
-            Toast.makeText(this, "Se ha guardado la Rutina 1 "+pos, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "posicion "+pos, Toast.LENGTH_SHORT).show();
 
         }
 
         adapterEjercicio = new EjerciciosAdapter(this, listEjerc);
         setListAdapter(adapterEjercicio);
+        getListView().setOnItemClickListener(this);
 
         btnRegresaraRutina = (Button) findViewById(R.id.button_rutinas);
         btnRegresaraRutina.setOnClickListener(this);
-        getListView().setOnItemClickListener(this);
 
         home = (Button) findViewById(R.id.button_home);
         rutinas = (Button) findViewById(R.id.button_rutinas);
