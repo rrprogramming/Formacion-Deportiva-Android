@@ -28,12 +28,12 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\layout\\activity_historial.xml"
     },
     {
-        "merged": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
-    },
-    {
         "merged": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
         "merged": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
@@ -104,12 +104,12 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\row_rutina.xml",
         "source": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\src\\main\\res\\layout\\row_rutina.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Cesar\\Desktop\\ProyectoMoviles\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
