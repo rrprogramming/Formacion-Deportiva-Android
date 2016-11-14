@@ -43,6 +43,16 @@ public class DBHelper extends SQLiteOpenHelper {
                 ")";
         Log.i("ProductHelper onCreate", CREATE_EJERCICIO_TABLE);
         db.execSQL(CREATE_EJERCICIO_TABLE);
+
+        String CREATE_HISTORIAL_TABLE = "CREATE TABLE "+
+                DatabaseSchema.HistorialTable.TABLE_NAME+
+                "("+
+                DatabaseSchema.HistorialTable._ID+" INTEGER PRIMARY KEY, "+
+                DatabaseSchema.HistorialTable.COLUMN_NAME_EJERCICIO_ID+" INTEGER, "+
+                DatabaseSchema.HistorialTable.COLUMN_NAME_FIN+" DATETIME "+
+                ")";
+        Log.i("ProductHelper onCreate", CREATE_HISTORIAL_TABLE);
+        db.execSQL(CREATE_HISTORIAL_TABLE);
     }
 
     @Override
@@ -53,6 +63,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String DELETE_EJERCICIO_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.EjercicioTable.TABLE_NAME;
         db.execSQL(DELETE_EJERCICIO_TABLE);
+        onCreate(db);
+
+        String DELETE_HISTORIAL_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.HistorialTable.TABLE_NAME;
+        db.execSQL(DELETE_HISTORIAL_TABLE);
         onCreate(db);
     }
 

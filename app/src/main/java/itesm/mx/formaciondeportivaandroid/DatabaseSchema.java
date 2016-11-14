@@ -41,4 +41,11 @@ public class DatabaseSchema {
         public static final String COLUMN_NAME_FOTO = "idFoto";
         public static final String COLUMN_NAME_FIN = "fechaFin";
     }
+
+    public static class HistorialTable implements BaseColumns {
+        public static final String TABLE_NAME = "HistorialTable";
+        public static final String COLUMN_NAME_ID = "idHistorial";
+        public static final String COLUMN_NAME_EJERCICIO_ID = "EjercicioId";
+        public static final String COLUMN_NAME_FIN = "fechaFin";
+    }
 }

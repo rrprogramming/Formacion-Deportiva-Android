@@ -20,6 +20,8 @@ package itesm.mx.formaciondeportivaandroid;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,8 +29,12 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
+import com.google.gson.Gson;
+
+import java.io.ByteArrayOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -47,6 +53,8 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
     Button btnPerfil;
     Button btnGuardar;
 
+    ImageView ivFoto;
+
     EditText etNombre;
     EditText etMatricula;
     EditText etPesoActual;
@@ -55,6 +63,8 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
     EditText etPesoMaximoBrazo;
 
     Keys keys = new Keys();
+
+    byte[] byteArray;
 
 
     @Override
@@ -110,6 +120,10 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
                 editor.putString(keys.KEY_MES_POS, Integer.toString(spMes.getSelectedItemPosition()));
                 editor.putString(keys.KEY_DIA_POS, Integer.toString(spDia.getSelectedItemPosition()));
 
+                /*Gson gson = new Gson();
+                String json = gson.toJson(byteArray);
+                editor.putString(keys.KEY_IMAGEN,json);*/
+
                 editor.commit();
                 break;
         }
@@ -124,6 +138,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         spDia = (Spinner)findViewById(R.id.spinner_dia);
         spAño = (Spinner)findViewById(R.id.spinner_año);
         spMes = (Spinner)findViewById(R.id.spinner_mes);
+        ivFoto = (ImageView)findViewById(R.id.image_perfil);
 
         ArrayAdapter<CharSequence> adapterGenero = ArrayAdapter.createFromResource(this,R.array.genero,R.layout.support_simple_spinner_dropdown_item);
         spGenero.setAdapter(adapterGenero);
@@ -160,12 +175,20 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
 
         SharedPreferences settings = getPreferences(MODE_PRIVATE);
 
+        String json = settings.getString(keys.KEY_IMAGEN, "");
         String nombre = settings.getString(keys.KEY_NOMBRE, null);
         String matricula = settings.getString(keys.KEY_MATRICULA, null);
         String pesoActual = settings.getString(keys.KEY_PESO_ACTUAL, null);
         String pesoMeta = settings.getString(keys.KEY_PESO_META, null);
         String pesoMaximoPierna = settings.getString(keys.KEY_PESO_MAXIMO_PIERNA, null);
         String pesoMaximoBrazo = settings.getString(keys.KEY_PESO_MAXIMO_BRAZO, null);
+
+        /*Gson gson = new Gson();
+        if(!json.contentEquals("")){
+            byteArray = gson.fromJson(json, byte[]);
+            Bitmap bmimage = BitmapFactory.decodeByteArray(byteArray,0,image.length);
+            ivFoto.setImageBitmap(bmimage);
+        }*/
 
         /*
         spGenero.setSelection(Integer.parseInt(settings.getString(keys.KEY_GENERO_POS, "0")));
@@ -179,5 +202,20 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         etPesoMeta.setText(pesoMeta);
         etPesoMaximoPierna.setText(pesoMaximoPierna);
         etPesoMaximoBrazo.setText(pesoMaximoBrazo);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+
+        if(requestCode==keys.REQUEST_CODE && resultCode == RESULT_OK){
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byteArray = stream.toByteArray();
+
+            ivFoto.setImageBitmap(bitmap);
+        }
     }
 }

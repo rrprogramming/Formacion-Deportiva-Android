@@ -15,6 +15,7 @@ public class Keys {
     public final String KEY_PESO_MAXIMO_PIERNA = "KEY_PESO_MAXIMO_PIERNA";
     public final String KEY_PESO_MAXIMO_BRAZO = "KEY_PESO_MAXIMO_BRAZO";
     public final String KEY_IMAGEN = "KEY_IMAGEN";
+    public final int REQUEST_CODE = 1;
 
     //Estas llaves son para las posiciones de los spinners
     public String KEY_GENERO_POS = "KEY_GENERO_POS";

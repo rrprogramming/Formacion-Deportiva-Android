@@ -206,8 +206,8 @@ public class DBOperations {
         Ejercicio ejercicio;
         ArrayList<Ejercicio> listEjercicio = new ArrayList<>();
 
-        String selectQuery = "SELECT * FROM "+DatabaseSchema.EjercicioTable.TABLE_NAME+
-                            " WHERE "+DatabaseSchema.EjercicioTable.COLUMN_NAME_FIN+
+        String selectQuery = "SELECT * FROM "+DatabaseSchema.HistorialTable.TABLE_NAME+
+                            " WHERE "+DatabaseSchema.HistorialTable.COLUMN_NAME_FIN+
                             " >= "+'\''+fechaInicio+'\''+" AND"+" <= "+'\''+fechaFinal+'\'';
 
         Log.i("QUERY: ", selectQuery);
@@ -216,16 +216,33 @@ public class DBOperations {
             Cursor cursor = db.rawQuery(selectQuery, null);
             if(cursor.moveToFirst()) {
                 do{
-                    ejercicio = new Ejercicio(Integer.parseInt(cursor.getString(0)),
-                            cursor.getString(1),
-                            cursor.getString(2),
-                            cursor.getString(3),
-                            Integer.parseInt(cursor.getString(4)),
-                            Integer.parseInt(cursor.getString(5)),
-                            Integer.parseInt(cursor.getString(6)),
-                            cursor.getString(7));
 
-                    listEjercicio.add(ejercicio);
+                    int id = Integer.parseInt(cursor.getString(1));
+
+                    String ejercicioQuery = "SELECT * FROM "+DatabaseSchema.EjercicioTable.TABLE_NAME+
+                            " WHERE "+DatabaseSchema.EjercicioTable.COLUNM_NAME_ID+
+                            " = "+'\''+id+'\'';
+
+                    try {
+                        Cursor cursor2 = db.rawQuery(ejercicioQuery, null);
+                        if (cursor2.moveToFirst()) {
+                            do {
+
+                                ejercicio = new Ejercicio(Integer.parseInt(cursor2.getString(0)),
+                                        cursor2.getString(1),
+                                        cursor2.getString(2),
+                                        cursor2.getString(3),
+                                        Integer.parseInt(cursor2.getString(4)),
+                                        Integer.parseInt(cursor2.getString(5)),
+                                        Integer.parseInt(cursor2.getString(6)),
+                                        cursor2.getString(7));
+
+                                listEjercicio.add(ejercicio);
+                            }while (cursor2.moveToNext());
+                        }
+                    }catch (SQLException e){
+                        Log.e("SQL Get", e.toString());
+                    }
                 }while (cursor.moveToNext());
             }
             cursor.close();
@@ -270,20 +287,21 @@ public class DBOperations {
     }
 
     //Esta clase edita un objeto de tipo Ejercicio
-    public void editEjercicio(long eId, String data){
+    public long editEjercicio(long eId, String data){
 
-        String updateQuery = "UPDATE "+DatabaseSchema.EjercicioTable.TABLE_NAME+
-                " SET "+DatabaseSchema.EjercicioTable.COLUMN_NAME_FIN+"="+"\'"+data+"\'"+
-                " WHERE "+DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+
-                "="+"\'"+eId+"\'";
-
-        Log.i("UPDATE QUERY",updateQuery);
-
+        long newRowId = 0;
         try {
-            db.execSQL(updateQuery);
-        }catch (SQLException e){
-            Log.e("SQL Get", e.toString());
-        }
-    }
 
+            ContentValues values = new ContentValues();
+            values.put(DatabaseSchema.HistorialTable.COLUMN_NAME_EJERCICIO_ID, eId);
+            values.put(DatabaseSchema.HistorialTable.COLUMN_NAME_FIN, data);
+
+            newRowId = db.insert(DatabaseSchema.RutinaTable.TABLE_NAME, null, values);
+
+        }catch (SQLException e){
+            Log.e("SQL ADD",e.toString());
+        }
+
+        return newRowId;
+    }
 }
