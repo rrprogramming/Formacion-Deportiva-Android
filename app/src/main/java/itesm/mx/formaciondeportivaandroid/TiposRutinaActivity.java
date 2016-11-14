@@ -27,12 +27,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 
 public class TiposRutinaActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     ArrayList<TipoEjercicio> listRuti;
     TipoEjercicioAdapter adapterRutina;
+    Rutina RJson;
 
     Button btnRegresarR;
     Button btnGuardar;
@@ -81,6 +84,8 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         nomRut=getIntent().getStringExtra("nombre");
         tvNom.setText(nomRut);
 
+        ArrayList<Ejercicio> ArrEj = new ArrayList<Ejercicio>();
+        RJson = new Rutina(nomRut, ArrEj ,R.mipmap.ic_launcher);
     }
 
     @Override
@@ -143,6 +148,20 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         Intent intent = new Intent(this, SeleccionActivity.class);
         intent.putExtra("tipo",tipoejer.getTipo());
         intent.putExtra("nombre",nomRut);
-        startActivity(intent);
+        Gson gson = new Gson();
+        String json = gson.toJson(RJson);
+        intent.putExtra("json",json);
+        startActivityForResult(intent,1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode == RESULT_OK){
+            Gson gson = new Gson();
+            RJson = gson.fromJson(data.getStringExtra("json"),Rutina.class);
+            //Bundle extras = data.getStringExtra("json",);
+            //RJson = data
+        }
     }
 }

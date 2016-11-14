@@ -19,10 +19,22 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.Switch;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class EjercicioActivity extends AppCompatActivity implements  View.OnClickListener{
     private Button btn_listo;
@@ -32,6 +44,18 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
     Button sesion;
     Button historia;
     Button perfil;
+
+    TextView tvRutina;
+    TextView tvnomEjercicio;
+    TextView tvMusculo;
+    TextView tvRepeticiones;
+    TextView tvSeries;
+    Switch swTerminado;
+    ImageView ivEjercicio;
+    DBOperations dbo;
+
+    private int pos;
+    private ArrayList<Ejercicio> arrEjercicio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +76,49 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
 
+        tvRutina = (TextView) findViewById(R.id.tvrutina);
+        tvnomEjercicio = (TextView) findViewById(R.id.tv_nomEjercicio);
+        tvMusculo= (TextView) findViewById(R.id.tv_musculo);
+        tvRepeticiones= (TextView) findViewById(R.id.tv_repeticiones);
+        tvSeries= (TextView) findViewById(R.id.tv_series);
+        swTerminado = (Switch) findViewById(R.id.sw_terminado);
+        ivEjercicio = (ImageView) findViewById(R.id.iv_ejercicio);
+
+        long idRutina = Long.parseLong(getIntent().getStringExtra("ID"));
+
+        Log.i("ID EXTRA", Long.toString(idRutina));
+        dbo=new DBOperations(this);
+        dbo.open();
+
+        Rutina rutina = dbo.getRutina(idRutina);
+        arrEjercicio=rutina.getEjercicio();
+        tvRutina.setText(rutina.getsNombre());
+        pos=0;
+        mostrarEjercicio();
+
+        swTerminado.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    Date date = new Date();
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                    String sdate = sdf.format(date);
+                    dbo.editEjercicio(arrEjercicio.get(pos).getId(), sdate);
+                    if(pos<(arrEjercicio.size()-1)){
+                        pos+=1;
+                        mostrarEjercicio();
+                    }
+                }
+            }
+        });
+    }
+
+    public void mostrarEjercicio(){
+        tvnomEjercicio.setText(arrEjercicio.get(pos).getsNombreEjer());
+        tvMusculo.setText(arrEjercicio.get(pos).getsMusculo());
+        tvRepeticiones.setText("Repeticiones: " + Integer.toString(arrEjercicio.get(pos).getiRepeticiones()));
+        tvSeries.setText("Series: " + Integer.toString(arrEjercicio.get(pos).getiSeries()));
+        swTerminado.setChecked(false);
+        ivEjercicio.setImageResource(arrEjercicio.get(pos).getIdFotoE());
     }
 
     @Override

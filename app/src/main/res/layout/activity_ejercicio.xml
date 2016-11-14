@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rutina"
-        android:id="@+id/textView2"
+        android:id="@+id/tvrutina"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="@string/nombre_ejercicio"
         android:id="@+id/tv_nomEjercicio"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/tvrutina"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp" />
 
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:text="@string/repeticiones"
         android:id="@+id/tv_repeticiones"
-        android:layout_toStartOf="@+id/textView2"
+        android:layout_toStartOf="@+id/tvrutina"
         android:layout_below="@+id/iv_ejercicio" />
 
     <TextView

@@ -2440,7 +2440,6 @@ containing a value of this type.
         public static final int text2=0x7f0d00ae;
         public static final int textSpacerNoButtons=0x7f0d004d;
         public static final int textView=0x7f0d006f;
-        public static final int textView2=0x7f0d0070;
         public static final int text_fechaNacimiento=0x7f0d008e;
         public static final int text_genero=0x7f0d008c;
         public static final int text_id=0x7f0d00b7;
@@ -2470,6 +2469,7 @@ containing a value of this type.
         public static final int tv_sesion=0x7f0d009a;
         public static final int tv_tipo_ejercicio=0x7f0d00b9;
         public static final int tv_tipo_musculo=0x7f0d00ba;
+        public static final int tvrutina=0x7f0d0070;
         public static final int up=0x7f0d0009;
         public static final int useLogo=0x7f0d0014;
         public static final int view_offset_helper=0x7f0d000a;

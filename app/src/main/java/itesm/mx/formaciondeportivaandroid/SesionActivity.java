@@ -21,19 +21,27 @@ package itesm.mx.formaciondeportivaandroid;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 public class SesionActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btn_comenzar;
+    private Spinner spinnerRutinas;
+    private String sRutinas[];
 
     Button home;
     Button rutinas;
     Button sesion;
     Button historia;
     Button perfil;
+
+    DBOperations dbo;
+    ArrayList<Rutina> arrRutina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +50,19 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
 
         btn_comenzar = (Button) findViewById(R.id.btn_comenzar);
 
-        Spinner spinnerPaises = (Spinner) findViewById(R.id.spinner_rutinas);
-        String sPaises[] = {
-                "Rutina 1",
-                "Rutina 2",
-                "Rutina 3"};
+        spinnerRutinas = (Spinner) findViewById(R.id.spinner_rutinas);
+        //TO DO: la base de datos regrese un String[] con los nombres de las rutinas
+        dbo=new DBOperations(this);
+        dbo.open();
+        arrRutina = dbo.getAllRutinas();
+        sRutinas = new String[arrRutina.size()];
+        for(int i=0; i<arrRutina.size(); i++){
+            sRutinas[i]=arrRutina.get(i).getsNombre();
+        }
 
-        ArrayAdapter<String> adapterPaises = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sPaises);
-        adapterPaises.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerPaises.setAdapter(adapterPaises);
+        ArrayAdapter<String> adapterRutina = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sRutinas);
+        adapterRutina.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerRutinas.setAdapter(adapterRutina);
         btn_comenzar.setOnClickListener(this);
 
         home = (Button) findViewById(R.id.button_home);
@@ -95,6 +107,8 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.btn_comenzar:
                 Intent myIntent6 = new Intent(this, EjercicioActivity.class);
+                myIntent6.putExtra("ID", Long.toString(arrRutina.get(spinnerRutinas.getSelectedItemPosition()).getid()));
+                Log.i("ID EXTRA", Long.toString(arrRutina.get(spinnerRutinas.getSelectedItemPosition()).getid()));
                 startActivity(myIntent6);
                 break;
         }
