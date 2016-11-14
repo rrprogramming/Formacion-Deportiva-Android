@@ -23,6 +23,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class HistorialActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,15 +36,11 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
     Button sesion;
     Button historia;
     Button perfil;
+    Button enviar;
+    DatePicker dp_inicio;
+    DatePicker dp_fin;
+    DBOperations dbo;
 
-    /**
-     Guarda la fecha de esta forma
-
-     DateFormat df = new SimpleDateFormat("YYYY-MM-DD");
-     String date = df.format(Calendar.getInstance().getTime());
-
-     para la base de datos
-    */
 
     @Override
     public void onClick(View v) {
@@ -67,6 +68,23 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 Intent intent5 = new Intent(this,PerfilActivity.class);
                 startActivity(intent5);
                 break;
+
+            case R.id.btn_historial:
+                GregorianCalendar cal1=new GregorianCalendar(dp_inicio.getYear(),
+                        dp_inicio.getMonth(),dp_inicio.getDayOfMonth());
+                Date begin=cal1.getTime();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                String fechaInicio = sdf.format(begin);
+                GregorianCalendar cal2=new GregorianCalendar(dp_fin.getYear(),
+                        dp_fin.getMonth(),dp_fin.getDayOfMonth());
+                Date end=cal2.getTime();
+                String fechaFin = sdf.format(begin);
+
+
+                dbo=new DBOperations(this);
+                dbo.open();
+                dbo.getHistorial(fechaInicio, fechaFin);
+                break;
         }
     }
 
@@ -80,12 +98,17 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
         sesion = (Button) findViewById(R.id.button_sesion);
         historia = (Button) findViewById(R.id.button_history);
         perfil = (Button) findViewById(R.id.button_perfil);
+        enviar = (Button) findViewById(R.id.btn_historial);
+
 
         home.setOnClickListener(this);
         rutinas.setOnClickListener(this);
         sesion.setOnClickListener(this);
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
+
+        dp_inicio = (DatePicker) findViewById(R.id.dp_fechain);
+        dp_fin = (DatePicker) findViewById(R.id.fp_fechafin);
     }
 
 }
