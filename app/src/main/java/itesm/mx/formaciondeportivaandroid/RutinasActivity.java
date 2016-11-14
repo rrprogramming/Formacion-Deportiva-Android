@@ -123,6 +123,10 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                         Toast.makeText(getApplication(), "Se vaa agregar una rutina", Toast.LENGTH_SHORT).show();
                         Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
                         intent6.putExtra(KEY_NOMBRE,etCrearRutina.getText().toString());
+                        //ArrayList<Ejercicio> ej = new ArrayList<Ejercicio>();;// SE AGREGO ESTO
+                        //Rutina ruti = new Rutina(etCrearRutina.getText().toString(),ej,R.mipmap.ic_launcher);;// SE AGREGO ESTO
+                        //long idR = dao.addRutina(ruti); ;// SE AGREGO ESTO
+                        //ruti.setId(idR);// SE AGREGO ESTO
                         startActivity(intent6);
                     }
                 });

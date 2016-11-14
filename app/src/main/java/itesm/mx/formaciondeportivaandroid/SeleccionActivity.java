@@ -35,6 +35,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.util.ArrayList;
 
 public class SeleccionActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener{
@@ -65,7 +68,12 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         btnGuardarAct = (Button) findViewById(R.id.button_guardarR);
         ArrayList<TipoEjercicio> arrayListEjercicio;
         sTipo=getIntent().getStringExtra("tipo");
+        Gson gson = new Gson();
+        rutina = gson.fromJson(getIntent().getStringExtra("json"),Rutina.class);
+        //rutina = new Rutina(getIntent().getStringExtra("nombre"), listEjer, R.mipmap.ic_launcher);
+
         arrayListEjercicio = getDataFotListView();
+        //getIntent().getArra
 
         adapterR = new TipoEjercicioAdapter(this, arrayListEjercicio);
         setListAdapter(adapterR);
@@ -86,7 +94,6 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         sesion.setOnClickListener(this);
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
-
 
         tvTipo.setText(sTipo);
     }
@@ -302,20 +309,25 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                 break;
 
             case R.id.button_rutinasAct:
-                Toast.makeText(this, "Regreso a la Rutina 1", Toast.LENGTH_SHORT).show();
-                Intent intent6 = new Intent(this, TiposRutinaActivity.class);
-                startActivity(intent6);
+                Gson gson = new Gson();
+                String json = gson.toJson(rutina);
+                Intent intentjson = new Intent();
+                intentjson.putExtra("json",json);
+                setResult(TiposRutinaActivity.RESULT_OK,intentjson);
+                //Toast.makeText(this, "Regreso a la Rutina 1", Toast.LENGTH_SHORT).show();
+                finish();
+                //Intent intent6 = new Intent(this, TiposRutinaActivity.class);
+                //startActivity(intent6);
                 break;
 
             case R.id.button_guardarR:
-                if(listEjer.size()!=0) {
-                    rutina = new Rutina(getIntent().getStringExtra("nombre"), listEjer, R.mipmap.ic_launcher);
+                    //rutina = new Rutina(getIntent().getStringExtra("nombre"), listEjer, R.mipmap.ic_launcher);
                     long id = dao.addRutina(rutina);
                     rutina.setId(id);
                     Toast.makeText(this, "Se ha guardado la Rutina 1 "+listEjer.size(), Toast.LENGTH_SHORT).show();
                     Intent intent7 = new Intent(this, RutinasActivity.class);
                     startActivity(intent7);
-                }
+
                 break;
         }
     }
@@ -348,10 +360,14 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         dialogoSeRep.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                //rutina.setEjercicio();
+                listEjer = rutina.getEjercicio();
                 Ejercicio ejer;
                 ejer = new Ejercicio(nombreEjer.getTipo(),sTipo,nombreEjer.getTMusculo(),Integer.parseInt(etSeries.getText().toString()),
                         Integer.parseInt(etRepeticiones.getText().toString()),R.mipmap.ic_launcher);
                 listEjer.add(ejer);
+                rutina.setEjercicio(listEjer);
+
                 Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
             }
         });
