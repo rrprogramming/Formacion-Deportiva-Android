@@ -18,14 +18,11 @@ package itesm.mx.formaciondeportivaandroid;
 * along with this program.  If not, see <http://www.gnu.org/licenses.
 */
 
-import android.util.Log;
-
 import java.util.ArrayList;
 
 public class Rutina {
     private  long id;
     private String sNombre;
-    private ArrayList<TipoEjercicio> tipoEjercicio;
     private ArrayList<Ejercicio> ejercicio;
     private int idFotoR;
 
@@ -36,14 +33,14 @@ public class Rutina {
     }
 
     public Rutina(long id, String sNombre, int idFotoR) {
+        this.id = id;
         this.sNombre = sNombre;
-        this.tipoEjercicio = tipoEjercicio;
-        this.ejercicio = ejercicio;
+        this.idFotoR = idFotoR;
     }
 
     public Rutina(String sNombre, ArrayList<Ejercicio> ejercicio,int idFotoR) {
+        this.id = -1;
         this.sNombre = sNombre;
-        this.tipoEjercicio = tipoEjercicio;
         this.ejercicio = ejercicio;
         this.idFotoR = idFotoR;
     }
@@ -51,7 +48,6 @@ public class Rutina {
     public Rutina(long id, String sNombre, ArrayList<Ejercicio> ejercicio, int idFotoR) {
         this.id = id;
         this.sNombre = sNombre;
-        this.tipoEjercicio = tipoEjercicio;
         this.ejercicio = ejercicio;
         this.idFotoR = idFotoR;
     }
@@ -70,14 +66,6 @@ public class Rutina {
 
     public void setsNombre(String sNombre) {
         this.sNombre = sNombre;
-    }
-
-    public ArrayList<TipoEjercicio> getTipoEjercicio(){
-        return this.tipoEjercicio;
-    }
-
-    public void setTipoEjercicio(ArrayList<TipoEjercicio> tipoEjercicio){
-        this.tipoEjercicio = tipoEjercicio;
     }
 
     public ArrayList<Ejercicio> getEjercicio() {

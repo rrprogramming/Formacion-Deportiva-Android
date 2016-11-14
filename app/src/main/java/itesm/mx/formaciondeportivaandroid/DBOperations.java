@@ -62,7 +62,7 @@ public class DBOperations {
             for (int i = 0; i < rutina.getEjercicio().size(); i++){
                 Log.i("EJERCICIO", "Guardando ejercicio "+rutina.getEjercicio().get(i).getsNombreEjer()+" / "+newRowId);
                 ContentValues values2 = new ContentValues();
-                values2.put(DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA, newRowId-1);
+                values2.put(DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA, newRowId);
                 values2.put(DatabaseSchema.EjercicioTable.COLUNM_NAME_NOMBRE, rutina.getEjercicio().get(i).getsNombreEjer());
                 values2.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_TIPO_EJERCICIO, rutina.getEjercicio().get(i).getsNombreEjer());
                 values2.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_MUSCULO, rutina.getEjercicio().get(i).getsMusculo());
@@ -96,7 +96,7 @@ public class DBOperations {
         try {
             Cursor cursor = db.rawQuery(query, null);
             if(cursor.moveToFirst()){
-                rutina = new Rutina(Integer.parseInt(cursor.getString(0)),
+                rutina = new Rutina(Long.parseLong(cursor.getString(0)),
                         cursor.getString(1),
                         Integer.parseInt(cursor.getString(2)));
             }
@@ -155,9 +155,11 @@ public class DBOperations {
             Cursor cursor = db.rawQuery(selectQuery, null);
             if(cursor.moveToFirst()) {
                 do {
-                    rutina = new Rutina(Integer.parseInt(cursor.getString(0)),
+                    rutina = new Rutina(Long.parseLong(cursor.getString(0)),
                             cursor.getString(1),
                             Integer.parseInt(cursor.getString(2)));
+
+                    Log.i("RUTINA ID", Long.toString(rutina.getid()));
 
                     String query = "Select * FROM "+
                             DatabaseSchema.EjercicioTable.TABLE_NAME+
