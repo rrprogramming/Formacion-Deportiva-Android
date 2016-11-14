@@ -267,4 +267,21 @@ public class DBOperations {
         return listEjercicio;
     }
 
+    //Esta clase edita un objeto de tipo Ejercicio
+    public void editEjercicio(long eId, String data){
+
+        String updateQuery = "UPDATE "+DatabaseSchema.EjercicioTable.TABLE_NAME+
+                " SET "+DatabaseSchema.EjercicioTable.COLUMN_NAME_FIN+"="+"\'"+data+"\'"+
+                " WHERE "+DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+
+                "="+"\'"+eId+"\'";
+
+        Log.i("UPDATE QUERY",updateQuery);
+
+        try {
+            db.execSQL(updateQuery);
+        }catch (SQLException e){
+            Log.e("SQL Get", e.toString());
+        }
+    }
+
 }
