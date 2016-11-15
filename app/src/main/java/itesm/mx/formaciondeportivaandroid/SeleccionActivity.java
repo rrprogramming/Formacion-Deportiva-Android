@@ -379,4 +379,16 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         });
         dialogoSeRep.show();
     }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        dao.close();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        dao.close();
+    }
 }

@@ -48,6 +48,10 @@ public class DBOperations {
         }
     }
 
+    public void close(){
+        db.close();
+    }
+
     //Esta clase recive un objeto de tipo Rutina para ingresarlo a la base de datos y regresar si id (AUTOINCREMENT)
     public long addRutina(Rutina rutina){
         long newRowId = 0;

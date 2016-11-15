@@ -111,4 +111,16 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
         dp_fin = (DatePicker) findViewById(R.id.fp_fechafin);
     }
 
+    @Override
+    public void onPause(){
+        super.onPause();
+        dbo.close();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        dbo.close();
+    }
+
 }

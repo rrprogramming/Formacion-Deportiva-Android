@@ -113,4 +113,16 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
                 break;
         }
     }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        dbo.close();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        dbo.close();
+    }
 }

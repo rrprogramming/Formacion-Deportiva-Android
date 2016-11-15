@@ -156,4 +156,16 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         startActivity(intent);
     }
 
+    @Override
+    public void onPause(){
+        super.onPause();
+        dao.close();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        dao.close();
+    }
+
 }

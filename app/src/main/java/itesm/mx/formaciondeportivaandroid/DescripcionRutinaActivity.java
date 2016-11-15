@@ -120,4 +120,16 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
     public ArrayList<Ejercicio> getDataFotListView() {
         return arti.getLista();
     }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        dao.close();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        dao.close();
+    }
 }

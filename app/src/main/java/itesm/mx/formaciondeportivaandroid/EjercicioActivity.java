@@ -153,4 +153,16 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
                 break;
         }
     }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        dbo.close();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        dbo.close();
+    }
 }
