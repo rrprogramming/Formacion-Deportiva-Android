@@ -45,18 +45,29 @@
     <string name="musculo">Musculo: Pierna</string>
     <string name="terminado">Terminado</string>
     <string name="btn_listo">listo</string>
-    <string name="info_inicio">Horario \n
+    <string name="info_inicio">
         Horaio del gimnasio\n
-        Lunes - Viernes 06:00 - 21:00\n
-        Sábados 08:00 - 15:00\n
+        \tLunes - Viernes 06:00 - 21:00\n
+        \tSábados 08:00 - 15:00\n
         \n
         Horario de los profesores:\n
-        Lunes - Viernes\n
-        Jorge Barrientos 07:00 - 15:00\n
-        Antonio Martínez 13:00 - 21:00\n
+        \tLunes - Viernes\n
+        \t\tJorge Barrientos 07:00 - 15:00\n
+        \t\tAntonio Martínez 13:00 - 21:00\n
         \n
-        Sábado:\n
-        Ariel Santos/Antonio Martínez\n
-        08:00 - 15:00
+        \tSábado:\n
+        \t\tAriel Santos/Antonio Martínez\n
+        \t\t08:00 - 15:00
     </string>
+     <string name="reglamento">
+        1.- Solo podrán ingresar alumnos del campus, los cuales deberán mostrar en el módulo de acceso su credencial actualizada\n\n
+        2.- Contar con toalla de mano para higiene personal.\n\n
+        3.- Portar ropa y tenis deporticos (playera con manga).\n\n
+        4.- Evitar introducir alimentos, maletines o mochilas.\n\n
+        5.- Los alumnos EXATEC, TecMilenio, UV, EGADE, EGAP, PrepaTec y Prepa Arte A.C. deberán realizar un pago para poder ingresar a la sala de pesas (pedir información en el módulo).\n\n
+        *Se prohíbe el manejo y/o consumo de bebidas ergogénicas nutricionales dentro de las instalaciones deportivas. Sera sancionado quien no respete alguna de las reglas.\n\n
+
+    </string>
+    <string name="btnHorario">Horario</string>
+    <string name="btnReglamento">Reglamento</string>
 </resources>

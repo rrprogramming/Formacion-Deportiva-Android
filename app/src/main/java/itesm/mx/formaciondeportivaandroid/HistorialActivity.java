@@ -84,6 +84,7 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 dbo=new DBOperations(this);
                 dbo.open();
                 dbo.getHistorial(fechaInicio, fechaFin);
+                dbo.close();
                 break;
         }
     }
@@ -111,16 +112,6 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
         dp_fin = (DatePicker) findViewById(R.id.fp_fechafin);
     }
 
-    @Override
-    public void onPause(){
-        super.onPause();
-        dbo.close();
-    }
 
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        dbo.close();
-    }
 
 }

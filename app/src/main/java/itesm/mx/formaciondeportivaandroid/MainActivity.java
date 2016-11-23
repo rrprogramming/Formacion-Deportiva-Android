@@ -19,10 +19,12 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button sesion;
     Button historia;
     Button perfil;
+    Button horario;
+    Button reglamento;
 
     @Override
     public void onClick(View v){
@@ -59,6 +63,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent5 = new Intent(this,PerfilActivity.class);
                 startActivity(intent5);
                 break;
+
+            case R.id.button_reglamento:
+                Intent intent6 = new Intent(this,ReglamentoActivity.class);
+                startActivity(intent6);
+                break;
+
+            case R.id.button_horario:
+                Intent intent7 = new Intent(this,HorarioActivity.class);
+                startActivity(intent7);
+                break;
         }
     }
 
@@ -66,17 +80,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView ivLogo = (ImageView) findViewById(R.id.iv_logo);
+        ImageView ivGimnasio = (ImageView) findViewById(R.id.iv_gimnasio);
+        ivLogo.setImageResource(R.drawable.logo_deportes);
+        ivGimnasio.setImageResource(R.drawable.img_gym);
 
         home = (Button) findViewById(R.id.button_home);
         rutinas = (Button) findViewById(R.id.button_rutinas);
         sesion = (Button) findViewById(R.id.button_sesion);
         historia = (Button) findViewById(R.id.button_history);
         perfil = (Button) findViewById(R.id.button_perfil);
+        horario = (Button) findViewById(R.id.button_horario);
+        reglamento = (Button) findViewById(R.id.button_reglamento);
 
         home.setOnClickListener(this);
         rutinas.setOnClickListener(this);
         sesion.setOnClickListener(this);
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
+        horario.setOnClickListener(this);
+        reglamento.setOnClickListener(this);
+
     }
 }

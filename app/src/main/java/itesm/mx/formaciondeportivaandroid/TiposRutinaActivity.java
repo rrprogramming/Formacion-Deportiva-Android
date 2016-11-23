@@ -128,13 +128,13 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         TipoEjercicio arti;
 
         listRuti = new ArrayList<TipoEjercicio>();
-        arti = new TipoEjercicio("Maquina Selectiva","", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Maquina Selectiva","", R.drawable.pullups100);
         listRuti.add(arti);
-        arti = new TipoEjercicio("Cross Over","", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Cross Over","", R.drawable.curlswithdumbbells100);
         listRuti.add(arti);
-        arti = new TipoEjercicio("Aparato Libre","", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Aparato Libre","", R.drawable.benchoverhead100);
         listRuti.add(arti);
-        arti = new TipoEjercicio("Torre Selectiva","", R.mipmap.ic_launcher);
+        arti = new TipoEjercicio("Torre Selectiva","", R.drawable.benchpress100);
         listRuti.add(arti);
 
 
