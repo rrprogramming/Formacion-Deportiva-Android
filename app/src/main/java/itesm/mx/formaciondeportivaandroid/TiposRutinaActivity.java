@@ -92,8 +92,8 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_rutinas:
-                Intent intent = new Intent(this, RutinasActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(this, RutinasActivity.class);
+                //startActivity(intent);
                 break;
 
             case R.id.button_home:

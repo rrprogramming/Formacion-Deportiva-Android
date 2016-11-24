@@ -134,8 +134,8 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
                 break;
 
             case R.id.button_sesion:
-                Intent intent3 = new Intent(this,SesionActivity.class);
-                startActivity(intent3);
+                //Intent intent3 = new Intent(this,SesionActivity.class);
+                //startActivity(intent3);
                 break;
 
             case R.id.button_history:

@@ -60,8 +60,8 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 break;
 
             case R.id.button_history:
-                Intent intent4 = new Intent(this,HistorialActivity.class);
-                startActivity(intent4);
+                //Intent intent4 = new Intent(this,HistorialActivity.class);
+                //startActivity(intent4);
                 break;
 
             case R.id.button_perfil:

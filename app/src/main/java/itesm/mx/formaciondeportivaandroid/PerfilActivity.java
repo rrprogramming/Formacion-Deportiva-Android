@@ -96,9 +96,9 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.button_perfil:
-                intent = new Intent(this,PerfilActivity.class);
-                finishAffinity();
-                startActivity(intent);
+                //intent = new Intent(this,PerfilActivity.class);
+                //finishAffinity();
+                //startActivity(intent);
                 break;
 
             case R.id.button_guardar:

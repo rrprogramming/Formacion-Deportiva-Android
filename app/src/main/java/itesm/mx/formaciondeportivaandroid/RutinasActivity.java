@@ -87,8 +87,8 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
 
         switch (v.getId()){
             case R.id.button_rutinas:
-                Intent intent = new Intent(this, RutinasActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(this, RutinasActivity.class);
+                //startActivity(intent);
                 break;
             case R.id.button_home:
                 Intent intent2 = new Intent(this,MainActivity.class);

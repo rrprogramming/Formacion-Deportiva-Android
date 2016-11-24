@@ -83,8 +83,8 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
         Intent intent;
         switch (v.getId()){
             case R.id.button_rutinas:
-                intent = new Intent(this, RutinasActivity.class);
-                startActivity(intent);
+                //intent = new Intent(this, RutinasActivity.class);
+                //startActivity(intent);
                 break;
             case R.id.button_home:
                 intent = new Intent(this,MainActivity.class);
