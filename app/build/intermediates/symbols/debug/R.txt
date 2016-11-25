@@ -835,6 +835,8 @@ int id title_template 0x7f0d0048
 int id top 0x7f0d0026
 int id topPanel 0x7f0d0047
 int id touch_outside 0x7f0d00a9
+int id tvR 0x7f0d00c8
+int id tvS 0x7f0d00c7
 int id tv_bienvenido 0x7f0d0089
 int id tv_ejercicio 0x7f0d00c0
 int id tv_fechafin 0x7f0d0085

@@ -28,6 +28,32 @@
             android:id="@+id/tv_tipo_musculo"
             android:textStyle="bold"
             android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/series"
+                android:textStyle="bold"
+                android:id="@+id/tvS"
+                android:visibility="invisible"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:text="@string/repeticiones"
+                android:textStyle="bold"
+                android:id="@+id/tvR"
+                android:visibility="invisible"
+                android:textColor="@color/black"/>
+        </LinearLayout>
     </LinearLayout>
 
 

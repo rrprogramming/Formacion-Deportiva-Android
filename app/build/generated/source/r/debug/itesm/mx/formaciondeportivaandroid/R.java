@@ -2536,6 +2536,8 @@ containing a value of this type.
         public static final int top=0x7f0d0026;
         public static final int topPanel=0x7f0d0047;
         public static final int touch_outside=0x7f0d00a9;
+        public static final int tvR=0x7f0d00c8;
+        public static final int tvS=0x7f0d00c7;
         public static final int tv_bienvenido=0x7f0d0089;
         public static final int tv_ejercicio=0x7f0d00c0;
         public static final int tv_fechafin=0x7f0d0085;
