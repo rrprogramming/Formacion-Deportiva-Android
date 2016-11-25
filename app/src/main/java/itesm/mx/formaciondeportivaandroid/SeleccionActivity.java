@@ -321,11 +321,18 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
 
             case R.id.button_guardarR:
                 //rutina = new Rutina(getIntent().getStringExtra("nombre"), listEjer, R.mipmap.ic_launcher);
-                long id = dao.addRutina(rutina);
-                rutina.setId(id);
-                Toast.makeText(this, "Se ha guardado la Rutina 1 "+listEjer.size(), Toast.LENGTH_SHORT).show();
-                Intent intent7 = new Intent(this, RutinasActivity.class);
-                startActivity(intent7);
+                ArrayList<Ejercicio> ArrEjercicio = new ArrayList<>();
+                ArrEjercicio=rutina.getEjercicio();
+                if(ArrEjercicio.size()==0){
+                    Toast.makeText(this, "Favor de seleccionar ejercicios antes de guardar una rutina", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    long id = dao.addRutina(rutina);
+                    rutina.setId(id);
+                    Toast.makeText(this, "Se ha guardado la rutina "+ rutina.getsNombre(), Toast.LENGTH_SHORT).show();
+                    Intent intent7 = new Intent(this, RutinasActivity.class);
+                    startActivity(intent7);
+                }
 
                 break;
         }
@@ -359,15 +366,18 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         dialogoSeRep.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //rutina.setEjercicio();
-                listEjer = rutina.getEjercicio();
-                Ejercicio ejer;
-                ejer = new Ejercicio(nombreEjer.getTipo(),sTipo,nombreEjer.getTMusculo(),Integer.parseInt(etSeries.getText().toString()),
-                        Integer.parseInt(etRepeticiones.getText().toString()),nombreEjer.getIdFotoRT());
-                listEjer.add(ejer);
-                rutina.setEjercicio(listEjer);
-
-                Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
+                if (etSeries.getText().length() == 0 || etRepeticiones.getText().length() == 0){
+                    Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones"+listEjer.size(), Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    listEjer = rutina.getEjercicio();
+                    Ejercicio ejer;
+                    ejer = new Ejercicio(nombreEjer.getTipo(),sTipo,nombreEjer.getTMusculo(),Integer.parseInt(etSeries.getText().toString()),
+                            Integer.parseInt(etRepeticiones.getText().toString()),nombreEjer.getIdFotoRT());
+                    listEjer.add(ejer);
+                    rutina.setEjercicio(listEjer);
+                    Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
+                }
             }
         });
         dialogoSeRep.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

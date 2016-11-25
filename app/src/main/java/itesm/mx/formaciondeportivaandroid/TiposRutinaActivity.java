@@ -36,6 +36,7 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
     ArrayList<TipoEjercicio> listRuti;
     TipoEjercicioAdapter adapterRutina;
     Rutina RJson;
+    private DBOperations dao;
 
     Button btnRegresarR;
     Button btnGuardar;
@@ -57,6 +58,8 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         getListView().setOnItemClickListener(this);
         btnRegresarR = (Button) findViewById(R.id.button_rutinas);
         btnGuardar = (Button) findViewById(R.id.button_guardar);
+        dao = new DBOperations(this);
+        dao.open();
         ArrayList<TipoEjercicio> arrayListArticulo;
 
         arrayListArticulo = getDataFotListView();
@@ -117,9 +120,21 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
                 break;
 
             case R.id.button_guardar:
-                Toast.makeText(this, "Se ha guardado la Rutina 1", Toast.LENGTH_SHORT).show();
+                ArrayList<Ejercicio> ArrEjercicio = new ArrayList<>();
+                ArrEjercicio=RJson.getEjercicio();
+                if(ArrEjercicio.size()==0){
+                    Toast.makeText(this, "Favor de seleccionar ejercicios antes de guardar una rutina", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                   long id = dao.addRutina(RJson);
+                    RJson.setId(id);
+                    Toast.makeText(this, "Se ha guardado la rutina "+ RJson.getsNombre(), Toast.LENGTH_SHORT).show();
+                    Intent intentR = new Intent(this, RutinasActivity.class);
+                    startActivity(intentR);
+                }
+                /*Toast.makeText(this, "Se ha guardado la Rutina 1", Toast.LENGTH_SHORT).show();
                 Intent intent6 = new Intent(this, RutinasActivity.class);
-                startActivity(intent6);
+                startActivity(intent6);*/
                 break;
         }
     }

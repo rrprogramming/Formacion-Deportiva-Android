@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
     Button btnSesion;
     Button btnHistoria;
     Button btnPerfil;
+    TextView tvNombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,7 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
 
         id = Long.parseLong(getIntent().getStringExtra("ID"));
         rutina = dao.getRutina(id);
+        String sN = rutina.getsNombre();
 
         listEjerc = rutina.getEjercicio();
 
@@ -69,6 +72,8 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
         btnSesion = (Button) findViewById(R.id.button_sesion);
         btnHistoria = (Button) findViewById(R.id.button_history);
         btnPerfil = (Button) findViewById(R.id.button_perfil);
+        tvNombre = (TextView) findViewById(R.id.tv_nomrut);
+        tvNombre.setText(sN);
 
         btnHome.setOnClickListener(this);
         btnRutinas.setOnClickListener(this);
