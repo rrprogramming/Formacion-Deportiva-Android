@@ -51,6 +51,7 @@
             android:screenOrientation="portrait" />
         <activity android:name="itesm.mx.formaciondeportivaandroid.HorarioActivity" />
         <activity android:name="itesm.mx.formaciondeportivaandroid.ReglamentoActivity" />
+        <activity android:name="itesm.mx.formaciondeportivaandroid.EmailActivity" />
     </application>
 
 </manifest>

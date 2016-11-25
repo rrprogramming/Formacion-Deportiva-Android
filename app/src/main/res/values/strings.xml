@@ -70,4 +70,9 @@
     </string>
     <string name="btnHorario">Horario</string>
     <string name="btnReglamento">Reglamento</string>
+    <string name="email">Complete los campos para mandar el correo</string>
+    <string name="destinatario">Destinatario</string>
+    <string name="subject">Subject</string>
+    <string name="mandar">Mandar correo</string>
+    <string name="correo">harmando_52@hotmail.com</string>
 </resources>

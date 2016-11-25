@@ -19,13 +19,17 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -37,10 +41,37 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
     Button historia;
     Button perfil;
     Button enviar;
+    String sCorreo;
+    TextView tvC;
     DatePicker dp_inicio;
     DatePicker dp_fin;
     DBOperations dbo;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_historial);
+
+        home = (Button) findViewById(R.id.button_home);
+        rutinas = (Button) findViewById(R.id.button_rutinas);
+        sesion = (Button) findViewById(R.id.button_sesion);
+        historia = (Button) findViewById(R.id.button_history);
+        perfil = (Button) findViewById(R.id.button_perfil);
+        enviar = (Button) findViewById(R.id.btn_historial);
+        tvC = (TextView) findViewById(R.id.corr);
+
+
+        tvC.setVisibility(View.INVISIBLE);
+        home.setOnClickListener(this);
+        rutinas.setOnClickListener(this);
+        sesion.setOnClickListener(this);
+        historia.setOnClickListener(this);
+        perfil.setOnClickListener(this);
+        enviar.setOnClickListener(this);
+
+        dp_inicio = (DatePicker) findViewById(R.id.dp_fechain);
+        dp_fin = (DatePicker) findViewById(R.id.fp_fechafin);
+    }
 
     @Override
     public void onClick(View v) {
@@ -70,6 +101,7 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 break;
 
             case R.id.btn_historial:
+                ArrayList<Ejercicio> arrEjer;
                 GregorianCalendar cal1=new GregorianCalendar(dp_inicio.getYear(),
                         dp_inicio.getMonth(),dp_inicio.getDayOfMonth());
                 Date begin=cal1.getTime();
@@ -83,33 +115,30 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
 
                 dbo=new DBOperations(this);
                 dbo.open();
-                dbo.getHistorial(fechaInicio, fechaFin);
+                arrEjer=dbo.getHistorial(fechaInicio, fechaFin);
                 dbo.close();
+                //String[] recipients = {etrecipient.getText().toString()};
+                Intent email = new Intent(Intent.ACTION_SEND,
+                        Uri.parse("mailto:"));
+                email.setType("message/rfc822");
+                String sInstructores = tvC.getText().toString();
+                for(int i=0; i<arrEjer.size();i++){
+                    sCorreo+= arrEjer.get(i) + "xdxd \n";
+                }
+
+                email.putExtra(Intent.EXTRA_EMAIL,sInstructores);
+                email.putExtra(Intent.EXTRA_SUBJECT,"Rutina dia "+fechaInicio+" al "+fechaFin);
+                email.putExtra(Intent.EXTRA_TEXT,sCorreo);
+                try{
+                    startActivity(Intent.createChooser(email,"Selecciona un cliente de correo.."));
+                }catch(android.content.ActivityNotFoundException ex){
+                    Toast.makeText(HistorialActivity.this,"No esta instalado ese cliente de correo.",
+                            Toast.LENGTH_LONG).show();
+                }
+                /*Intent email2 = new Intent(this, EmailActivity.class);
+                startActivity(email);*/
                 break;
         }
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historial);
-
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
-        enviar = (Button) findViewById(R.id.btn_historial);
-
-
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
-
-        dp_inicio = (DatePicker) findViewById(R.id.dp_fechain);
-        dp_fin = (DatePicker) findViewById(R.id.fp_fechafin);
     }
 
 

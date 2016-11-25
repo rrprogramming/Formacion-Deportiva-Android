@@ -469,8 +469,11 @@
     <string name="btn_historial">Enviar</string>
     <string name="btn_listo">listo</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="correo">harmando_52@hotmail.com</string>
     <string name="crear">+</string>
+    <string name="destinatario">Destinatario</string>
     <string name="ejercicio_tipo">Tipo de Ejercicio</string>
+    <string name="email">Complete los campos para mandar el correo</string>
     <string name="genero_label">Genero</string>
     <string name="guardar">Guardar</string>
     <string name="info_inicio">
@@ -487,6 +490,7 @@
         \t\tAriel Santos/Antonio Martínez\n
         \t\t08:00 - 15:00
     </string>
+    <string name="mandar">Mandar correo</string>
     <string name="matricula">Matricula</string>
     <string name="musculo">Musculo: Pierna</string>
     <string name="nacimiento_label">Fecha de nacimiento</string>
@@ -514,6 +518,7 @@
     <string name="seleccion_sesion">Seleccciona una Rutina</string>
     <string name="series">Series:</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="subject">Subject</string>
     <string name="terminado">Terminado</string>
     <string name="title_activity_descripcion_rutina">DescripcionRutina</string>
     <string name="titulo_ejercicio">Cross Over</string>
