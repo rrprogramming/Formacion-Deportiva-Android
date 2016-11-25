@@ -24,12 +24,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -112,11 +115,24 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
 
             case R.id.button_crear_rutina:
                 //etCrearRutina.setText("Nombre de la rutina");
+
                 AlertDialog.Builder dialogorutina = new AlertDialog.Builder(this);
                 final EditText etCrearRutina = new EditText(this);
-                dialogorutina.setTitle("Crear Rutina");
+                final EditText etContrasena = new EditText(this);
+
+                LinearLayout lila= new LinearLayout(this);
+                lila.setOrientation(LinearLayout.VERTICAL);
+
+                dialogorutina.setTitle("Favor de ir con su instructor para crear una rutina");
                 etCrearRutina.setHint("Nombre de la rutina");
-                dialogorutina.setView(etCrearRutina);
+
+                etContrasena.setHint("Contrasena");
+                etContrasena.setTransformationMethod(PasswordTransformationMethod.getInstance());
+
+                lila.addView(etContrasena);
+                lila.addView(etCrearRutina);
+
+                dialogorutina.setView(lila);
                 dialogorutina.setPositiveButton("Crear", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -137,11 +153,6 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                     }
                 });
                 dialogorutina.show();
-                //Toast.makeText(getApplication(), "Se vaa agregar una rutina", Toast.LENGTH_SHORT).show();
-                // Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
-                //startActivity(intent6);
-
-
                 break;
         }
     }

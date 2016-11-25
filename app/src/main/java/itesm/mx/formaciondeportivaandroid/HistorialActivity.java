@@ -121,14 +121,17 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 Intent email = new Intent(Intent.ACTION_SEND,
                         Uri.parse("mailto:"));
                 email.setType("message/rfc822");
-                String sInstructores = tvC.getText().toString();
+                String[] recipients = {tvC.getText().toString()};
+                //tvC.setText("");
                 for(int i=0; i<arrEjer.size();i++){
                     sCorreo+= arrEjer.get(i) + "xdxd \n";
                 }
+                //tvC.setText(sCorreo);
+                String[] body = {tvC.getText().toString()};
 
-                email.putExtra(Intent.EXTRA_EMAIL,sInstructores);
-                email.putExtra(Intent.EXTRA_SUBJECT,"Rutina dia "+fechaInicio+" al "+fechaFin);
-                email.putExtra(Intent.EXTRA_TEXT,sCorreo);
+                email.putExtra(Intent.EXTRA_EMAIL,recipients);
+                email.putExtra(Intent.EXTRA_SUBJECT,"Rutina dia "+fechaInicio+" al "+fechaFin+" "+arrEjer.size());
+                email.putExtra(Intent.EXTRA_TEXT,recipients);
                 try{
                     startActivity(Intent.createChooser(email,"Selecciona un cliente de correo.."));
                 }catch(android.content.ActivityNotFoundException ex){
