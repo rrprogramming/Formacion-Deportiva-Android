@@ -86,13 +86,8 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        //dialogoPersonalizado()
 
         switch (v.getId()){
-            case R.id.button_rutinas:
-                //Intent intent = new Intent(this, RutinasActivity.class);
-                //startActivity(intent);
-                break;
             case R.id.button_home:
                 Intent intent2 = new Intent(this,MainActivity.class);
                 startActivity(intent2);
@@ -114,7 +109,6 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                 break;
 
             case R.id.button_crear_rutina:
-                //etCrearRutina.setText("Nombre de la rutina");
 
                 AlertDialog.Builder dialogorutina = new AlertDialog.Builder(this);
                 final EditText etCrearRutina = new EditText(this);

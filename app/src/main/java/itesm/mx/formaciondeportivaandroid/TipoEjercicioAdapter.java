@@ -36,7 +36,6 @@ public class TipoEjercicioAdapter extends ArrayAdapter<TipoEjercicio> {
     public View getView(int position, View convertView, ViewGroup parent) {
         TipoEjercicio rutin = getItem(position);
 
-        //convertview --> visita a reusar, si es nulo se crea
         if(convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.row_tipo_ejercicio,parent,false);
         }

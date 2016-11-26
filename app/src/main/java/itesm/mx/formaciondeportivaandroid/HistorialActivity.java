@@ -93,11 +93,6 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 startActivity(intent3);
                 break;
 
-            case R.id.button_history:
-                //Intent intent4 = new Intent(this,HistorialActivity.class);
-                //startActivity(intent4);
-                break;
-
             case R.id.button_perfil:
                 Intent intent5 = new Intent(this,PerfilActivity.class);
                 startActivity(intent5);
@@ -120,13 +115,13 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 dbo.open();
                 arrEjer=dbo.getHistorial(fechaInicio, fechaFin);
                 dbo.close();
-                //String[] recipients = {etrecipient.getText().toString()};
+
                 Intent email = new Intent(Intent.ACTION_SEND,
                         Uri.parse("mailto:"));
                 email.setType("text/plain");
-                //emailIntent.setType("text/plain");
+
                 String[] recipients = {tvC.getText().toString()};
-                //tvC.setText("");
+
                 for(int i=0; i<arrEjer.size();i++){
                     sCorreo+="<b>Ejercicio: </b>"+arrEjer.get(i).getsNombreEjer()+"<br>"+
                             "<b>Tipo de Ejercicio: </b>"+arrEjer.get(i).getsTipoEjer()+"<br>"+
@@ -134,8 +129,6 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                             "<b>Numero de Repeticiones: </b>"+arrEjer.get(i).getiRepeticiones()+"<br><br>";
                     Log.i("EJERCICIO HISTORIAL", sCorreo);
                 }
-                //tvC.setText(sCorreo);
-                //String[] body = {tvC.getText().toString()};
 
                 email.putExtra(Intent.EXTRA_EMAIL,recipients);
                 email.putExtra(Intent.EXTRA_SUBJECT,"Rutinas dia "+fechaInicio+" al "+fechaFin+" "+arrEjer.size());
@@ -146,8 +139,7 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                     Toast.makeText(HistorialActivity.this,"No esta instalado ese cliente de correo.",
                             Toast.LENGTH_LONG).show();
                 }
-                /*Intent email2 = new Intent(this, EmailActivity.class);
-                startActivity(email);*/
+
                 break;
         }
     }

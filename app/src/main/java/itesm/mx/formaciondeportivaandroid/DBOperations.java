@@ -29,12 +29,8 @@ import java.util.ArrayList;
 */
 public class DBOperations {
 
-    ListaTipoEjercicios listaTipoEjercicios;
-
     private SQLiteDatabase db;
     private DBHelper dbHelper;
-    private ArrayList<Ejercicio> ejercicioArrayList;
-   // private ArrayList<TipoEjercicio> tipoEjercicioArrayList = listaTipoEjercicios.getLista();
 
     public DBOperations(Context context){
         dbHelper = new DBHelper(context);
