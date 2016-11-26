@@ -22,6 +22,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -42,7 +44,7 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
     Button historia;
     Button perfil;
     Button enviar;
-    String sCorreo;
+    String sCorreo= "";
     TextView tvC;
     DatePicker dp_inicio;
     DatePicker dp_fin;
@@ -126,16 +128,18 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 String[] recipients = {tvC.getText().toString()};
                 //tvC.setText("");
                 for(int i=0; i<arrEjer.size();i++){
-                    sCorreo+= arrEjer.get(i).getsNombreEjer();
+                    sCorreo+="<b>Ejercicio: </b>"+arrEjer.get(i).getsNombreEjer()+"<br>"+
+                            "<b>Tipo de Ejercicio: </b>"+arrEjer.get(i).getsTipoEjer()+"<br>"+
+                            "<b>Numero de Series: </b>"+arrEjer.get(i).getiSeries()+"<br>"+
+                            "<b>Numero de Repeticiones: </b>"+arrEjer.get(i).getiRepeticiones()+"<br><br>";
                     Log.i("EJERCICIO HISTORIAL", sCorreo);
                 }
-                sCorreo = "aver1\naver2\naver3\naver4";
                 //tvC.setText(sCorreo);
                 //String[] body = {tvC.getText().toString()};
 
                 email.putExtra(Intent.EXTRA_EMAIL,recipients);
-                email.putExtra(Intent.EXTRA_SUBJECT,"Rutina dia "+fechaInicio+" al "+fechaFin+" "+arrEjer.size());
-                email.putExtra(Intent.EXTRA_TEXT,sCorreo);
+                email.putExtra(Intent.EXTRA_SUBJECT,"Rutinas dia "+fechaInicio+" al "+fechaFin+" "+arrEjer.size());
+                email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(sCorreo));
                 try{
                     startActivity(Intent.createChooser(email,"Selecciona un cliente de correo.."));
                 }catch(android.content.ActivityNotFoundException ex){
