@@ -18,10 +18,13 @@ package itesm.mx.formaciondeportivaandroid;
 * along with this program.  If not, see <http://www.gnu.org/licenses.
 */
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,15 +34,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class PerfilActivity extends AppCompatActivity implements View.OnClickListener {
+
+    DBOperations dbOperations;
+
+    long id = -1;
 
     Spinner spGenero;
     Spinner spDia;
@@ -52,6 +62,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
     Button btnHistoria;
     Button btnPerfil;
     Button btnGuardar;
+    Button btnTomarFoto;
 
     ImageView ivFoto;
 
@@ -61,10 +72,40 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
     EditText etPesoMeta;
     EditText etPesoMaximoPierna;
     EditText etPesoMaximoBrazo;
+    EditText etGrupoMuscular;
+    EditText etPeso;
+    EditText etRepeticion;
+    EditText etPorcentaje;
 
     Keys keys = new Keys();
 
+    Bitmap bitmap;
+
     byte[] byteArray;
+
+    public void setData(){
+        Perfil perfil;
+
+        perfil = dbOperations.getPerfil(id);
+
+        spGenero.setSelection(Integer.parseInt(perfil.getGenero()));
+        spDia.setSelection(Integer.parseInt(perfil.getDiaNaciemiento()));
+        spAño.setSelection(Integer.parseInt(perfil.getAnoNaciemiento()));
+        spMes.setSelection(Integer.parseInt(perfil.getMesNaciemiento()));
+        etGrupoMuscular.setText(perfil.getGrupoMuscular());
+        etPeso.setText(perfil.getPeso());
+        etRepeticion.setText(perfil.getRepeticion());
+        etPorcentaje.setText(perfil.getPorcentaje());
+        etNombre.setText(perfil.getNombre());
+        etMatricula.setText(perfil.getMatricula());
+        etPesoActual.setText(perfil.getPesoActual());
+        etPesoMeta.setText(perfil.getPesoMeta());
+        etPesoMaximoPierna.setText(perfil.getPesoMaximoPierna());
+        etPesoMaximoBrazo.setText(perfil.getPesoMaximoBrazo());
+
+
+        ivFoto = (ImageView)findViewById(R.id.image_perfil);
+    }
 
 
     @Override
@@ -101,30 +142,29 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
                 //startActivity(intent);
                 break;
 
+            case R.id.button_tomarFoto:
+                intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                /**Valida que el dispositivo tenga camara */
+                if(intent.resolveActivity(getPackageManager())!=null){
+                    startActivityForResult(intent,keys.REQUEST_CODE);
+                }
+                break;
+
             case R.id.button_guardar:
+
+                Perfil perfil = new Perfil(etNombre.getText().toString(),etMatricula.getText().toString(),spGenero.getSelectedItem().toString(),spDia.getSelectedItem().toString(),
+                        spMes.getSelectedItem().toString(),spAño.getSelectedItem().toString(),etPesoActual.getText().toString(),etPesoMeta.getText().toString(),etPesoMaximoPierna.getText().toString(),
+                        etPesoMaximoBrazo.getText().toString(),etGrupoMuscular.getText().toString(),etRepeticion.getText().toString(),etPorcentaje.getText().toString(),etPeso.getText().toString(),byteArray);
+
+                id = dbOperations.addPerfil(perfil);
+
                 SharedPreferences settings = getPreferences(MODE_PRIVATE);
                 SharedPreferences.Editor editor = settings.edit();
-                editor.putString(keys.KEY_NOMBRE, etNombre.getText().toString());
-                editor.putString(keys.KEY_MATRICULA, etMatricula.getText().toString());
-                editor.putString(keys.KEY_GENERO, spGenero.getSelectedItem().toString());
-                editor.putString(keys.KEY_DIA, spDia.getSelectedItem().toString());
-                editor.putString(keys.KEY_MES, spMes.getSelectedItem().toString());
-                editor.putString(keys.KEY_AÑO, spAño.getSelectedItem().toString());
-                editor.putString(keys.KEY_PESO_ACTUAL, etPesoActual.getText().toString());
-                editor.putString(keys.KEY_PESO_META, etPesoMeta.getText().toString());
-                editor.putString(keys.KEY_PESO_MAXIMO_PIERNA, etPesoMaximoPierna.getText().toString());
-                editor.putString(keys.KEY_PESO_MAXIMO_BRAZO, etPesoMaximoBrazo.getText().toString());
+                editor.putString(keys.KEY_ID, Long.toString(id));
 
-                editor.putString(keys.KEY_GENERO_POS, Integer.toString(spGenero.getSelectedItemPosition()));
-                editor.putString(keys.KEY_AÑO_POS, Integer.toString(spAño.getSelectedItemPosition()));
-                editor.putString(keys.KEY_MES_POS, Integer.toString(spMes.getSelectedItemPosition()));
-                editor.putString(keys.KEY_DIA_POS, Integer.toString(spDia.getSelectedItemPosition()));
+                Toast.makeText(this,"Perfil actualizado con exito",Toast.LENGTH_LONG).show();
 
-                /*Gson gson = new Gson();
-                String json = gson.toJson(byteArray);
-                editor.putString(keys.KEY_IMAGEN,json);*/
-
-                editor.commit();
                 break;
         }
     }
@@ -134,11 +174,33 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
+        dbOperations = new DBOperations(this);
+        dbOperations.open();
+
         spGenero = (Spinner)findViewById(R.id.spinner_genero);
         spDia = (Spinner)findViewById(R.id.spinner_dia);
         spAño = (Spinner)findViewById(R.id.spinner_año);
         spMes = (Spinner)findViewById(R.id.spinner_mes);
+
         ivFoto = (ImageView)findViewById(R.id.image_perfil);
+
+        etGrupoMuscular = (EditText)findViewById(R.id.edit_grupoMuscular);
+        etPeso = (EditText)findViewById(R.id.edit_peso);
+        etRepeticion = (EditText)findViewById(R.id.edit_repeticion);
+        etPorcentaje = (EditText)findViewById(R.id.edit_porcentaje);
+        etNombre = (EditText) findViewById(R.id.edit_nombre);
+        etMatricula = (EditText) findViewById(R.id.edit_matricula);
+        etPesoActual = (EditText) findViewById(R.id.edit_pesoActual);
+        etPesoMeta = (EditText) findViewById(R.id.edit_pesoMeta);
+        etPesoMaximoPierna = (EditText) findViewById(R.id.edit_pesoMaximoPierna);
+        etPesoMaximoBrazo = (EditText) findViewById(R.id.edit_pesoMaximoBrazo);
+
+        SharedPreferences settings = getPreferences(MODE_PRIVATE);
+        id = settings.getLong(keys.KEY_ID, -1);
+
+        if(id != -1){
+            setData();
+        }
 
         ArrayAdapter<CharSequence> adapterGenero = ArrayAdapter.createFromResource(this,R.array.genero,R.layout.support_simple_spinner_dropdown_item);
         spGenero.setAdapter(adapterGenero);
@@ -158,13 +220,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         btnHistoria = (Button) findViewById(R.id.button_history);
         btnPerfil = (Button) findViewById(R.id.button_perfil);
         btnGuardar = (Button) findViewById(R.id.button_guardar);
-
-        etNombre = (EditText) findViewById(R.id.edit_nombre);
-        etMatricula = (EditText) findViewById(R.id.edit_matricula);
-        etPesoActual = (EditText) findViewById(R.id.edit_pesoActual);
-        etPesoMeta = (EditText) findViewById(R.id.edit_pesoMeta);
-        etPesoMaximoPierna = (EditText) findViewById(R.id.edit_pesoMaximoPierna);
-        etPesoMaximoBrazo = (EditText) findViewById(R.id.edit_pesoMaximoBrazo);
+        btnTomarFoto = (Button) findViewById(R.id.button_tomarFoto);
 
         btnHome.setOnClickListener(this);
         btnRutinas.setOnClickListener(this);
@@ -172,36 +228,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         btnHistoria.setOnClickListener(this);
         btnPerfil.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);
-
-        SharedPreferences settings = getPreferences(MODE_PRIVATE);
-
-        String json = settings.getString(keys.KEY_IMAGEN, "");
-        String nombre = settings.getString(keys.KEY_NOMBRE, null);
-        String matricula = settings.getString(keys.KEY_MATRICULA, null);
-        String pesoActual = settings.getString(keys.KEY_PESO_ACTUAL, null);
-        String pesoMeta = settings.getString(keys.KEY_PESO_META, null);
-        String pesoMaximoPierna = settings.getString(keys.KEY_PESO_MAXIMO_PIERNA, null);
-        String pesoMaximoBrazo = settings.getString(keys.KEY_PESO_MAXIMO_BRAZO, null);
-
-        /*Gson gson = new Gson();
-        if(!json.contentEquals("")){
-            byteArray = gson.fromJson(json, byte[]);
-            Bitmap bmimage = BitmapFactory.decodeByteArray(byteArray,0,image.length);
-            ivFoto.setImageBitmap(bmimage);
-        }*/
-
-        /*
-        spGenero.setSelection(Integer.parseInt(settings.getString(keys.KEY_GENERO_POS, "0")));
-        spDia.setSelection(Integer.parseInt(settings.getString(keys.KEY_DIA_POS, "0")));
-        spMes.setSelection(Integer.parseInt(settings.getString(keys.KEY_MES_POS, "0")));
-        spAño.setSelection(Integer.parseInt(settings.getString(keys.KEY_AÑO_POS, "0")));*/
-
-        etNombre.setText(nombre);
-        etMatricula.setText(matricula);
-        etPesoActual.setText(pesoActual);
-        etPesoMeta.setText(pesoMeta);
-        etPesoMaximoPierna.setText(pesoMaximoPierna);
-        etPesoMaximoBrazo.setText(pesoMaximoBrazo);
+        btnTomarFoto.setOnClickListener(this);
     }
 
     @Override
@@ -209,7 +236,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         super.onActivityResult(requestCode,resultCode,data);
 
         if(requestCode==keys.REQUEST_CODE && resultCode == RESULT_OK){
-            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+            bitmap = (Bitmap) data.getExtras().get("data");
 
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);

@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -110,7 +111,7 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 GregorianCalendar cal2=new GregorianCalendar(dp_fin.getYear(),
                         dp_fin.getMonth(),dp_fin.getDayOfMonth());
                 Date end=cal2.getTime();
-                String fechaFin = sdf.format(begin);
+                String fechaFin = sdf.format(end);
 
 
                 dbo=new DBOperations(this);
@@ -125,7 +126,8 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 String[] recipients = {tvC.getText().toString()};
                 //tvC.setText("");
                 for(int i=0; i<arrEjer.size();i++){
-                    sCorreo+= arrEjer.get(i) + "xdxd \n";
+                    sCorreo+= arrEjer.get(i).getsNombreEjer();
+                    Log.i("EJERCICIO HISTORIAL", sCorreo);
                 }
                 sCorreo = "aver1\naver2\naver3\naver4";
                 //tvC.setText(sCorreo);

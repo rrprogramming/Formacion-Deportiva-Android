@@ -10,6 +10,10 @@
     <string name="pesoMeta">Peso Meta</string>
     <string name="pesoMaximoPierna">Peso Máximo Pierna</string>
     <string name="pesoMaximoBrazo">Peso Máximo Brazo</string>
+    <string name="grupoMuscular">Grupo Muscular</string>
+    <string name="repeticion">Repeticiones</string>
+    <string name="porcentaje">Porcentaje</string>
+    <string name="peso">Peso de carga</string>
     <string name="tomarFoto">Tomar Foto</string>
     <string name="title_activity_descripcion_rutina">DescripcionRutina</string>
 
