@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".SeleccionActivity"
-    android:background="@color/white">
+    android:background="@drawable/degradado">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:background="@color/white">
+        android:background="@color/colorPrimary">
 
         <Button
             android:id="@+id/button_home"

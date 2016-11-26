@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@drawable/degradado">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -258,7 +258,7 @@
         android:layout_height="60dp"
         android:layout_gravity="bottom"
         android:orientation="horizontal"
-        android:background="@color/white">
+        android:background="@color/colorPrimary">
 
         <Button
             android:id="@+id/button_home"

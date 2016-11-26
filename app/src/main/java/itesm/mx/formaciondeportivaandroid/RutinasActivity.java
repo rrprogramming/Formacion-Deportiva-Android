@@ -140,9 +140,15 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                             Toast.makeText(getApplication(), "Favor de completar todos los campos de texto", Toast.LENGTH_SHORT).show();
                         }
                         else{
-                            Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
-                            intent6.putExtra(KEY_NOMBRE, etCrearRutina.getText().toString());
-                            startActivity(intent6);
+                            if(etContrasena.getText().toString().equals("gymsport")){
+                                Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
+                                intent6.putExtra(KEY_NOMBRE, etCrearRutina.getText().toString());
+                                startActivity(intent6);
+                            }
+                            else{
+                                Toast.makeText(getApplication(), "Contraseña equivocada", Toast.LENGTH_SHORT).show();
+                            }
+
                         }
                     }
                 });

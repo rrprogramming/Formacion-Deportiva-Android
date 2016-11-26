@@ -370,13 +370,18 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                     Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones"+listEjer.size(), Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    listEjer = rutina.getEjercicio();
-                    Ejercicio ejer;
-                    ejer = new Ejercicio(nombreEjer.getTipo(),sTipo,nombreEjer.getTMusculo(),Integer.parseInt(etSeries.getText().toString()),
-                            Integer.parseInt(etRepeticiones.getText().toString()),nombreEjer.getIdFotoRT());
-                    listEjer.add(ejer);
-                    rutina.setEjercicio(listEjer);
-                    Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
+                    if(etSeries.getText().toString().equals("0") || etRepeticiones.getText().toString().equals("0")){
+                        Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        listEjer = rutina.getEjercicio();
+                        Ejercicio ejer;
+                        ejer = new Ejercicio(nombreEjer.getTipo(), sTipo, nombreEjer.getTMusculo(), Integer.parseInt(etSeries.getText().toString()),
+                                Integer.parseInt(etRepeticiones.getText().toString()), nombreEjer.getIdFotoRT());
+                        listEjer.add(ejer);
+                        rutina.setEjercicio(listEjer);
+                        Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
+                    }
                 }
             }
         });

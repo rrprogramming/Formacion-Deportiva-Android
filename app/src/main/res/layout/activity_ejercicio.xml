@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="itesm.mx.formaciondeportivaandroid.EjercicioActivity"
-    android:background="@color/white">
+    android:background="@drawable/degradado">
 
     <RelativeLayout
         android:id="@+id/textView"
@@ -92,8 +92,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
-        android:background="@color/white">
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_home"
