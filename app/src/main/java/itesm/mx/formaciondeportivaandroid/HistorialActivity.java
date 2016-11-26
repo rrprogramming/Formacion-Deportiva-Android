@@ -105,7 +105,7 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 GregorianCalendar cal1=new GregorianCalendar(dp_inicio.getYear(),
                         dp_inicio.getMonth(),dp_inicio.getDayOfMonth());
                 Date begin=cal1.getTime();
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String fechaInicio = sdf.format(begin);
                 GregorianCalendar cal2=new GregorianCalendar(dp_fin.getYear(),
                         dp_fin.getMonth(),dp_fin.getDayOfMonth());
@@ -120,18 +120,20 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 //String[] recipients = {etrecipient.getText().toString()};
                 Intent email = new Intent(Intent.ACTION_SEND,
                         Uri.parse("mailto:"));
-                email.setType("message/rfc822");
+                email.setType("text/plain");
+                //emailIntent.setType("text/plain");
                 String[] recipients = {tvC.getText().toString()};
                 //tvC.setText("");
                 for(int i=0; i<arrEjer.size();i++){
                     sCorreo+= arrEjer.get(i) + "xdxd \n";
                 }
+                sCorreo = "aver1\naver2\naver3\naver4";
                 //tvC.setText(sCorreo);
-                String[] body = {tvC.getText().toString()};
+                //String[] body = {tvC.getText().toString()};
 
                 email.putExtra(Intent.EXTRA_EMAIL,recipients);
                 email.putExtra(Intent.EXTRA_SUBJECT,"Rutina dia "+fechaInicio+" al "+fechaFin+" "+arrEjer.size());
-                email.putExtra(Intent.EXTRA_TEXT,recipients);
+                email.putExtra(Intent.EXTRA_TEXT,sCorreo);
                 try{
                     startActivity(Intent.createChooser(email,"Selecciona un cliente de correo.."));
                 }catch(android.content.ActivityNotFoundException ex){
