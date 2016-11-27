@@ -69,10 +69,8 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         sTipo=getIntent().getStringExtra("tipo");
         Gson gson = new Gson();
         rutina = gson.fromJson(getIntent().getStringExtra("json"),Rutina.class);
-        //rutina = new Rutina(getIntent().getStringExtra("nombre"), listEjer, R.mipmap.ic_launcher);
 
         arrayListEjercicio = getDataFotListView();
-        //getIntent().getArra
 
         adapterR = new TipoEjercicioAdapter(this, arrayListEjercicio);
         setListAdapter(adapterR);
@@ -99,7 +97,7 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
 
     public ArrayList<TipoEjercicio> getDataFotListView() {
         TipoEjercicio arti;
-        listSelec = new ArrayList<TipoEjercicio>();
+        listSelec = new ArrayList<>();
         switch(sTipo){
             case "Maquina Selectiva":
                 arti = new TipoEjercicio("Pantorrila Parado","Pierna", R.drawable.img_0536);
@@ -265,17 +263,6 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                 break;
         }
 
-        /*arti = new TipoEjercicio("Dominadas\nEspalda", R.mipmap.ic_launcher);
-        listSelec.add(arti);
-        arti = new TipoEjercicio("Aperturas\nPecho", R.mipmap.ic_launcher);
-        listSelec.add(arti);
-        arti = new TipoEjercicio("Jalon Frontal\nEspalda", R.mipmap.ic_launcher);
-        listSelec.add(arti);
-        arti = new TipoEjercicio("Remo Sentado\nEspalda", R.mipmap.ic_launcher);
-        listSelec.add(arti);
-        arti = new TipoEjercicio("Empujones\nTriceps", R.mipmap.ic_launcher);
-        listSelec.add(arti);*/
-
 
         return listSelec;
     }
@@ -370,18 +357,13 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                     Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones"+listEjer.size(), Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    if(etSeries.getText().toString().equals("0") || etRepeticiones.getText().toString().equals("0")){
-                        Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
-                        listEjer = rutina.getEjercicio();
-                        Ejercicio ejer;
-                        ejer = new Ejercicio(nombreEjer.getTipo(), sTipo, nombreEjer.getTMusculo(), Integer.parseInt(etSeries.getText().toString()),
-                                Integer.parseInt(etRepeticiones.getText().toString()), nombreEjer.getIdFotoRT());
-                        listEjer.add(ejer);
-                        rutina.setEjercicio(listEjer);
-                        Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
-                    }
+                    listEjer = rutina.getEjercicio();
+                    Ejercicio ejer;
+                    ejer = new Ejercicio(nombreEjer.getTipo(),sTipo,nombreEjer.getTMusculo(),Integer.parseInt(etSeries.getText().toString()),
+                            Integer.parseInt(etRepeticiones.getText().toString()),nombreEjer.getIdFotoRT());
+                    listEjer.add(ejer);
+                    rutina.setEjercicio(listEjer);
+                    Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
                 }
             }
         });

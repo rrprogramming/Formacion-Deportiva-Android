@@ -53,6 +53,29 @@ public class DBHelper extends SQLiteOpenHelper {
                 ")";
         Log.i("ProductHelper onCreate", CREATE_HISTORIAL_TABLE);
         db.execSQL(CREATE_HISTORIAL_TABLE);
+
+        String CREATE_PERFIL_TABLE = "CREATE TABLE "+
+                DatabaseSchema.PerfilTable.TABLE_NAME+
+                "("+
+                DatabaseSchema.PerfilTable._ID+" INTEGER PRIMARY KEY, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_NOMBRE+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_MATRICULA+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_GENERO+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_DIA_NACIMEINTO+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_MES_NACIMIENTO+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_ANO_NACIMIENTO+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_ACTUAL+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_META+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_PIERNA+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_BRAZO+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_GRUPO_MUSCULAR+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_REPETICION+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_PESO+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_PORCENTAJE+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_IMAGEN+" BLOB "+
+                ")";
+        Log.i("ProductHelper onCreate", CREATE_PERFIL_TABLE);
+        db.execSQL(CREATE_PERFIL_TABLE);
     }
 
     @Override
@@ -68,6 +91,9 @@ public class DBHelper extends SQLiteOpenHelper {
         String DELETE_HISTORIAL_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.HistorialTable.TABLE_NAME;
         db.execSQL(DELETE_HISTORIAL_TABLE);
         onCreate(db);
+
+        String DELETE_PERFIL_TABLE = "DROP TABLE IF EXISTS "+DatabaseSchema.PerfilTable.TABLE_NAME;
+        db.execSQL(DELETE_PERFIL_TABLE);
     }
 
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion){

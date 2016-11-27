@@ -37,7 +37,6 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
     private DBOperations dao;
     private long id;
     Button btnRegresaraRutina;
-    ListaEjercicios arti;
 
     Button btnHome;
     Button btnRutinas;
@@ -87,10 +86,6 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()){
-            case R.id.button_rutinas:
-                //intent = new Intent(this, RutinasActivity.class);
-                //startActivity(intent);
-                break;
             case R.id.button_home:
                 intent = new Intent(this,MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -120,10 +115,6 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-    }
-
-    public ArrayList<Ejercicio> getDataFotListView() {
-        return arti.getLista();
     }
 
     @Override

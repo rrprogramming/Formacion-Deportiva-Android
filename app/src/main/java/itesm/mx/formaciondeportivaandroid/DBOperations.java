@@ -29,12 +29,8 @@ import java.util.ArrayList;
 */
 public class DBOperations {
 
-    ListaTipoEjercicios listaTipoEjercicios;
-
     private SQLiteDatabase db;
     private DBHelper dbHelper;
-    private ArrayList<Ejercicio> ejercicioArrayList;
-   // private ArrayList<TipoEjercicio> tipoEjercicioArrayList = listaTipoEjercicios.getLista();
 
     public DBOperations(Context context){
         dbHelper = new DBHelper(context);
@@ -83,6 +79,92 @@ public class DBOperations {
         }
 
         return newRowId;
+    }
+
+    public long addPerfil(Perfil perfil){
+        long newRowId = perfil.getId();
+
+        if(perfil.getId()<0) {
+            try {
+
+                ContentValues values = new ContentValues();
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_NOMBRE, perfil.getNombre());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_MATRICULA,perfil.getMatricula());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_GENERO,perfil.getGenero());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_DIA_NACIMEINTO, perfil.getDiaNaciemiento());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_MES_NACIMIENTO, perfil.getMesNaciemiento());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_ANO_NACIMIENTO, perfil.getAnoNaciemiento());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_ACTUAL, perfil.getPesoActual());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_META, perfil.getPesoMeta());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_PIERNA, perfil.getPesoMaximoPierna());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_BRAZO, perfil.getPesoMaximoBrazo());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_GRUPO_MUSCULAR, perfil.getGrupoMuscular());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_REPETICION,perfil.getRepeticion());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PESO, perfil.getPeso());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PORCENTAJE, perfil.getPorcentaje());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_IMAGEN, perfil.getFoto());
+
+                newRowId = db.insert(DatabaseSchema.PerfilTable.TABLE_NAME, null, values);
+
+            } catch (SQLException e) {
+                Log.e("SQLADD", e.toString());
+            }
+        }else {
+            String query = "UPDATE "+DatabaseSchema.PerfilTable.TABLE_NAME+
+                    " SET "+ DatabaseSchema.PerfilTable.COLUMN_NAME_NOMBRE +"="+"\'"+perfil.getNombre()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_MATRICULA +"="+"\'"+perfil.getMatricula()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_GENERO +"="+"\'"+perfil.getGenero()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_DIA_NACIMEINTO +"="+"\'"+perfil.getDiaNaciemiento()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_MES_NACIMIENTO +"="+"\'"+perfil.getMesNaciemiento()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_ANO_NACIMIENTO +"="+"\'"+perfil.getAnoNaciemiento()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_ACTUAL +"="+"\'"+perfil.getPesoActual()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_META +"="+"\'"+perfil.getPesoMeta()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_PIERNA +"="+"\'"+perfil.getPesoMaximoPierna()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_BRAZO +"="+"\'"+perfil.getPesoMaximoBrazo()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_GRUPO_MUSCULAR +"="+"\'"+perfil.getGrupoMuscular()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_REPETICION +"="+"\'"+perfil.getRepeticion()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_PESO +"="+"\'"+perfil.getPeso()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_PORCENTAJE +"="+"\'"+perfil.getPorcentaje()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_IMAGEN +"="+"\'"+(byte[]) perfil.getFoto()+"\'"+" "+
+                    "WHERE "+DatabaseSchema.PerfilTable._ID+"="+"\'"+perfil.getId()+"\'";
+
+            db.execSQL(query);
+        }
+        return newRowId;
+    }
+
+    public Perfil getPerfil(long id){
+        Perfil perfil = new Perfil();
+
+        String query = "Select * FROM "+
+                DatabaseSchema.PerfilTable.TABLE_NAME+
+                " WHERE "+DatabaseSchema.PerfilTable._ID+
+                " = \""+id+"\"";
+        try {
+            Cursor cursor = db.rawQuery(query, null);
+            if(cursor.moveToFirst()) {
+                perfil = new Perfil(Long.parseLong(cursor.getString(0)),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getString(6),
+                        cursor.getString(7),
+                        cursor.getString(8),
+                        cursor.getString(9),
+                        cursor.getString(10),
+                        cursor.getString(11),
+                        cursor.getString(12),
+                        cursor.getString(13),
+                        cursor.getString(14),
+                        cursor.getBlob(15));
+            }
+        }catch (SQLException e){
+            Log.e("GET PERFIL", e.toString());
+        }
+
+        return perfil;
     }
 
     //Esta clase recive el id de Rutina para regresar un objeto de tipo Rutina
@@ -212,7 +294,7 @@ public class DBOperations {
 
         String selectQuery = "SELECT * FROM "+DatabaseSchema.HistorialTable.TABLE_NAME+
                             " WHERE "+DatabaseSchema.HistorialTable.COLUMN_NAME_FIN+
-                            " >= "+'\''+fechaInicio+'\''+" AND"+" <= "+'\''+fechaFinal+'\'';
+                            " BETWEEN "+'\''+fechaInicio+'\''+" AND "+'\''+fechaFinal+'\'';
 
         Log.i("QUERY: ", selectQuery);
 
@@ -224,7 +306,7 @@ public class DBOperations {
                     int id = Integer.parseInt(cursor.getString(1));
 
                     String ejercicioQuery = "SELECT * FROM "+DatabaseSchema.EjercicioTable.TABLE_NAME+
-                            " WHERE "+DatabaseSchema.EjercicioTable.COLUNM_NAME_ID+
+                            " WHERE "+DatabaseSchema.EjercicioTable._ID+
                             " = "+'\''+id+'\'';
 
                     try {
@@ -233,13 +315,14 @@ public class DBOperations {
                             do {
 
                                 ejercicio = new Ejercicio(Integer.parseInt(cursor2.getString(0)),
-                                        cursor2.getString(1),
+                                        Integer.parseInt(cursor2.getString(1)),
                                         cursor2.getString(2),
                                         cursor2.getString(3),
-                                        Integer.parseInt(cursor2.getString(4)),
+                                        cursor2.getString(4),
                                         Integer.parseInt(cursor2.getString(5)),
                                         Integer.parseInt(cursor2.getString(6)),
-                                        cursor2.getString(7));
+                                        Integer.parseInt(cursor2.getString(7)),
+                                        cursor2.getString(8));
 
                                 listEjercicio.add(ejercicio);
                             }while (cursor2.moveToNext());
@@ -300,7 +383,7 @@ public class DBOperations {
             values.put(DatabaseSchema.HistorialTable.COLUMN_NAME_EJERCICIO_ID, eId);
             values.put(DatabaseSchema.HistorialTable.COLUMN_NAME_FIN, data);
 
-            newRowId = db.insert(DatabaseSchema.RutinaTable.TABLE_NAME, null, values);
+            newRowId = db.insert(DatabaseSchema.HistorialTable.TABLE_NAME, null, values);
 
         }catch (SQLException e){
             Log.e("SQL ADD",e.toString());

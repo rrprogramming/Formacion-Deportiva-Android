@@ -51,7 +51,6 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
         btn_comenzar = (Button) findViewById(R.id.btn_comenzar);
 
         spinnerRutinas = (Spinner) findViewById(R.id.spinner_rutinas);
-        //TO DO: la base de datos regrese un String[] con los nombres de las rutinas
         dbo=new DBOperations(this);
         dbo.open();
         arrRutina = dbo.getAllRutinas();

@@ -22,6 +22,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -41,7 +44,7 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
     Button historia;
     Button perfil;
     Button enviar;
-    String sCorreo;
+    String sCorreo= "";
     TextView tvC;
     DatePicker dp_inicio;
     DatePicker dp_fin;
@@ -90,11 +93,6 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 startActivity(intent3);
                 break;
 
-            case R.id.button_history:
-                //Intent intent4 = new Intent(this,HistorialActivity.class);
-                //startActivity(intent4);
-                break;
-
             case R.id.button_perfil:
                 Intent intent5 = new Intent(this,PerfilActivity.class);
                 startActivity(intent5);
@@ -110,38 +108,38 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 GregorianCalendar cal2=new GregorianCalendar(dp_fin.getYear(),
                         dp_fin.getMonth(),dp_fin.getDayOfMonth());
                 Date end=cal2.getTime();
-                String fechaFin = sdf.format(begin);
+                String fechaFin = sdf.format(end);
 
 
                 dbo=new DBOperations(this);
                 dbo.open();
                 arrEjer=dbo.getHistorial(fechaInicio, fechaFin);
                 dbo.close();
-                //String[] recipients = {etrecipient.getText().toString()};
+
                 Intent email = new Intent(Intent.ACTION_SEND,
                         Uri.parse("mailto:"));
                 email.setType("text/plain");
-                //emailIntent.setType("text/plain");
+
                 String[] recipients = {tvC.getText().toString()};
-                //tvC.setText("");
+
                 for(int i=0; i<arrEjer.size();i++){
-                    sCorreo+= arrEjer.get(i) + "xdxd \n";
+                    sCorreo+="<b>Ejercicio: </b>"+arrEjer.get(i).getsNombreEjer()+"<br>"+
+                            "<b>Tipo de Ejercicio: </b>"+arrEjer.get(i).getsTipoEjer()+"<br>"+
+                            "<b>Numero de Series: </b>"+arrEjer.get(i).getiSeries()+"<br>"+
+                            "<b>Numero de Repeticiones: </b>"+arrEjer.get(i).getiRepeticiones()+"<br><br>";
+                    Log.i("EJERCICIO HISTORIAL", sCorreo);
                 }
-                sCorreo = "aver1\naver2\naver3\naver4";
-                //tvC.setText(sCorreo);
-                //String[] body = {tvC.getText().toString()};
 
                 email.putExtra(Intent.EXTRA_EMAIL,recipients);
-                email.putExtra(Intent.EXTRA_SUBJECT,"Rutina dia "+fechaInicio+" al "+fechaFin+" "+arrEjer.size());
-                email.putExtra(Intent.EXTRA_TEXT,sCorreo);
+                email.putExtra(Intent.EXTRA_SUBJECT,"Rutinas dia "+fechaInicio+" al "+fechaFin+" "+arrEjer.size());
+                email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(sCorreo));
                 try{
                     startActivity(Intent.createChooser(email,"Selecciona un cliente de correo.."));
                 }catch(android.content.ActivityNotFoundException ex){
                     Toast.makeText(HistorialActivity.this,"No esta instalado ese cliente de correo.",
                             Toast.LENGTH_LONG).show();
                 }
-                /*Intent email2 = new Intent(this, EmailActivity.class);
-                startActivity(email);*/
+
                 break;
         }
     }

@@ -94,10 +94,6 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button_rutinas:
-                //Intent intent = new Intent(this, RutinasActivity.class);
-                //startActivity(intent);
-                break;
 
             case R.id.button_home:
                 Intent intent2 = new Intent(this, MainActivity.class);
@@ -120,7 +116,7 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
                 break;
 
             case R.id.button_guardar:
-                ArrayList<Ejercicio> ArrEjercicio = new ArrayList<>();
+                ArrayList<Ejercicio> ArrEjercicio;
                 ArrEjercicio=RJson.getEjercicio();
                 if(ArrEjercicio.size()==0){
                     Toast.makeText(this, "Favor de seleccionar ejercicios antes de guardar una rutina", Toast.LENGTH_SHORT).show();
@@ -132,9 +128,6 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
                     Intent intentR = new Intent(this, RutinasActivity.class);
                     startActivity(intentR);
                 }
-                /*Toast.makeText(this, "Se ha guardado la Rutina 1", Toast.LENGTH_SHORT).show();
-                Intent intent6 = new Intent(this, RutinasActivity.class);
-                startActivity(intent6);*/
                 break;
         }
     }
@@ -142,7 +135,7 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
     public ArrayList<TipoEjercicio> getDataFotListView() {
         TipoEjercicio arti;
 
-        listRuti = new ArrayList<TipoEjercicio>();
+        listRuti = new ArrayList<>();
         arti = new TipoEjercicio("Maquina Selectiva","", R.drawable.pullups100);
         listRuti.add(arti);
         arti = new TipoEjercicio("Cross Over","", R.drawable.curlswithdumbbells100);
@@ -171,12 +164,10 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //super.onActivityResult(requestCode, resultCode, data);
+
         if(requestCode == 1 && resultCode == RESULT_OK){
             Gson gson = new Gson();
             RJson = gson.fromJson(data.getStringExtra("json"),Rutina.class);
-            //Bundle extras = data.getStringExtra("json",);
-            //RJson = data
         }
     }
 }

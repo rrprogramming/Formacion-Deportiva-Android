@@ -22,33 +22,74 @@ public class Perfil {
     private long id;
     private String nombre;
     private String matricula;
-    private String fechaNacimiento;
     private String genero;
+    private String diaNaciemiento;
+    private String mesNaciemiento;
+    private String anoNaciemiento;
+    private String pesoActual;
+    private String pesoMeta;
+    private String pesoMaximoPierna;
+    private String pesoMaximoBrazo;
+    private String grupoMuscular;
+    private String repeticion;
+    private String porcentaje;
+    private String peso;
+
     private byte[] foto;
 
     public Perfil(){
         this.id = -1;
         this.nombre = null;
         this.matricula = null;
-        this.fechaNacimiento = null;
-        this.genero = null;
+        this.diaNaciemiento= null;
+        this.mesNaciemiento= null;
+        this.anoNaciemiento= null;
+        this.pesoActual= null;
+        this.pesoMeta= null;
+        this.pesoMaximoPierna= null;
+        this.pesoMaximoBrazo= null;
+        this.grupoMuscular= null;
+        this.repeticion= null;
+        this.porcentaje= null;
+        this.peso= null;
         this.foto = null;
     }
 
-    public Perfil(String nombre, String matricula, String fechaNacimiento, String genero, byte[] foto){
+    public Perfil(String nombre, String matricula, String genero, String diaNaciemiento, String mesNaciemiento, String anoNaciemiento, String pesoActual, String pesoMeta, String pesoMaximoPierna, String pesoMaximoBrazo, String grupoMuscular, String repeticion,String porcentaje, String peso, byte[] foto){
+        this.id = -1;
         this.nombre = nombre;
         this.matricula = matricula;
-        this.fechaNacimiento = fechaNacimiento;
         this.genero = genero;
+        this.diaNaciemiento= diaNaciemiento;
+        this.mesNaciemiento= mesNaciemiento;
+        this.anoNaciemiento= anoNaciemiento;
+        this.pesoActual= pesoActual;
+        this.pesoMeta= pesoMeta;
+        this.pesoMaximoPierna= pesoMaximoPierna;
+        this.pesoMaximoBrazo= pesoMaximoBrazo;
+        this.grupoMuscular= grupoMuscular;
+        this.repeticion= repeticion;
+        this.porcentaje= porcentaje;
+        this.peso= peso;
         this.foto = foto;
     }
-    
-    public Perfil(long id, String nombre, String matricula, String fechaNacimiento, String genero, byte[] foto){
+
+    public Perfil(long id, String nombre, String matricula, String genero, String diaNaciemiento, String mesNaciemiento, String anoNaciemiento, String pesoActual, String pesoMeta, String pesoMaximoPierna, String pesoMaximoBrazo, String grupoMuscular, String repeticion, String porcentaje, String peso, byte[] foto){
         this.id = id;
         this.nombre = nombre;
         this.matricula = matricula;
-        this.fechaNacimiento = fechaNacimiento;
         this.genero = genero;
+        this.diaNaciemiento= diaNaciemiento;
+        this.mesNaciemiento= mesNaciemiento;
+        this.anoNaciemiento= anoNaciemiento;
+        this.pesoActual= pesoActual;
+        this.pesoMeta= pesoMeta;
+        this.pesoMaximoPierna= pesoMaximoPierna;
+        this.pesoMaximoBrazo= pesoMaximoBrazo;
+        this.grupoMuscular= grupoMuscular;
+        this.repeticion= repeticion;
+        this.porcentaje= porcentaje;
+        this.peso= peso;
         this.foto = foto;
     }
 
@@ -56,48 +97,128 @@ public class Perfil {
         this.id = id;
     }
 
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-
-    public void setMatricula(String matricula){
-        this.matricula = matricula;
-    }
-
-    public void setFechaNacimiento(String fechaNacimiento){
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
-    public void setGenero(String genero){
-        this.genero = genero;
-    }
-
-    public void setFoto(byte[] foto){
-        this.foto = foto;
-    }
-
     public long getId(){
         return this.id;
     }
 
-    public String getNombre(){
-        return this.nombre;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getMatricula(){
-        return this.matricula;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getFechaNacimiento(){
-        return this.fechaNacimiento;
+    public String getMatricula() {
+        return matricula;
     }
 
-    public String getGenero(){
-        return this.genero;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
-    public byte[] getFoto(){
-        return this.foto;
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getDiaNaciemiento() {
+        return diaNaciemiento;
+    }
+
+    public void setDiaNaciemiento(String diaNaciemiento) {
+        this.diaNaciemiento = diaNaciemiento;
+    }
+
+    public String getMesNaciemiento() {
+        return mesNaciemiento;
+    }
+
+    public void setMesNaciemiento(String mesNaciemiento) {
+        this.mesNaciemiento = mesNaciemiento;
+    }
+
+    public String getAnoNaciemiento() {
+        return anoNaciemiento;
+    }
+
+    public void setAnoNaciemiento(String anoNaciemiento) {
+        this.anoNaciemiento = anoNaciemiento;
+    }
+
+    public String getPesoActual() {
+        return pesoActual;
+    }
+
+    public void setPesoActual(String pesoActual) {
+        this.pesoActual = pesoActual;
+    }
+
+    public String getPesoMeta() {
+        return pesoMeta;
+    }
+
+    public void setPesoMeta(String pesoMeta) {
+        this.pesoMeta = pesoMeta;
+    }
+
+    public String getPesoMaximoPierna() {
+        return pesoMaximoPierna;
+    }
+
+    public void setPesoMaximoPierna(String pesoMaximoPierna) {
+        this.pesoMaximoPierna = pesoMaximoPierna;
+    }
+
+    public String getPesoMaximoBrazo() {
+        return pesoMaximoBrazo;
+    }
+
+    public void setPesoMaximoBrazo(String pesoMaximoBrazo) {
+        this.pesoMaximoBrazo = pesoMaximoBrazo;
+    }
+
+    public String getGrupoMuscular() {
+        return grupoMuscular;
+    }
+
+    public void setGrupoMuscular(String grupoMuscular) {
+        this.grupoMuscular = grupoMuscular;
+    }
+
+    public String getRepeticion() {
+        return repeticion;
+    }
+
+    public void setRepeticion(String repeticion) {
+        this.repeticion = repeticion;
+    }
+
+    public String getPorcentaje() {
+        return porcentaje;
+    }
+
+    public void setPorcentaje(String porcentaje) {
+        this.porcentaje = porcentaje;
+    }
+
+    public String getPeso() {
+        return peso;
+    }
+
+    public void setPeso(String peso) {
+        this.peso = peso;
+    }
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
     }
 
 }

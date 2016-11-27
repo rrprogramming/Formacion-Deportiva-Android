@@ -100,8 +100,9 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     Date date = new Date();
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                     String sdate = sdf.format(date);
+                    Log.i("DATE ",sdate);
                     dbo.editEjercicio(arrEjercicio.get(pos).getId(), sdate);
                     if(pos<(arrEjercicio.size()-1)){
                         pos+=1;
@@ -131,11 +132,6 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
             case R.id.button_home:
                 Intent intent2 = new Intent(this,MainActivity.class);
                 startActivity(intent2);
-                break;
-
-            case R.id.button_sesion:
-                //Intent intent3 = new Intent(this,SesionActivity.class);
-                //startActivity(intent3);
                 break;
 
             case R.id.button_history:

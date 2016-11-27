@@ -48,4 +48,24 @@ public class DatabaseSchema {
         public static final String COLUMN_NAME_EJERCICIO_ID = "EjercicioId";
         public static final String COLUMN_NAME_FIN = "fechaFin";
     }
+
+    public static class PerfilTable implements BaseColumns {
+        public static final String TABLE_NAME = "PerfilTable";
+        public static final String COLUMN_NAME_ID = "id";
+        public static final String COLUMN_NAME_NOMBRE = "nombre";
+        public static final String COLUMN_NAME_MATRICULA = "matricula";
+        public static final String COLUMN_NAME_GENERO = "genero";
+        public static final String COLUMN_NAME_DIA_NACIMEINTO = "diaNacimiento";
+        public static final String COLUMN_NAME_MES_NACIMIENTO = "mesNacimiento";
+        public static final String COLUMN_NAME_ANO_NACIMIENTO = "anoNacimiento";
+        public static final String COLUMN_NAME_PESO_ACTUAL = "pesoActual";
+        public static final String COLUMN_NAME_PESO_META = "pesoMeta";
+        public static final String COLUMN_NAME_PESO_MAXIMO_PIERNA = "pesoMaximoPierna";
+        public static final String COLUMN_NAME_PESO_MAXIMO_BRAZO = "pesoMaximoBrao";
+        public static final String COLUMN_NAME_GRUPO_MUSCULAR = "grupoMuscular";
+        public static final String COLUMN_NAME_REPETICION = "repeticion";
+        public static final String COLUMN_NAME_PESO = "peso";
+        public static final String COLUMN_NAME_PORCENTAJE = "porcentaje";
+        public static final String COLUMN_NAME_IMAGEN = "imagen";
+    }
 }
