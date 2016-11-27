@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary">
+        android:background="@drawable/degradadotap">
 
         <TextView
             android:id="@+id/tv_nomrut"
@@ -21,16 +21,16 @@
             android:text="@string/rut_seleccionada"
             android:textSize="25dp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
 
         <Button
             android:id="@+id/button_rutinas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/titulo_rutina"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_alignParentEnd="true"
-            android:background="@color/colorPrimary"/>
+            android:background="@drawable/degradadotap"/>
 
     </RelativeLayout>
 
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/degradadotap"
         android:layout_gravity="bottom">
 
         <Button

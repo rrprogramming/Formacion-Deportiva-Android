@@ -10,16 +10,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary">
+        android:background="@drawable/degradadotap">
 
         <Button
             android:id="@+id/button_rutinasAct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/regresar"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_alignParentStart="true"
-            android:background="@color/colorPrimary"/>
+            android:background="@drawable/degradadotap"/>
 
         <TextView
             android:id="@+id/text_title"
@@ -30,16 +30,16 @@
             android:text="@string/titulo_ejercicio"
             android:textSize="25dp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
 
         <Button
             android:id="@+id/button_guardarR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/guardar"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_alignParentEnd="true"
-            android:background="@color/colorPrimary"/>
+            android:background="@drawable/degradadotap"/>
 
     </RelativeLayout>
 
@@ -55,7 +55,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:background="@color/colorPrimary">
+        android:background="@drawable/degradadotap">
 
         <Button
             android:id="@+id/button_home"

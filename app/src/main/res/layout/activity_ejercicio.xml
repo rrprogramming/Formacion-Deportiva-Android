@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary">
+        android:background="@drawable/degradadotap">
 
         <TextView
             android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
             android:text="@string/seleccion_sesion"
             android:textSize="25dp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
 
     </RelativeLayout>
 
@@ -92,7 +92,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/degradadotap"
         android:orientation="horizontal">
 
         <Button

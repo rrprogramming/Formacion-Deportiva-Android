@@ -544,6 +544,10 @@
         "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\logo_deportes.png"
     },
     {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degradadotap.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\degradadotap.xml"
+    },
+    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0536.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0536.jpg"
     },

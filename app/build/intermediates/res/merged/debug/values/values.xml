@@ -229,6 +229,7 @@
     <color name="dim_foreground_material_light">#ff323232</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <color name="gray">#DDDDDAAf</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
@@ -510,12 +511,13 @@
     <string name="pesoMeta">Peso Meta</string>
     <string name="porcentaje">Porcentaje</string>
     <string name="reglamento">
-        1.- Solo podrán ingresar alumnos del campus, los cuales deberán mostrar en el módulo de acceso su credencial actualizada\n\n
-        2.- Contar con toalla de mano para higiene personal.\n\n
-        3.- Portar ropa y tenis deporticos (playera con manga).\n\n
-        4.- Evitar introducir alimentos, maletines o mochilas.\n\n
-        5.- Los alumnos EXATEC, TecMilenio, UV, EGADE, EGAP, PrepaTec y Prepa Arte A.C. deberán realizar un pago para poder ingresar a la sala de pesas (pedir información en el módulo).\n\n
-        *Se prohíbe el manejo y/o consumo de bebidas ergogénicas nutricionales dentro de las instalaciones deportivas. Sera sancionado quien no respete alguna de las reglas.\n\n
+         1.- Solo podrán ingresar alumnos del campus, los cuales deberán mostrar en el módulo de acceso su credencial actualizada\n\n
+         2.- Contar con toalla de mano para higiene personal.\n\n
+         3.- Portar ropa y tenis deporticos (playera con manga).\n\n
+         4.- Ingresar sólo con envases herméticos para agua.\n\n
+         5.- Evitar introducir alimentos, maletines o mochilas.\n\n
+         6.- Los alumnos EXATEC, TecMilenio, UV, EGADE, EGAP, PrepaTec y Prepa Arte A.C. deberán realizar un pago para poder ingresar a la sala de pesas (pedir información en el módulo).\n\n
+         *Se prohíbe el manejo y/o consumo de bebidas ergogénicas nutricionales dentro de las instalaciones deportivas. Sera sancionado quien no respete alguna de las reglas.\n\n
 
     </string>
     <string name="regresar"> Regresar </string>

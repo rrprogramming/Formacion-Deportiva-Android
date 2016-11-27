@@ -50,7 +50,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/degradadotap"
         android:id="@+id/linearLayout">
 
         <Button

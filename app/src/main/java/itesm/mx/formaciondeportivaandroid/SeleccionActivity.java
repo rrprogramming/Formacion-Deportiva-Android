@@ -326,6 +326,19 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
     }
 
     @Override
+    public void onBackPressed() {
+        Gson gson = new Gson();
+        String json = gson.toJson(rutina);
+        Intent intentjson = new Intent();
+        intentjson.putExtra("json",json);
+        setResult(TiposRutinaActivity.RESULT_OK,intentjson);
+        //Toast.makeText(this, "Regreso a la Rutina 1", Toast.LENGTH_SHORT).show();
+        finish();
+        //Intent intent6 = new Intent(this, TiposRutinaActivity.class);
+        //startActivity(intent6);
+    }
+
+    @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         final TipoEjercicio nombreEjer = (TipoEjercicio) parent.getItemAtPosition(position);
         AlertDialog.Builder dialogoSeRep = new AlertDialog.Builder(this);
@@ -358,6 +371,9 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                 }
                 else{
                     if(etSeries.getText().toString().equals("0") || etRepeticiones.getText().toString().equals("0")) {
+                        Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
                         listEjer = rutina.getEjercicio();
                         Ejercicio ejer;
                         ejer = new Ejercicio(nombreEjer.getTipo(), sTipo, nombreEjer.getTMusculo(), Integer.parseInt(etSeries.getText().toString()),
@@ -365,9 +381,6 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                         listEjer.add(ejer);
                         rutina.setEjercicio(listEjer);
                         Log.i("EJERCICIO", "SE AGREGO EL EJERCICIO");
-                    }
-                    else{
-                        Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

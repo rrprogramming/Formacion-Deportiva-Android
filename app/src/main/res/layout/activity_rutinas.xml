@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary">
+        android:background="@drawable/degradadotap">
 
         <TextView
             android:id="@+id/text_title"
@@ -21,16 +21,16 @@
             android:text="@string/titulo_rutina"
             android:textSize="25dp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
 
         <Button
             android:id="@+id/button_crear_rutina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/crear"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_alignParentEnd="true"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/degradadotap"
             android:textStyle="bold"
             android:textSize="30dp"/>
 
@@ -47,7 +47,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/degradadotap"
         android:orientation="horizontal">
 
         <Button
