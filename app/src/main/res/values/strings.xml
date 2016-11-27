@@ -45,6 +45,9 @@
     <string name="seleccion_sesion">Seleccciona una Rutina</string>
     <string name="btn_comenzar">Comenzar</string>
     <string name="rutina">Rutina 1</string>
+    <string name="eliminar">¿Desea eliminar esta rutina?</string>
+    <string name="eliminarR">Eliminar</string>
+    <string name="cancelar">Cancelar</string>
     <string name="nombre_ejercicio">Presa Horizontal</string>
     <string name="musculo">Musculo: Pierna</string>
     <string name="terminado">Terminado</string>

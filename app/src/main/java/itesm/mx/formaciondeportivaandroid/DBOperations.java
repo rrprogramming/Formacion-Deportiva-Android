@@ -81,6 +81,27 @@ public class DBOperations {
         return newRowId;
     }
 
+    public boolean deleteRutina(long id){
+        boolean result = false;
+        String query = "Select * FROM " + DatabaseSchema.RutinaTable.TABLE_NAME +
+                " WHERE " + DatabaseSchema.RutinaTable._ID +
+                " = " + id;
+        try {
+            Cursor cursor = db.rawQuery(query, null);
+            if(cursor.moveToFirst()){
+                id = Integer.parseInt(cursor.getString(0));
+                db.delete(DatabaseSchema.RutinaTable.TABLE_NAME,
+                        DatabaseSchema.RutinaTable._ID + " = ?",
+                        new String[]{String.valueOf(id)});
+                result = true;
+            }
+            cursor.close();
+        } catch (SQLException e){
+            Log.e("SQLDELETE", e.toString());
+        }
+        return result;
+    }
+
     public long addPerfil(Perfil perfil){
         long newRowId = perfil.getId();
 

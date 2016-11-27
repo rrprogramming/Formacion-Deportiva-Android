@@ -27,6 +27,8 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -81,6 +83,7 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         sesion.setOnClickListener(this);
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
+        registerForContextMenu(this.getListView());
     }
 
 
@@ -134,9 +137,14 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                             Toast.makeText(getApplication(), "Favor de completar todos los campos de texto", Toast.LENGTH_SHORT).show();
                         }
                         else{
-                            Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
-                            intent6.putExtra(KEY_NOMBRE, etCrearRutina.getText().toString());
-                            startActivity(intent6);
+                            if(etContrasena.getText().toString().equals("gymsport")) {
+                                Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
+                                intent6.putExtra(KEY_NOMBRE, etCrearRutina.getText().toString());
+                                startActivity(intent6);
+                            }
+                            else{
+                                Toast.makeText(getApplication(), "La contraseña es incorrecta", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
                 });
@@ -159,6 +167,21 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         intent.putExtra("ID", Long.toString(rutina.getid()));
         Log.i("ID EXTRA", Long.toString(rutina.getid()));
         startActivity(intent);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.menu_context,menu);
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+        Rutina elect;
+        int id = item.getItemId();
+        //info.position;
+        return super.onContextItemSelected(item);
     }
 
     @Override

@@ -469,11 +469,14 @@
     <string name="btn_comenzar">Comenzar</string>
     <string name="btn_historial">Enviar</string>
     <string name="btn_listo">listo</string>
+    <string name="cancelar">Cancelar</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="correo">harmando_52@hotmail.com</string>
     <string name="crear">+</string>
     <string name="destinatario">Destinatario</string>
     <string name="ejercicio_tipo">Tipo de Ejercicio</string>
+    <string name="eliminar">¿Desea eliminar esta rutina?</string>
+    <string name="eliminarR">Eliminar</string>
     <string name="email">Complete los campos para mandar el correo</string>
     <string name="genero_label">Genero</string>
     <string name="grupoMuscular">Grupo Muscular</string>
