@@ -20,6 +20,7 @@ package itesm.mx.formaciondeportivaandroid;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -30,6 +31,7 @@ import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -93,21 +95,25 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         switch (v.getId()){
             case R.id.button_home:
                 Intent intent2 = new Intent(this,MainActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent2);
                 break;
 
             case R.id.button_sesion:
                 Intent intent3 = new Intent(this,SesionActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent3);
                 break;
 
             case R.id.button_history:
                 Intent intent4 = new Intent(this,HistorialActivity.class);
+                intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent4);
                 break;
 
             case R.id.button_perfil:
                 Intent intent5 = new Intent(this,PerfilActivity.class);
+                intent5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent5);
                 break;
 
@@ -122,9 +128,11 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
 
                 dialogorutina.setTitle("Favor de ir con su instructor para crear una rutina");
                 etCrearRutina.setHint("Nombre de la rutina");
-
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+                etCrearRutina.setInputType(InputType.TYPE_CLASS_TEXT);
                 etContrasena.setHint("Contrasena");
-                etContrasena.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                etContrasena.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
                 lila.addView(etContrasena);
                 lila.addView(etCrearRutina);

@@ -81,20 +81,24 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()){
             case R.id.button_rutinas:
                 Intent intent = new Intent(this, RutinasActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;
             case R.id.button_home:
                 Intent intent2 = new Intent(this,MainActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent2);
                 break;
 
             case R.id.button_sesion:
                 Intent intent3 = new Intent(this,SesionActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent3);
                 break;
 
             case R.id.button_perfil:
                 Intent intent5 = new Intent(this,PerfilActivity.class);
+                intent5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent5);
                 break;
 

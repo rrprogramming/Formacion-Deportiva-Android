@@ -75,6 +75,7 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
         tvNombre.setText(sN);
 
         btnHome.setOnClickListener(this);
+        btnRegresaraRutina.setOnClickListener(this);
         btnRutinas.setOnClickListener(this);
         btnSesion.setOnClickListener(this);
         btnHistoria.setOnClickListener(this);
@@ -106,6 +107,11 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
 
             case R.id.button_perfil:
                 intent = new Intent(this,PerfilActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            case R.id.button_rutinas:
+                intent = new Intent(this,RutinasActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;

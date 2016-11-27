@@ -1,7 +1,7 @@
 package itesm.mx.formaciondeportivaandroid;
 
 /*
-* Copyright (c) 2016, Instituto Tecnológico y de Estudios Superiores de Monterrey, México. Derechos reservados.
+* Copyright (c) 2016, Instituto TecnolÃ³gico y de Estudios Superiores de Monterrey, MÃ©xico. Derechos reservados.
 * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
 *
 * This program is free software: you can redistribute it and/or modify
@@ -88,7 +88,13 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
 
         perfil = dbOperations.getPerfil(id);
 
-        spGenero.setSelection(Integer.parseInt(perfil.getGenero()));
+        if(perfil.getGenero().equalsIgnoreCase("Masculino")){
+            spGenero.setSelection(1);
+        }else if(perfil.getGenero().equalsIgnoreCase("Femenino")){
+            spGenero.setSelection(2);
+        }else {
+            spGenero.setSelection(3);
+        }
         spDia.setSelection(Integer.parseInt(perfil.getDiaNaciemiento()));
         spAño.setSelection(Integer.parseInt(perfil.getAnoNaciemiento()));
         spMes.setSelection(Integer.parseInt(perfil.getMesNaciemiento()));
@@ -114,26 +120,32 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()){
             case R.id.button_home:
                 intent = new Intent(this,MainActivity.class);
-                finishAffinity();
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;
 
             case R.id.button_rutinas:
                 intent = new Intent(this,RutinasActivity.class);
-                finishAffinity();
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;
 
             case R.id.button_sesion:
                 intent = new Intent(this,SesionActivity.class);
-                finishAffinity();
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;
 
             case R.id.button_history:
                 intent = new Intent(this,HistorialActivity.class);
-                finishAffinity();
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                break;
+
+            case R.id.button_perfil:
+                //intent = new Intent(this,PerfilActivity.class);
+                //finishAffinity();
+                //startActivity(intent);
                 break;
 
             case R.id.button_tomarFoto:
@@ -147,13 +159,11 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.button_guardar:
 
-                Perfil perfil = new Perfil(id,etNombre.getText().toString(),etMatricula.getText().toString(),spGenero.getSelectedItem().toString(),spDia.getSelectedItem().toString(),
-                        spMes.getSelectedItem().toString(),spAño.getSelectedItem().toString(),etPesoActual.getText().toString(),etPesoMeta.getText().toString(),etPesoMaximoPierna.getText().toString(),
+                Perfil perfil = new Perfil(etNombre.getText().toString(),etMatricula.getText().toString(),spGenero.getSelectedItem().toString(),Integer.toString(spDia.getSelectedItemPosition()),
+                        Integer.toString(spMes.getSelectedItemPosition()),Integer.toString(spAño.getSelectedItemPosition()),etPesoActual.getText().toString(),etPesoMeta.getText().toString(),etPesoMaximoPierna.getText().toString(),
                         etPesoMaximoBrazo.getText().toString(),etGrupoMuscular.getText().toString(),etRepeticion.getText().toString(),etPorcentaje.getText().toString(),etPeso.getText().toString(),byteArray);
 
                 id = dbOperations.addPerfil(perfil);
-
-                Log.i("ID ", Long.toString(id));
 
                 SharedPreferences settings = getPreferences(MODE_PRIVATE);
                 SharedPreferences.Editor editor = settings.edit();
@@ -194,8 +204,6 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
 
         SharedPreferences settings = getPreferences(MODE_PRIVATE);
         id = settings.getLong(keys.KEY_ID, -1);
-
-        Log.i("ID ", Long.toString(id));
 
         if(id != -1){
             setData();

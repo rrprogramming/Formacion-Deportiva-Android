@@ -276,21 +276,25 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                 break;
             case R.id.button_home:
                 Intent intent2 = new Intent(this,MainActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent2);
                 break;
 
             case R.id.button_sesion:
                 Intent intent3 = new Intent(this,SesionActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent3);
                 break;
 
             case R.id.button_history:
                 Intent intent4 = new Intent(this,HistorialActivity.class);
+                intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent4);
                 break;
 
             case R.id.button_perfil:
                 Intent intent5 = new Intent(this,PerfilActivity.class);
+                intent5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent5);
                 break;
 
@@ -318,6 +322,7 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                     rutina.setId(id);
                     Toast.makeText(this, "Se ha guardado la rutina "+ rutina.getsNombre(), Toast.LENGTH_SHORT).show();
                     Intent intent7 = new Intent(this, RutinasActivity.class);
+                    intent7.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent7);
                 }
 
@@ -354,7 +359,6 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         etSeries.setHint("Número de series");
         etSeries.setInputType(InputType.TYPE_CLASS_NUMBER);
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-        //imm.showSoftInput(etSeries, InputMethodManager.SHOW_IMPLICIT);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
         etRepeticiones.setHint("Número de repeticiones");
         etRepeticiones.setInputType(InputType.TYPE_CLASS_NUMBER);
