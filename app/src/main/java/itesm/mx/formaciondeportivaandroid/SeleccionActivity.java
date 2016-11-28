@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -372,12 +373,15 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
             public void onClick(DialogInterface dialog, int which) {
                 if (etSeries.getText().length() == 0 || etRepeticiones.getText().length() == 0){
                     Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones"+listEjer.size(), Toast.LENGTH_SHORT).show();
+                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                 }
                 else{
                     if(etSeries.getText().toString().equals("0") || etRepeticiones.getText().toString().equals("0")) {
                         Toast.makeText(getApplication(), "Favor de ingresar Series y Repeticiones", Toast.LENGTH_SHORT).show();
+                        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                     }
                     else{
+                        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                         listEjer = rutina.getEjercicio();
                         Ejercicio ejer;
                         ejer = new Ejercicio(nombreEjer.getTipo(), sTipo, nombreEjer.getTMusculo(), Integer.parseInt(etSeries.getText().toString()),
@@ -392,7 +396,7 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         dialogoSeRep.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
             }
         });
         dialogoSeRep.show();

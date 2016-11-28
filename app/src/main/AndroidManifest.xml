@@ -43,9 +43,18 @@
         <activity
             android:name=".SesionActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".HorarioActivity" />
-        <activity android:name=".ReglamentoActivity" />
-        <activity android:name=".EmailActivity"></activity>
+        <activity
+            android:name=".HorarioActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ReglamentoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EmailActivity" />
+        <activity
+            android:name=".InformacionActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_informacion"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

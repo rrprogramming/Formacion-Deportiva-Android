@@ -1,7 +1,15 @@
 [
     {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0530.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0530.jpg"
+    },
+    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6946.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6946.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0575.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0575.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0511.jpg",
@@ -16,72 +24,68 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\curlswithdumbbells100.png",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\curlswithdumbbells100.png"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rutinas_icon.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\rutinas_icon.png"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7088.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7088.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0509.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0509.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6382.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6382.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0525.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0525.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\history_icon.png",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\history_icon.png"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0592.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0592.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0588.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0588.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0507.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0507.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7020.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7020.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7029.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7029.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6345.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6345.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0574.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0574.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\perfil_icon.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\perfil_icon.png"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7125.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7125.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5800.jpg",
@@ -96,48 +100,68 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0599.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0536.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0536.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7029.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7029.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7034.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7034.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\benchpress100.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\benchpress100.png"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5806.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5806.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5800.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5800.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5751.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5751.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6918.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6918.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sesion_icon.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\sesion_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0525.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0525.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degradado.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\degradado.xml"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6946.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6946.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0580.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0580.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6924.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6924.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0503.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0503.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_gym.png",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_gym.png"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_icon.png",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\home_icon.png"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0514.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0514.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0573.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0573.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0575.jpg",
@@ -146,10 +170,6 @@
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0530.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0530.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6973.jpg",
@@ -172,16 +192,8 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7131.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sesion_icon.png",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\sesion_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5810.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5810.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6368.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6368.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6998.jpg",
@@ -192,6 +204,442 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0521.jpg"
     },
     {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\curlswithdumbbells100.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\curlswithdumbbells100.png"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\benchoverhead100.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\benchoverhead100.png"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0581.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0581.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0536.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0536.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5806.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5806.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0522.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0522.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6940.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6940.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0583.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0583.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0519.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0519.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_icon.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\home_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6340.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6340.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0503.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0503.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0502.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0502.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0580.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0580.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0584.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0584.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rutinas_icon.png",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\rutinas_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6356.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6356.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0599.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0599.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7034.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7034.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6345.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6345.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5774.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5774.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6375.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6375.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0517.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0517.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6356.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6356.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0531.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0531.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0528.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0528.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0522.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0522.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7010.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7010.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6340.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6340.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7132.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7132.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0511.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0511.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6906.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6906.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5774.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5774.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7131.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7131.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degradadotap.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\degradadotap.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0540.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0540.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\perfil_icon.png",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\perfil_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0521.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0521.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6973.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6973.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6998.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6998.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0519.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0519.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0502.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0502.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7132.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7132.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pullups100.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\pullups100.png"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_gym.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_gym.png"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0514.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0514.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0500.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0500.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7088.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7088.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0509.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0509.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0531.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0531.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\history_icon.png",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\history_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0588.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0588.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0507.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0507.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6345.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6345.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0574.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0574.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0588.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0588.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7125.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7125.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0574.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0574.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0509.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0509.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0528.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0528.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6918.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6918.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo_deportes.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\logo_deportes.png"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degradadotap.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\degradadotap.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0536.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0536.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6940.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6940.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7088.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7088.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6918.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6918.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0507.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0507.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0514.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0514.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sesion_icon.png",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\sesion_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6368.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6368.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6914.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6914.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6354.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6354.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degradado.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\degradado.xml"
+    },
+    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0584.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0584.jpg"
     },
@@ -200,24 +648,32 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6906.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0581.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0581.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5749.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5749.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7010.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7010.jpg"
+    },
+    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5806.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5806.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\history_icon.png",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\history_icon.png"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6924.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6924.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7041.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7041.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
@@ -228,36 +684,20 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5770.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6940.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6940.jpg"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6340.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6340.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0502.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0502.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0503.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0503.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6388.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6388.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0580.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0580.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5786.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5786.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6354.jpg",
@@ -272,10 +712,6 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0517.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rutinas_icon.png",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\rutinas_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\benchoverhead100.png",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\benchoverhead100.png"
     },
@@ -284,92 +720,60 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5786.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7034.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7034.jpg"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0515.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0515.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7125.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_7125.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5810.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5810.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0506.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0506.jpg"
+    },
+    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5767.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5767.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6356.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6356.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6873.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6873.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0531.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0531.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0528.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0528.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6377.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6377.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7041.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7041.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0522.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0522.jpg"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0592.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0592.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7010.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7010.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0500.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0500.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7132.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7132.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0581.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0581.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5749.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5749.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5774.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5774.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0506.jpg",
@@ -392,20 +796,28 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5767.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5767.jpg"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0515.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_0515.jpg"
+    },
+    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6914.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6914.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degradadotap.xml",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\degradadotap.xml"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6382.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6382.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\perfil_icon.png",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\perfil_icon.png"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6368.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\img_6368.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0573.jpg",
@@ -416,11 +828,23 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\pullups100.png"
     },
     {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5751.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5751.jpg"
+    },
+    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0519.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0519.jpg"
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5770.jpg",
+        "source": "C:\\Users\\armando\\Desktop\\FormacionDeportiva\\Formacion-Deportiva-Android\\app\\src\\main\\res\\drawable\\dsc_5770.jpg"
     }
 ]

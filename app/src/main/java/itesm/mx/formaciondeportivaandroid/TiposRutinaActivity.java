@@ -22,6 +22,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
@@ -89,6 +90,8 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
 
         ArrayList<Ejercicio> ArrEj = new ArrayList<Ejercicio>();
         RJson = new Rutina(nomRut, ArrEj ,R.mipmap.ic_launcher);
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     @Override

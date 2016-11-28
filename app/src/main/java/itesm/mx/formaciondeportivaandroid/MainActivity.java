@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button perfil;
     Button horario;
     Button reglamento;
-
+    Button informacion;
     @Override
     public void onClick(View v){
         switch (v.getId()){
@@ -75,7 +75,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent7.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent7);
                 break;
+            case R.id.button_informacion:
+                Intent intentinf = new Intent(this,InformacionActivity.class);
+                intentinf.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intentinf);
+                break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
     }
 
     @Override
@@ -94,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         perfil = (Button) findViewById(R.id.button_perfil);
         horario = (Button) findViewById(R.id.button_horario);
         reglamento = (Button) findViewById(R.id.button_reglamento);
+        informacion = (Button) findViewById(R.id.button_informacion);
 
         home.setOnClickListener(this);
         rutinas.setOnClickListener(this);
@@ -102,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         perfil.setOnClickListener(this);
         horario.setOnClickListener(this);
         reglamento.setOnClickListener(this);
+        informacion.setOnClickListener(this);
 
     }
 }

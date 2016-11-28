@@ -11,7 +11,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 /*
-* Copyright (c) 2016, Instituto Tecnológico y de Estudios Superiores de Monterrey, México. Derechos reservados.
+* Copyright (c) 2016, Instituto TecnolÃ³gico y de Estudios Superiores de Monterrey, MÃ©xico. Derechos reservados.
 * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
 *
 * This program is free software: you can redistribute it and/or modify
@@ -64,7 +64,7 @@ public class DBOperations {
                 ContentValues values2 = new ContentValues();
                 values2.put(DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA, newRowId);
                 values2.put(DatabaseSchema.EjercicioTable.COLUNM_NAME_NOMBRE, rutina.getEjercicio().get(i).getsNombreEjer());
-                values2.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_TIPO_EJERCICIO, rutina.getEjercicio().get(i).getsNombreEjer());
+                values2.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_TIPO_EJERCICIO, rutina.getEjercicio().get(i).getsTipoEjer());
                 values2.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_MUSCULO, rutina.getEjercicio().get(i).getsMusculo());
                 values2.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_SERIES, rutina.getEjercicio().get(i).getiSeries());
                 values2.put(DatabaseSchema.EjercicioTable.COLUMN_NAME_REPETICIONES, rutina.getEjercicio().get(i).getiRepeticiones());
@@ -86,10 +86,33 @@ public class DBOperations {
         String query = "Select * FROM " + DatabaseSchema.RutinaTable.TABLE_NAME +
                 " WHERE " + DatabaseSchema.RutinaTable._ID +
                 " = \'"+id+"\'";
+
+        Log.i("ID RUTINA", Long.toString(id));
+
         try {
             Cursor cursor = db.rawQuery(query, null);
             if(cursor.moveToFirst()){
                 id = Integer.parseInt(cursor.getString(0));
+
+                String subQuery = "Select * FROM " + DatabaseSchema.EjercicioTable.TABLE_NAME +
+                        " WHERE " + DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA +
+                        " = \'"+id+"\'";
+
+                try{
+                    Cursor subCursor = db.rawQuery(subQuery, null);
+                    if(subCursor.moveToFirst()){
+                        do{
+                            String subSubQuery = "UPDATE "+DatabaseSchema.EjercicioTable.TABLE_NAME+
+                                    " SET "+ DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+"=\'-1\'";
+
+                            db.execSQL(subSubQuery);
+                        }while (subCursor.moveToNext());
+                    }
+                    subCursor.close();
+                }catch (SQLException e){
+                    Log.e("SQLDELETE", e.toString());
+                }
+
                 db.delete(DatabaseSchema.RutinaTable.TABLE_NAME, DatabaseSchema.RutinaTable._ID + " =?", new String[]{String.valueOf(id)});
                 result = true;
             }
@@ -306,8 +329,8 @@ public class DBOperations {
         ArrayList<Ejercicio> listEjercicio = new ArrayList<>();
 
         String selectQuery = "SELECT * FROM "+DatabaseSchema.HistorialTable.TABLE_NAME+
-                            " WHERE "+DatabaseSchema.HistorialTable.COLUMN_NAME_FIN+
-                            " BETWEEN "+'\''+fechaInicio+'\''+" AND "+'\''+fechaFinal+'\'';
+                " WHERE "+DatabaseSchema.HistorialTable.COLUMN_NAME_FIN+
+                " BETWEEN "+'\''+fechaInicio+'\''+" AND "+'\''+fechaFinal+'\'';
 
         Log.i("QUERY: ", selectQuery);
 

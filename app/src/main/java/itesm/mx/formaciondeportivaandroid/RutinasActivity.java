@@ -169,6 +169,11 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
     }
 
     @Override
+    public void onBackPressed() {
+        finishAffinity();
+    }
+
+    @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Rutina rutina = (Rutina)parent.getItemAtPosition(position);
         Toast.makeText(this, "Se selecciono una rutina", Toast.LENGTH_SHORT).show();

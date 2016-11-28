@@ -52,8 +52,9 @@
     <string name="musculo">Musculo: Pierna</string>
     <string name="terminado">Terminado</string>
     <string name="btn_listo">listo</string>
+    <string name="infor">Información</string>
     <string name="info_inicio">
-        Horaio del gimnasio\n
+        Horario del gimnasio\n
         \tLunes - Viernes 06:00 - 21:00\n
         \tSábados 08:00 - 15:00\n
         \n
@@ -77,7 +78,7 @@
 
     </string>
 
-    <string name="credios">
+    <string name="creditos">
         TransformaTEC ha sido desrrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto-Diciembre de 2016 como parte del curso Proyectos de desarrllo para dispositivos
         móviles impartido por la maestra Martha Sordia Salidas. Esta aplicación es una adaptación de la versión de iOS que fue desarrollada en el semestre Enero-Mayo
         del mismo año.\n\n
@@ -85,7 +86,7 @@
         Desarrolladores:\n
         Armando Aguilar Muñiz A01196064\n
         Rolando Ruiz Guerrero A01280151\n
-        Cesar de la Barreda Martínez A01195359\n\n
+        Cesar de la Barreda Mtz. A01195359\n\n
 
         TransformaTEC se distribuye como está de manera gratuita y se prohibe su dsitribución y uso con fines de lucro.\n\n
 
@@ -99,4 +100,5 @@
     <string name="subject">Subject</string>
     <string name="mandar">Mandar correo</string>
     <string name="correo">harmando_52@hotmail.com</string>
+    <string name="title_activity_informacion">InformacionActivity</string>
 </resources>

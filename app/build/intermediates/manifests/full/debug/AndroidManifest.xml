@@ -52,6 +52,10 @@
         <activity android:name="itesm.mx.formaciondeportivaandroid.HorarioActivity" />
         <activity android:name="itesm.mx.formaciondeportivaandroid.ReglamentoActivity" />
         <activity android:name="itesm.mx.formaciondeportivaandroid.EmailActivity" />
+        <activity
+            android:name="itesm.mx.formaciondeportivaandroid.InformacionActivity"
+            android:label="@string/title_activity_informacion"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

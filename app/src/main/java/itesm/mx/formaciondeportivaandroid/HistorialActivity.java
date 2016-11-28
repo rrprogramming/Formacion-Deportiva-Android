@@ -149,6 +149,8 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
         }
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+    }
 }

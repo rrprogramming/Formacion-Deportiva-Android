@@ -300,4 +300,9 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
             ivFoto.setImageBitmap(bitmap);
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+    }
 }

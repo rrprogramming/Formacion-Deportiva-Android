@@ -123,6 +123,11 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
+    public void onBackPressed() {
+        finishAffinity();
+    }
+
+    @Override
     public void onPause(){
         super.onPause();
         dbo.close();
