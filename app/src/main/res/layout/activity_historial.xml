@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="itesm.mx.formaciondeportivaandroid.HistorialActivity"
-    android:background="@drawable/degradado">
+    android:background="@drawable/degradado"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/layout_title"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/degradadotap">
+        android:layout_height="22pt"
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/tv_historial"
@@ -19,16 +20,9 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="@string/tv_historial"
-            android:textSize="25dp"
+            android:textSize="12pt"
             android:textStyle="bold"
             android:textColor="@color/black"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/corr"
-            android:text="@string/correo"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            />
 
         <Button
             android:id="@+id/btn_historial"
@@ -37,94 +31,96 @@
             android:text="@string/btn_historial"
             android:textColor="@color/black"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/degradadotap"/>
+            android:background="@color/white"/>
 
     </RelativeLayout>
 
-    <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:datePickerMode="spinner"
-        android:padding="-100dp"
-        android:scaleY="0.8"
-        android:scaleX="0.8"
-        android:id="@+id/dp_fechain"
-        android:calendarViewShown="false"
-        android:layout_below="@+id/tv_fechain"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
 
-    <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:datePickerMode="spinner"
-        android:id="@+id/fp_fechafin"
-        android:calendarViewShown="false"
-        android:layout_below="@+id/tv_fechafin"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_fechain"
+            android:id="@+id/tv_fechain"
+            android:textColor="@color/black"
+            android:textSize="8pt"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_fechain"
-        android:id="@+id/tv_fechain"
-        android:layout_below="@+id/layout_title"
-        android:layout_alignStart="@+id/tv_fechafin"
-        android:textColor="@color/black"
-        android:textSize="8pt"/>
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:padding="-100dp"
+            android:scaleY="0.8"
+            android:scaleX="0.8"
+            android:id="@+id/dp_fechain"
+            android:calendarViewShown="false" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_fechafin"
-        android:id="@+id/tv_fechafin"
-        android:layout_below="@+id/dp_fechain"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
-        android:textSize="8pt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_fechafin"
+            android:id="@+id/tv_fechafin"
+            android:textColor="@color/black"
+            android:textSize="8pt"/>
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:padding="-100dp"
+            android:scaleY="0.8"
+            android:scaleX="0.8"
+            android:id="@+id/fp_fechafin"
+            android:calendarViewShown="false" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:background="@drawable/degradadotap">
+        android:background="@color/white"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.1">
 
         <Button
             android:id="@+id/button_home"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/home_icon"/>
 
         <Button
-            android:id="@+id/button_rutinas"
+            android:id="@id/button_rutinas"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/rutinas_icon"/>
 
         <Button
             android:id="@+id/button_sesion"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/sesion_icon"/>
 
         <Button
             android:id="@+id/button_history"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/history_icon"/>
 
         <Button
             android:id="@+id/button_perfil"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/perfil_icon"/>
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

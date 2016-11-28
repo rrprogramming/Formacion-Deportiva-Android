@@ -6,23 +6,21 @@
     android:orientation="vertical"
     android:background="@drawable/degradado">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@id/scrollView"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8">
+        android:layout_weight="0.9">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             tools:context="itesm.mx.formaciondeportivaandroid.PerfilActivity">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/degradadotap">
+                android:layout_height="22pt"
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/text_title"
@@ -31,7 +29,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:text="@string/perfil_title"
-                    android:textSize="25dp"
+                    android:textSize="12pt"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
 
@@ -42,7 +40,7 @@
                     android:text="@string/guardar"
                     android:textColor="@color/black"
                     android:layout_alignParentEnd="true"
-                    android:background="@drawable/degradadotap"/>
+                    android:background="@color/white"/>
 
             </RelativeLayout>
 
@@ -57,7 +55,7 @@
                     android:layout_width="90dp"
                     android:layout_height="100dp"
                     android:src="@mipmap/ic_launcher"
-                    android:paddingRight="10dp"/>
+                    android:paddingStart="10dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -73,14 +71,17 @@
                             android:id="@+id/text_nombre"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/nombre"/>
+                            android:text="@string/nombre"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
 
                         <EditText
                             android:id="@+id/edit_nombre"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/nombre"
-                            android:inputType="textPersonName"/>
+                            android:inputType="textPersonName"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -93,14 +94,17 @@
                             android:id="@+id/text_matricula"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/matricula"/>
+                            android:text="@string/matricula"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
 
                         <EditText
                             android:id="@+id/edit_matricula"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/matricula"
-                            android:inputType="textCapWords"/>
+                            android:inputType="textCapWords"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -113,7 +117,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/genero_label"
-                android:layout_gravity="left"/>
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
 
             <Spinner
                 android:id="@+id/spinner_genero"
@@ -128,7 +134,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nacimiento_label"
-                android:layout_gravity="left"/>
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -157,14 +165,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pesoActual"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/edit_pesoActual"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -178,14 +189,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pesoMeta"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/edit_pesoMeta"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -199,14 +213,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pesoMaximoPierna"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/edit_pesoMaximoPierna"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -220,14 +237,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pesoMaximoBrazo"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/edit_pesoMaximoBrazo"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -241,14 +261,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/grupoMuscular"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/edit_grupoMuscular"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapSentences"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -262,14 +285,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/repeticion"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/edit_repeticion"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -283,14 +309,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/peso"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/edit_peso"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -304,14 +333,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/porcentaje"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <EditText
                     android:id="@+id/edit_porcentaje"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -320,7 +352,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tomarFoto"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
         </LinearLayout>
 
@@ -328,43 +362,44 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="bottom"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:background="@drawable/degradadotap">
+        android:background="@color/white"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.1">
 
         <Button
             android:id="@+id/button_home"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/home_icon"/>
 
         <Button
-            android:id="@+id/button_rutinas"
+            android:id="@id/button_rutinas"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/rutinas_icon"/>
 
         <Button
             android:id="@+id/button_sesion"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/sesion_icon"/>
 
         <Button
             android:id="@+id/button_history"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/history_icon"/>
 
         <Button
             android:id="@+id/button_perfil"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/perfil_icon"/>
 

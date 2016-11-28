@@ -45,7 +45,6 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
     Button perfil;
     Button enviar;
     String sCorreo= "";
-    TextView tvC;
     DatePicker dp_inicio;
     DatePicker dp_fin;
     DBOperations dbo;
@@ -61,10 +60,7 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
         historia = (Button) findViewById(R.id.button_history);
         perfil = (Button) findViewById(R.id.button_perfil);
         enviar = (Button) findViewById(R.id.btn_historial);
-        tvC = (TextView) findViewById(R.id.corr);
 
-
-        tvC.setVisibility(View.INVISIBLE);
         home.setOnClickListener(this);
         rutinas.setOnClickListener(this);
         sesion.setOnClickListener(this);
@@ -124,7 +120,8 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                         Uri.parse("mailto:"));
                 email.setType("text/plain");
 
-                String[] recipients = {tvC.getText().toString()};
+                String[] recipients = {"casas@itesm.mx",
+                        "tony.gymsport@gmail.com"};
 
                 for(int i=0; i<arrEjer.size();i++){
                     sCorreo+="<b>Ejercicio: </b>"+arrEjer.get(i).getsNombreEjer()+"<br>"+

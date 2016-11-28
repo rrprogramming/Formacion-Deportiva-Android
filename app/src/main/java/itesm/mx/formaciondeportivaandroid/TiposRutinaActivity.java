@@ -47,6 +47,7 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
     Button sesion;
     Button historia;
     Button perfil;
+    Button regresar;
 
     TextView tvNom;
 
@@ -78,12 +79,14 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
         historia = (Button) findViewById(R.id.button_history);
         perfil = (Button) findViewById(R.id.button_perfil);
         tvNom = (TextView) findViewById(R.id.tv_nomrut);
+        regresar = (Button) findViewById(R.id.button_regresar);
 
         home.setOnClickListener(this);
         rutinas.setOnClickListener(this);
         sesion.setOnClickListener(this);
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
+        regresar.setOnClickListener(this);
 
         nomRut=getIntent().getStringExtra("nombre");
         tvNom.setText(nomRut);
@@ -100,21 +103,25 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
 
             case R.id.button_home:
                 Intent intent2 = new Intent(this, MainActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent2);
                 break;
 
             case R.id.button_sesion:
                 Intent intent3 = new Intent(this, SesionActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent3);
                 break;
 
             case R.id.button_history:
                 Intent intent4 = new Intent(this, HistorialActivity.class);
+                intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent4);
                 break;
 
             case R.id.button_perfil:
                 Intent intent5 = new Intent(this, PerfilActivity.class);
+                intent5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent5);
                 break;
 
@@ -132,6 +139,12 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
                     startActivity(intentR);
                 }
                 break;
+
+            case R.id.button_regresar:
+                Toast.makeText(this, "Operacion cancelada ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, RutinasActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
         }
     }
 

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="itesm.mx.formaciondeportivaandroid.SesionActivity"
-    android:background="@drawable/degradado">
+    android:background="@drawable/degradado"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/layout_title"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/degradadotap">
+        android:layout_height="23pt"
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/tv_sesion"
@@ -19,71 +20,77 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="@string/seleccion_sesion"
-            android:textSize="25dp"
+            android:textSize="12pt"
             android:textStyle="bold"
             android:textColor="@color/black"/>
 
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_comenzar"
-        android:id="@+id/btn_comenzar"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="65dp"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_rutinas"
+            android:spinnerMode="dialog"
+            android:layout_gravity="center_horizontal" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_rutinas"
-        android:spinnerMode="dialog"
-        android:layout_below="@id/layout_title"
-        android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_comenzar"
+            android:id="@+id/btn_comenzar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="65dp"
+            android:background="@color/white"
+            android:textColor="@color/black"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:background="@drawable/degradadotap">
+        android:background="@color/white"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.1">
 
         <Button
             android:id="@+id/button_home"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/home_icon"/>
 
         <Button
-            android:id="@+id/button_rutinas"
+            android:id="@id/button_rutinas"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/rutinas_icon"/>
 
         <Button
             android:id="@+id/button_sesion"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/sesion_icon"/>
 
         <Button
             android:id="@+id/button_history"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/history_icon"/>
 
         <Button
             android:id="@+id/button_perfil"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/perfil_icon"/>
 
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

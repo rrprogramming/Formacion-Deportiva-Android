@@ -83,41 +83,16 @@ public class DBOperations {
 
     public boolean deleteRutina(long id){
         boolean result = false;
-        String query = "Select * FROM " + DatabaseSchema.RutinaTable.TABLE_NAME +
-                " WHERE " + DatabaseSchema.RutinaTable._ID +
-                " = \'"+id+"\'";
-
-        Log.i("ID RUTINA", Long.toString(id));
+        String query = "UPDATE "+DatabaseSchema.EjercicioTable.TABLE_NAME+
+                " SET "+ DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+"=\'-1\' WHERE "+
+                DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+" = \'"+id+"\'";
 
         try {
-            Cursor cursor = db.rawQuery(query, null);
-            if(cursor.moveToFirst()){
-                id = Integer.parseInt(cursor.getString(0));
-
-                String subQuery = "Select * FROM " + DatabaseSchema.EjercicioTable.TABLE_NAME +
-                        " WHERE " + DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA +
-                        " = \'"+id+"\'";
-
-                try{
-                    Cursor subCursor = db.rawQuery(subQuery, null);
-                    if(subCursor.moveToFirst()){
-                        do{
-                            String subSubQuery = "UPDATE "+DatabaseSchema.EjercicioTable.TABLE_NAME+
-                                    " SET "+ DatabaseSchema.EjercicioTable.COLUNM_NAME_ID_RUTINA+"=\'-1\'";
-
-                            db.execSQL(subSubQuery);
-                        }while (subCursor.moveToNext());
-                    }
-                    subCursor.close();
-                }catch (SQLException e){
-                    Log.e("SQLDELETE", e.toString());
-                }
-
-                db.delete(DatabaseSchema.RutinaTable.TABLE_NAME, DatabaseSchema.RutinaTable._ID + " =?", new String[]{String.valueOf(id)});
-                result = true;
-            }
-            cursor.close();
-        } catch (SQLException e){
+            db.execSQL(query);
+            db.delete(DatabaseSchema.RutinaTable.TABLE_NAME, DatabaseSchema.RutinaTable._ID + " =?", new String[]{String.valueOf(id)});
+            result = true;
+        }
+        catch (SQLException e){
             Log.e("SQLDELETE", e.toString());
         }
         return result;

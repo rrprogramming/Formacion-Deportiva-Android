@@ -31,6 +31,7 @@ import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -43,7 +44,6 @@ import java.util.ArrayList;
 
 public class RutinasActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
 
-    public String [] sRutinas;
     private Button btnAgregar;
     final String KEY_NOMBRE = "nombre";
     private DBOperations dao;
@@ -54,7 +54,6 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
     Button historia;
     Button perfil;
     Rutina r;
-    //EditText etCrearRutina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +63,6 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         dao.open();
         ArrayList<Rutina> arrayListRutina;
         arrayListRutina=dao.getAllRutinas();
-        Toast.makeText(this, "Rutinas guardadas "+arrayListRutina.size(), Toast.LENGTH_SHORT).show();
 
         btnAgregar = (Button) findViewById(R.id.button_crear_rutina);
 
@@ -86,7 +84,6 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         sesion.setOnClickListener(this);
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
-        //registerForContextMenu(this.getListView());
     }
 
 
@@ -144,14 +141,17 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                     public void onClick(DialogInterface dialog, int which) {
                         if(etContrasena.getText().length()==0 || etCrearRutina.getText().length()==0) {
                             Toast.makeText(getApplication(), "Favor de completar todos los campos de texto", Toast.LENGTH_SHORT).show();
+                            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                         }
                         else{
                             if(etContrasena.getText().toString().equals("gymsport")) {
+                                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                                 Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
                                 intent6.putExtra(KEY_NOMBRE, etCrearRutina.getText().toString());
                                 startActivity(intent6);
                             }
                             else{
+                                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                                 Toast.makeText(getApplication(), "La contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -213,21 +213,6 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                 .show();
                 return true;
     }
-
-    /*@Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        getMenuInflater().inflate(R.menu.menu_context,menu);
-        super.onCreateContextMenu(menu, v, menuInfo);
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
-        Rutina elect;
-        int id = item.getItemId();
-        //info.position;
-        return super.onContextItemSelected(item);
-    }*/
 
     @Override
     public void onPause(){
