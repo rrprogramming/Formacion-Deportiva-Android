@@ -22,27 +22,26 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class DescripcionRutinaActivity extends ListActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
+public class DescripcionRutinaActivity extends ListActivity implements View.OnClickListener {
 
     ArrayList<Ejercicio> listEjerc;
     Rutina rutina;
     EjerciciosAdapter adapterEjercicio;
-    private DBOperations dao;
-    private long id;
-    Button btnRegresaraRutina;
 
+    private DBOperations dao;
+    private long iId;
+
+    Button btnRegresaraRutina;
     Button btnHome;
-    Button btnRutinas;
     Button btnSesion;
     Button btnHistoria;
     Button btnPerfil;
+
     TextView tvNombre;
 
     @Override
@@ -53,33 +52,29 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
         dao = new DBOperations(this);
         dao.open();
 
-        id = Long.parseLong(getIntent().getStringExtra("ID"));
-        rutina = dao.getRutina(id);
+        iId = Long.parseLong(getIntent().getStringExtra("ID"));
+        rutina = dao.getRutina(iId);
         String sN = rutina.getsNombre();
 
         listEjerc = rutina.getEjercicio();
 
         adapterEjercicio = new EjerciciosAdapter(this, listEjerc);
         setListAdapter(adapterEjercicio);
-        getListView().setOnItemClickListener(this);
 
         btnRegresaraRutina = (Button) findViewById(R.id.button_rutinas);
-        btnRegresaraRutina.setOnClickListener(this);
-
         btnHome= (Button) findViewById(R.id.button_home);
-        btnRutinas = (Button) findViewById(R.id.button_rutinas);
         btnSesion = (Button) findViewById(R.id.button_sesion);
         btnHistoria = (Button) findViewById(R.id.button_history);
         btnPerfil = (Button) findViewById(R.id.button_perfil);
-        tvNombre = (TextView) findViewById(R.id.tv_nomrut);
+        tvNombre = (TextView) findViewById(R.id.text_rutina);
         tvNombre.setText(sN);
 
         btnHome.setOnClickListener(this);
         btnRegresaraRutina.setOnClickListener(this);
-        btnRutinas.setOnClickListener(this);
         btnSesion.setOnClickListener(this);
         btnHistoria.setOnClickListener(this);
         btnPerfil.setOnClickListener(this);
+        btnRegresaraRutina.setOnClickListener(this);
 
     }
 
@@ -110,17 +105,11 @@ public class DescripcionRutinaActivity extends ListActivity implements AdapterVi
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;
+
             case R.id.button_rutinas:
-                intent = new Intent(this,RutinasActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                finish();
                 break;
         }
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
     }
 
     @Override

@@ -19,9 +19,6 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,13 +34,13 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class EjercicioActivity extends AppCompatActivity implements  View.OnClickListener{
-    private Button btn_listo;
+    private Button btnListo;
 
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnSome;
+    Button btnHistoria;
+    Button btnperfil;
 
     TextView tvRutina;
     TextView tvnomEjercicio;
@@ -61,32 +58,23 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejercicio);
-        btn_listo = (Button) findViewById(R.id.btn_listo);
-        btn_listo.setOnClickListener(this);
+        
+        btnListo = (Button) findViewById(R.id.button_guardar);
+        btnHome = (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnSome = (Button) findViewById(R.id.button_sesion);
+       btnHistoria = (Button) findViewById(R.id.button_history);
+        btnperfil = (Button) findViewById(R.id.button_perfil);
 
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
-
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
-
-        tvRutina = (TextView) findViewById(R.id.tvrutina);
-        tvnomEjercicio = (TextView) findViewById(R.id.tv_nomEjercicio);
-        tvMusculo= (TextView) findViewById(R.id.tv_musculo);
-        tvRepeticiones= (TextView) findViewById(R.id.tv_repeticiones);
-        tvSeries= (TextView) findViewById(R.id.tv_series);
-        swTerminado = (Switch) findViewById(R.id.sw_terminado);
-        ivEjercicio = (ImageView) findViewById(R.id.iv_ejercicio);
+        tvRutina = (TextView) findViewById(R.id.text_rutina);
+        tvnomEjercicio = (TextView) findViewById(R.id.text_nomEjercicio);
+        tvMusculo= (TextView) findViewById(R.id.text_musculo);
+        tvRepeticiones= (TextView) findViewById(R.id.text_repeticiones);
+        tvSeries= (TextView) findViewById(R.id.text_series);
+        swTerminado = (Switch) findViewById(R.id.switch_terminado);
+        ivEjercicio = (ImageView) findViewById(R.id.image_ejercicio);
 
         long idRutina = Long.parseLong(getIntent().getStringExtra("ID"));
-
-        Log.i("ID EXTRA", Long.toString(idRutina));
         dbo=new DBOperations(this);
         dbo.open();
 
@@ -111,6 +99,13 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
                 }
             }
         });
+        
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnSome.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnperfil.setOnClickListener(this);
+        btnListo.setOnClickListener(this);
     }
 
     public void mostrarEjercicio(){
@@ -118,13 +113,16 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
         tvMusculo.setText(arrEjercicio.get(pos).getsMusculo());
         tvRepeticiones.setText("Repeticiones: " + Integer.toString(arrEjercicio.get(pos).getiRepeticiones()));
         tvSeries.setText("Series: " + Integer.toString(arrEjercicio.get(pos).getiSeries()));
+
         swTerminado.setChecked(false);
+
         ivEjercicio.setImageResource(arrEjercicio.get(pos).getIdFotoE());
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            
             case R.id.button_rutinas:
                 Intent intent = new Intent(this, RutinasActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -148,7 +146,7 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
                 startActivity(intent5);
                 break;
 
-            case R.id.btn_listo:
+            case R.id.button_guardar:
                 finish();
                 break;
         }

@@ -36,18 +36,19 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
 
     ArrayList<TipoEjercicio> listRuti;
     TipoEjercicioAdapter adapterRutina;
+    
     Rutina RJson;
+    
     private DBOperations dao;
 
     Button btnRegresarR;
     Button btnGuardar;
-
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
-    Button regresar;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnSesion;
+    Button btnHistoria;
+    Button btnPerfil;
+    Button btnRegresar;
 
     TextView tvNom;
 
@@ -73,28 +74,29 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
 
         getListView().setOnItemClickListener(this);
 
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
-        tvNom = (TextView) findViewById(R.id.tv_nomrut);
-        regresar = (Button) findViewById(R.id.button_regresar);
+        btnHome = (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnSesion = (Button) findViewById(R.id.button_sesion);
+        btnHistoria = (Button) findViewById(R.id.button_history);
+        btnPerfil = (Button) findViewById(R.id.button_perfil);
+        btnRegresar = (Button) findViewById(R.id.button_regresar);
 
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
-        regresar.setOnClickListener(this);
+        tvNom = (TextView) findViewById(R.id.text_nomrut);
 
         nomRut=getIntent().getStringExtra("nombre");
         tvNom.setText(nomRut);
 
-        ArrayList<Ejercicio> ArrEj = new ArrayList<Ejercicio>();
+        ArrayList<Ejercicio> ArrEj = new ArrayList<>();
         RJson = new Rutina(nomRut, ArrEj ,R.mipmap.ic_launcher);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnSesion.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnPerfil.setOnClickListener(this);
+        btnRegresar.setOnClickListener(this);
     }
 
     @Override

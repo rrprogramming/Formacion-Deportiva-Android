@@ -40,8 +40,8 @@ public class TipoEjercicioAdapter extends ArrayAdapter<TipoEjercicio> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.row_tipo_ejercicio,parent,false);
         }
 
-        TextView tvSerie = (TextView)convertView.findViewById(R.id.tv_tipo_ejercicio);
-        TextView tvMusculo = (TextView)convertView.findViewById(R.id.tv_tipo_musculo);
+        TextView tvSerie = (TextView)convertView.findViewById(R.id.text_tipo_ejercicio);
+        TextView tvMusculo = (TextView)convertView.findViewById(R.id.text_tipo_musculo);
         ImageView ivArticulo = (ImageView)convertView.findViewById(R.id.image_tipo);
 
         if(rutin.getTMusculo().length()==0) {

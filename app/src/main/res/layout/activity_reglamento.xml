@@ -6,15 +6,15 @@
     android:baselineAligned="false"
     android:layout_height="match_parent"
     android:background="@drawable/degradado"
-    tools:context="itesm.mx.formaciondeportivaandroid.ReglamentoActivity">
+    tools:context="itesm.mx.formaciondeportivaandroid.ReglamentoActivity"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.8">
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
@@ -27,9 +27,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,8 +36,6 @@
                 android:id="@+id/textView5"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/black"
-                android:layout_below="@+id/textView4"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="29dp" />
         </LinearLayout>
     </ScrollView>

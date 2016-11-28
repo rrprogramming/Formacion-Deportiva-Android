@@ -25,64 +25,71 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.9"
-        android:orientation="vertical">
+        android:layout_weight="0.9">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/iv_logo"
-            android:src="@mipmap/ic_launcher"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/titulo_inicio"
-            android:gravity="center"
-            android:id="@+id/tv_msjBienvenida"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:textColor="@color/black"/>
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/iv_gimnasio"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_logo"
+                android:src="@mipmap/ic_launcher"
+                android:layout_gravity="center_horizontal"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btnHorario"
-            android:id="@+id/button_horario"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/black"
-            android:background="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_inicio"
+                android:gravity="center"
+                android:id="@+id/text_msjBienvenida"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/black"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btnReglamento"
-            android:id="@+id/button_reglamento"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/black"
-            android:background="@color/white"
-            android:layout_marginTop="10dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:id="@+id/image_gimnasio"
+                android:src="@mipmap/ic_launcher" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/infor"
-            android:id="@+id/button_informacion"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/black"
-            android:background="@color/white"
-            android:layout_marginTop="10dp"/>
-    </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnHorario"
+                android:id="@+id/button_horario"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:background="@color/white" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnReglamento"
+                android:id="@+id/button_reglamento"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/infor"
+                android:id="@+id/button_informacion"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_ejercicio"
+            android:id="@+id/text_ejercicio"
             android:hint="@string/ejercicio_tipo"
             android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -32,21 +32,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_seriesH"
+                android:id="@+id/tmage_seriesH"
                 android:text="@string/series"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/tv_series"
+                android:id="@+id/text_series"
                 android:hint="@string/series"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_repeticionesH"
+                android:id="@+id/text_repeticionesH"
                 android:layout_marginLeft="5dp"
                 android:hint="@string/repeticiones"
                 android:textColor="@color/black"/>
@@ -54,7 +54,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_repeticiones"
+                android:id="@+id/text_repeticiones"
                 android:layout_marginLeft="5dp"
                 android:hint="@string/repeticiones"
                 android:textColor="@color/black"/>

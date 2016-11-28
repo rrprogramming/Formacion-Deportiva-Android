@@ -42,9 +42,9 @@ public class EjerciciosAdapter extends ArrayAdapter<Ejercicio> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.row_descripcion,parent,false);
         }
 
-        TextView tvEjercicio = (TextView)convertView.findViewById(R.id.tv_ejercicio);
-        TextView tvSerie = (TextView)convertView.findViewById(R.id.tv_series);
-        TextView tvRepeticiones = (TextView)convertView.findViewById(R.id.tv_repeticiones);
+        TextView tvEjercicio = (TextView)convertView.findViewById(R.id.text_ejercicio);
+        TextView tvSerie = (TextView)convertView.findViewById(R.id.text_series);
+        TextView tvRepeticiones = (TextView)convertView.findViewById(R.id.text_repeticiones);
         ImageView ivArticulo = (ImageView)convertView.findViewById(R.id.image_ejercicio);
 
         tvEjercicio.setText(String.valueOf(ejer.getsNombreEjer()));

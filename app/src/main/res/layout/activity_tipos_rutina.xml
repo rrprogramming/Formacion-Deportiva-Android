@@ -22,7 +22,7 @@
             android:background="@color/white"/>
 
         <TextView
-            android:id="@+id/tv_nomrut"
+            android:id="@+id/text_nomrut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"

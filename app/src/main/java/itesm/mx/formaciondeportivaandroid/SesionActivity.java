@@ -31,15 +31,15 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class SesionActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_comenzar;
-    private Spinner spinnerRutinas;
-    private String sRutinas[];
+    String sRutinas[];
 
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
+    Button btn_comenzar;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnHistoria;
+    Button btnPerfil;
+    
+    Spinner spinnerRutinas;
 
     DBOperations dbo;
     ArrayList<Rutina> arrRutina;
@@ -49,33 +49,33 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sesion);
 
-        btn_comenzar = (Button) findViewById(R.id.btn_comenzar);
+        btn_comenzar = (Button) findViewById(R.id.button_comenzar);
+        btnHome = (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnHistoria = (Button) findViewById(R.id.button_history);
+        btnPerfil = (Button) findViewById(R.id.button_perfil);
 
         spinnerRutinas = (Spinner) findViewById(R.id.spinner_rutinas);
         dbo=new DBOperations(this);
         dbo.open();
+
         arrRutina = dbo.getAllRutinas();
+
         sRutinas = new String[arrRutina.size()];
+
         for(int i=0; i<arrRutina.size(); i++){
             sRutinas[i]=arrRutina.get(i).getsNombre();
         }
 
-        ArrayAdapter<String> adapterRutina = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sRutinas);
+        ArrayAdapter<String> adapterRutina = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sRutinas);
         adapterRutina.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerRutinas.setAdapter(adapterRutina);
+
         btn_comenzar.setOnClickListener(this);
-
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
-
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnPerfil.setOnClickListener(this);
     }
 
     @Override
@@ -92,11 +92,6 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(intent2);
                 break;
 
-            case R.id.button_sesion:
-                //Intent intent3 = new Intent(this, SesionActivity.class);
-                //startActivity(intent3);
-                break;
-
             case R.id.button_history:
                 Intent intent4 = new Intent(this, HistorialActivity.class);
                 startActivity(intent4);
@@ -108,9 +103,9 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(intent5);
                 break;
 
-            case R.id.btn_comenzar:
+            case R.id.button_comenzar:
                 if(arrRutina.size()==0){
-                    Toast.makeText(this, "No hay rutinas creadas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "No hay btnRutinas creadas", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Intent myIntent6 = new Intent(this, EjercicioActivity.class);

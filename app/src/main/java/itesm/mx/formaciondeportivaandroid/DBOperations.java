@@ -1,15 +1,5 @@
 package itesm.mx.formaciondeportivaandroid;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
-
-import java.util.ArrayList;
-
 /*
 * Copyright (c) 2016, Instituto TecnolÃ³gico y de Estudios Superiores de Monterrey, MÃ©xico. Derechos reservados.
 * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
@@ -27,6 +17,16 @@ import java.util.ArrayList;
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses.
 */
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import java.util.ArrayList;
+
 public class DBOperations {
 
     private SQLiteDatabase db;
@@ -40,7 +40,7 @@ public class DBOperations {
         try {
             db = dbHelper.getWritableDatabase();
         }catch (SQLException e){
-            Log.e("SQLOPEN", e.toString());
+            Log.e("SQL OPEN ERROR", e.toString());
         }
     }
 
@@ -75,7 +75,7 @@ public class DBOperations {
             }
 
         }catch (SQLException e){
-            Log.e("SQLADD",e.toString());
+            Log.e("SQL ADD RUTINA ERROR",e.toString());
         }
 
         return newRowId;
@@ -93,7 +93,7 @@ public class DBOperations {
             result = true;
         }
         catch (SQLException e){
-            Log.e("SQLDELETE", e.toString());
+            Log.e("SQL DELETE RUTINA ERROR", e.toString());
         }
         return result;
     }
@@ -122,7 +122,7 @@ public class DBOperations {
                 newRowId = db.insert(DatabaseSchema.PerfilTable.TABLE_NAME, null, values);
 
             } catch (SQLException e) {
-                Log.e("SQLADD", e.toString());
+                Log.e("SQL ADD PERFIL ERROR", e.toString());
             }
         }else {
             String query = "UPDATE "+DatabaseSchema.PerfilTable.TABLE_NAME+
@@ -172,7 +172,7 @@ public class DBOperations {
                         cursor.getBlob(13));
             }
         }catch (SQLException e){
-            Log.e("GET PERFIL", e.toString());
+            Log.e("SQL GET PERFIL ERRROR", e.toString());
         }
 
         return perfil;
@@ -199,7 +199,7 @@ public class DBOperations {
             }
             cursor.close();
         }catch (SQLException e){
-            Log.e("SQL Get", e.toString());
+            Log.e("SQL GET RUTINA ERROR", e.toString());
         }
 
         //Obtiene la lista de ejerccios relacionada con las Rutinas
@@ -229,7 +229,7 @@ public class DBOperations {
                 }while (cursor.moveToNext());
             }
         }catch (SQLException e){
-            Log.e("SQL Get",e.toString());
+            Log.e("SQL GET RUTINA ERROR",e.toString());
         }
 
         if(!listEjercicio.isEmpty()) {
@@ -282,7 +282,7 @@ public class DBOperations {
                             }while (cursor2.moveToNext());
                         }
                     }catch (SQLException e){
-                        Log.e("SQL Get",e.toString());
+                        Log.e("SQL GETALL RUTINA ERROR",e.toString());
                     }
 
                     rutina.setEjercicio(listEjercicio);
@@ -292,7 +292,7 @@ public class DBOperations {
             }
             cursor.close();
         }catch (SQLException e){
-            Log.e("SQL Get", e.toString());
+            Log.e("SQL GETALL RUTINA ERROR", e.toString());
         }
 
         return rutinaArrayList;
@@ -306,8 +306,6 @@ public class DBOperations {
         String selectQuery = "SELECT * FROM "+DatabaseSchema.HistorialTable.TABLE_NAME+
                 " WHERE "+DatabaseSchema.HistorialTable.COLUMN_NAME_FIN+
                 " BETWEEN "+'\''+fechaInicio+'\''+" AND "+'\''+fechaFinal+'\'';
-
-        Log.i("QUERY: ", selectQuery);
 
         try {
             Cursor cursor = db.rawQuery(selectQuery, null);
@@ -339,13 +337,13 @@ public class DBOperations {
                             }while (cursor2.moveToNext());
                         }
                     }catch (SQLException e){
-                        Log.e("SQL Get", e.toString());
+                        Log.e("SQL HISTORIAL ERROR", e.toString());
                     }
                 }while (cursor.moveToNext());
             }
             cursor.close();
         }catch (SQLException e){
-            Log.e("SQL Get", e.toString());
+            Log.e("SQL HISTORIAL ERRROR", e.toString());
         }
 
         return listEjercicio;
@@ -378,7 +376,7 @@ public class DBOperations {
             }
             cursor.close();
         }catch (SQLException e){
-            Log.e("SQL Get", e.toString());
+            Log.e("SQL GETALL EJERCICIO", e.toString());
         }
 
         return listEjercicio;
@@ -397,7 +395,7 @@ public class DBOperations {
             newRowId = db.insert(DatabaseSchema.HistorialTable.TABLE_NAME, null, values);
 
         }catch (SQLException e){
-            Log.e("SQL ADD",e.toString());
+            Log.e("SQL EDIT EJERCICIO",e.toString());
         }
 
         return newRowId;

@@ -1,13 +1,27 @@
 package itesm.mx.formaciondeportivaandroid;
 
+/*
+* Copyright (c) 2016, Instituto Tecnológico y de Estudios Superiores de Monterrey, México. Derechos reservados.
+* DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses.
+*/
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
-/**
- * Created by Rolando on 11/9/2016.
- */
 public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "TecDeportes.db";
     private static final int DATABASE_VERSION = 1;
@@ -25,7 +39,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 DatabaseSchema.RutinaTable.COLUNM_NAME_NOMBRE+" TEXT, "+
                 DatabaseSchema.RutinaTable.COLUMN_NAME_FOTO+" INTEGER "+
                 ")";
-        Log.i("ProductHelper onCreate", CREATE_RUTINA_TABLE);
         db.execSQL(CREATE_RUTINA_TABLE);
 
         String CREATE_EJERCICIO_TABLE = "CREATE TABLE "+
@@ -41,7 +54,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 DatabaseSchema.EjercicioTable.COLUMN_NAME_FOTO+" INTEGER, "+
                 DatabaseSchema.EjercicioTable.COLUMN_NAME_FIN+" DATETIME "+
                 ")";
-        Log.i("ProductHelper onCreate", CREATE_EJERCICIO_TABLE);
         db.execSQL(CREATE_EJERCICIO_TABLE);
 
         String CREATE_HISTORIAL_TABLE = "CREATE TABLE "+
@@ -51,7 +63,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 DatabaseSchema.HistorialTable.COLUMN_NAME_EJERCICIO_ID+" INTEGER, "+
                 DatabaseSchema.HistorialTable.COLUMN_NAME_FIN+" DATETIME "+
                 ")";
-        Log.i("ProductHelper onCreate", CREATE_HISTORIAL_TABLE);
         db.execSQL(CREATE_HISTORIAL_TABLE);
 
         String CREATE_PERFIL_TABLE = "CREATE TABLE "+
@@ -72,7 +83,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 DatabaseSchema.PerfilTable.COLUMN_NAME_PORCENTAJE+" TEXT, "+
                 DatabaseSchema.PerfilTable.COLUMN_NAME_IMAGEN+" BLOB "+
                 ")";
-        Log.i("ProductHelper onCreate", CREATE_PERFIL_TABLE);
         db.execSQL(CREATE_PERFIL_TABLE);
     }
 

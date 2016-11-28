@@ -23,12 +23,10 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -38,15 +36,15 @@ import java.util.GregorianCalendar;
 
 public class HistorialActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
-    Button enviar;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnSesion;
+    Button btnHistoria;
+    Button btnPerfil;
+    Button btnEnviar;
     String sCorreo= "";
-    DatePicker dp_inicio;
-    DatePicker dp_fin;
+    DatePicker dpInicio;
+    DatePicker dpFin;
     DBOperations dbo;
 
     @Override
@@ -54,22 +52,23 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historial);
 
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
-        enviar = (Button) findViewById(R.id.btn_historial);
+        btnHome = (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnSesion = (Button) findViewById(R.id.button_sesion);
+        btnHistoria = (Button) findViewById(R.id.button_history);
+        btnPerfil = (Button) findViewById(R.id.button_perfil);
+        btnEnviar = (Button) findViewById(R.id.button_historial);
 
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
-        enviar.setOnClickListener(this);
+        dpInicio = (DatePicker) findViewById(R.id.date_fechain);
+        dpFin = (DatePicker) findViewById(R.id.date_fechafin);
 
-        dp_inicio = (DatePicker) findViewById(R.id.dp_fechain);
-        dp_fin = (DatePicker) findViewById(R.id.fp_fechafin);
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnSesion.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnPerfil.setOnClickListener(this);
+        btnEnviar.setOnClickListener(this);
+
     }
 
     @Override
@@ -98,22 +97,22 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 startActivity(intent5);
                 break;
 
-            case R.id.btn_historial:
+            case R.id.button_historial:
                 ArrayList<Ejercicio> arrEjer;
-                GregorianCalendar cal1=new GregorianCalendar(dp_inicio.getYear(),
-                        dp_inicio.getMonth(),dp_inicio.getDayOfMonth());
+                GregorianCalendar cal1=new GregorianCalendar(dpInicio.getYear(),
+                        dpInicio.getMonth(),dpInicio.getDayOfMonth());
                 Date begin=cal1.getTime();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String fechaInicio = sdf.format(begin);
-                GregorianCalendar cal2=new GregorianCalendar(dp_fin.getYear(),
-                        dp_fin.getMonth(),dp_fin.getDayOfMonth());
+                GregorianCalendar cal2=new GregorianCalendar(dpFin.getYear(),
+                        dpFin.getMonth(),dpFin.getDayOfMonth());
                 Date end=cal2.getTime();
                 String fechaFin = sdf.format(end);
 
 
-                dbo=new DBOperations(this);
+                dbo = new DBOperations(this);
                 dbo.open();
-                arrEjer=dbo.getHistorial(fechaInicio, fechaFin);
+                arrEjer = dbo.getHistorial(fechaInicio, fechaFin);
                 dbo.close();
 
                 Intent email = new Intent(Intent.ACTION_SEND,

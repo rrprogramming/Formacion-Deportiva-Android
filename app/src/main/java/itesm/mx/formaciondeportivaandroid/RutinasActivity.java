@@ -23,18 +23,13 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
-import android.view.ContextMenu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -44,27 +39,33 @@ import java.util.ArrayList;
 
 public class RutinasActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
 
-    private Button btnAgregar;
-    final String KEY_NOMBRE = "nombre";
     private DBOperations dao;
+    Keys keys = new Keys();
 
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
-    Rutina r;
+    Button btnAgregar;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnSesion;
+    Button btnHistoria;
+    Button btnPerfil;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rutinas);
+
+        btnAgregar = (Button) findViewById(R.id.button_crear_rutina);
+        btnHome = (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnSesion = (Button) findViewById(R.id.button_sesion);
+        btnHistoria = (Button) findViewById(R.id.button_history);
+        btnPerfil = (Button) findViewById(R.id.button_perfil);
+
         dao = new DBOperations(this);
         dao.open();
         ArrayList<Rutina> arrayListRutina;
-        arrayListRutina=dao.getAllRutinas();
-
-        btnAgregar = (Button) findViewById(R.id.button_crear_rutina);
+        arrayListRutina = dao.getAllRutinas();
 
         RutinaAdapter rutinaAdapter = new RutinaAdapter(this,arrayListRutina);
         setListAdapter(rutinaAdapter);
@@ -72,18 +73,11 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         getListView().setOnItemLongClickListener(this);
 
         btnAgregar.setOnClickListener(this);
-
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
-
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnSesion.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnPerfil.setOnClickListener(this);
     }
 
 
@@ -147,7 +141,7 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                             if(etContrasena.getText().toString().equals("gymsport")) {
                                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                                 Intent intent6 = new Intent(getApplicationContext(), TiposRutinaActivity.class);
-                                intent6.putExtra(KEY_NOMBRE, etCrearRutina.getText().toString());
+                                intent6.putExtra(keys.KEY_NOMBRE, etCrearRutina.getText().toString());
                                 startActivity(intent6);
                             }
                             else{
@@ -206,18 +200,12 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
                 })
                 .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        // do nothing
+                        /** do nothing*/
                     }
                 })
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
                 return true;
-    }
-
-    @Override
-    public void onPause(){
-        super.onPause();
-        dao.close();
     }
 
     @Override

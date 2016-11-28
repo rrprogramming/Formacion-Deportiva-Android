@@ -19,7 +19,6 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,14 +27,18 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
-    Button horario;
-    Button reglamento;
-    Button informacion;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnSesion;
+    Button btnHistoria;
+    Button btnPerfil;
+    Button btnHorario;
+    Button btnReglamento;
+    Button btnInformacion;
+
+    ImageView ivLogo;
+    ImageView ivGimnasio;
+
     @Override
     public void onClick(View v){
         switch (v.getId()){
@@ -92,28 +95,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView ivLogo = (ImageView) findViewById(R.id.iv_logo);
-        ImageView ivGimnasio = (ImageView) findViewById(R.id.iv_gimnasio);
+        
+        ivLogo = (ImageView) findViewById(R.id.image_logo);
+        ivGimnasio = (ImageView) findViewById(R.id.image_gimnasio);
+
+        btnHome = (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnSesion = (Button) findViewById(R.id.button_sesion);
+        btnHistoria = (Button) findViewById(R.id.button_history);
+        btnPerfil = (Button) findViewById(R.id.button_perfil);
+        btnHorario = (Button) findViewById(R.id.button_horario);
+        btnReglamento = (Button) findViewById(R.id.button_reglamento);
+        btnInformacion = (Button) findViewById(R.id.button_informacion);
+
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnSesion.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnPerfil.setOnClickListener(this);
+        btnHorario.setOnClickListener(this);
+        btnReglamento.setOnClickListener(this);
+        btnInformacion.setOnClickListener(this);
+
         ivLogo.setImageResource(R.drawable.logo_deportes);
         ivGimnasio.setImageResource(R.drawable.img_gym);
-
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
-        horario = (Button) findViewById(R.id.button_horario);
-        reglamento = (Button) findViewById(R.id.button_reglamento);
-        informacion = (Button) findViewById(R.id.button_informacion);
-
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
-        horario.setOnClickListener(this);
-        reglamento.setOnClickListener(this);
-        informacion.setOnClickListener(this);
-
     }
 }

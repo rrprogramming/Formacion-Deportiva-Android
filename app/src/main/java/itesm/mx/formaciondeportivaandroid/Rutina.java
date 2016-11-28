@@ -21,43 +21,43 @@ package itesm.mx.formaciondeportivaandroid;
 import java.util.ArrayList;
 
 public class Rutina {
-    private  long id;
+    private  long iId;
     private String sNombre;
     private ArrayList<Ejercicio> ejercicio;
-    private int idFotoR;
+    private int iIdFotoR;
 
     public Rutina(){
-        this.id = -1;
+        this.iId = -1;
         this.sNombre = null;
         this.ejercicio = null;
     }
 
-    public Rutina(long id, String sNombre, int idFotoR) {
-        this.id = id;
+    public Rutina(long iId, String sNombre, int iIdFotoR) {
+        this.iId = iId;
         this.sNombre = sNombre;
-        this.idFotoR = idFotoR;
+        this.iIdFotoR = iIdFotoR;
     }
 
-    public Rutina(String sNombre, ArrayList<Ejercicio> ejercicio,int idFotoR) {
-        this.id = -1;
+    public Rutina(String sNombre, ArrayList<Ejercicio> ejercicio,int iIdFotoR) {
+        this.iId = -1;
         this.sNombre = sNombre;
         this.ejercicio = ejercicio;
-        this.idFotoR = idFotoR;
+        this.iIdFotoR = iIdFotoR;
     }
 
-    public Rutina(long id, String sNombre, ArrayList<Ejercicio> ejercicio, int idFotoR) {
-        this.id = id;
+    public Rutina(long iId, String sNombre, ArrayList<Ejercicio> ejercicio, int iIdFotoR) {
+        this.iId = iId;
         this.sNombre = sNombre;
         this.ejercicio = ejercicio;
-        this.idFotoR = idFotoR;
+        this.iIdFotoR = iIdFotoR;
     }
 
     public Long getid(){
-        return this.id;
+        return this.iId;
     }
 
-    public void setId(long id){
-        this.id = id;
+    public void setId(long iId){
+        this.iId = iId;
     }
 
     public String getsNombre() {
@@ -76,8 +76,8 @@ public class Rutina {
         this.ejercicio = ejercicio;
     }
 
-    public int getIdFotoR() {return idFotoR;}
+    public int getIdFotoR() {return iIdFotoR;}
 
-    public void setIdFotoR(int idFotoR) {this.idFotoR = idFotoR;}
+    public void setIdFotoR(int iIdFotoR) {this.iIdFotoR = iIdFotoR;}
 
 }

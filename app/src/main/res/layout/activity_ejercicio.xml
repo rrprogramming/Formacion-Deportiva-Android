@@ -15,7 +15,6 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="22pt"
             android:background="@color/white">
@@ -37,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rutina"
-            android:id="@+id/tvrutina"
+            android:id="@+id/text_rutina"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -47,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nombre_ejercicio"
-            android:id="@+id/tv_nomEjercicio"
+            android:id="@+id/text_nomEjercicio"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:textColor="@color/black"
@@ -57,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/musculo"
-            android:id="@+id/tv_musculo"
+            android:id="@+id/text_musculo"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
             android:textSize="8pt" />
@@ -65,7 +64,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="150dp"
-            android:id="@+id/iv_ejercicio"
+            android:id="@+id/image_ejercicio"
             android:src="@mipmap/ic_launcher"
             android:layout_gravity="center_horizontal" />
 
@@ -73,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/repeticiones"
-            android:id="@+id/tv_repeticiones"
+            android:id="@+id/text_repeticiones"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
             android:textSize="8pt" />
@@ -82,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/series"
-            android:id="@+id/tv_series"
+            android:id="@+id/text_series"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
             android:textSize="8pt" />
@@ -91,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/terminado"
-            android:id="@+id/sw_terminado"
+            android:id="@+id/switch_terminado"
             android:layout_gravity="end"
             android:textColor="@color/black"
             android:textSize="8pt"
@@ -102,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_listo"
-            android:id="@+id/btn_listo"
+            android:id="@+id/button_guardar"
             android:layout_gravity="center_horizontal"
             android:background="@color/white"
             android:textColor="@color/black"/>

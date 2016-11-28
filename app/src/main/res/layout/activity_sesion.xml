@@ -14,7 +14,7 @@
         android:background="@color/white">
 
         <TextView
-            android:id="@+id/tv_sesion"
+            android:id="@+id/text_sesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -42,9 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_comenzar"
-            android:id="@+id/btn_comenzar"
+            android:id="@+id/button_comenzar"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="65dp"
+            android:layout_marginTop="60dp"
             android:background="@color/white"
             android:textColor="@color/black"/>
     </LinearLayout>

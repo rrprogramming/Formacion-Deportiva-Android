@@ -14,7 +14,7 @@
         android:background="@color/white">
 
         <TextView
-            android:id="@+id/tv_historial"
+            android:id="@+id/text_historial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -25,7 +25,7 @@
             android:textColor="@color/black"/>
 
         <Button
-            android:id="@+id/btn_historial"
+            android:id="@+id/button_historial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_historial"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_fechain"
-            android:id="@+id/tv_fechain"
+            android:id="@+id/text_fechain"
             android:textColor="@color/black"
             android:textSize="8pt"/>
 
@@ -56,14 +56,14 @@
             android:padding="-100dp"
             android:scaleY="0.8"
             android:scaleX="0.8"
-            android:id="@+id/dp_fechain"
+            android:id="@+id/date_fechain"
             android:calendarViewShown="false" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_fechafin"
-            android:id="@+id/tv_fechafin"
+            android:id="@+id/text_fechafin"
             android:textColor="@color/black"
             android:textSize="8pt"/>
 
@@ -74,7 +74,7 @@
             android:padding="-100dp"
             android:scaleY="0.8"
             android:scaleX="0.8"
-            android:id="@+id/fp_fechafin"
+            android:id="@+id/date_fechafin"
             android:calendarViewShown="false" />
     </LinearLayout>
 

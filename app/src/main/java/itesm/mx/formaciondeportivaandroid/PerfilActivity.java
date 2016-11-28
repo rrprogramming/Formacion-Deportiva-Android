@@ -57,7 +57,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
 
     DBOperations dbOperations;
 
-    long id = -1;
+    long iId = -1;
 
     Spinner spGenero;
 
@@ -93,7 +93,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
     public void setData(){
         Perfil perfil;
 
-        perfil = dbOperations.getPerfil(id);
+        perfil = dbOperations.getPerfil(iId);
 
         if(perfil.getGenero().equalsIgnoreCase("Masculino")){
             spGenero.setSelection(1);
@@ -205,11 +205,11 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
                                 Perfil perfil = new Perfil(etNombre.getText().toString(),etMatricula.getText().toString(),spGenero.getSelectedItem().toString(),fecha,etPesoActual.getText().toString(),etPesoMeta.getText().toString(),etPesoMaximoPierna.getText().toString(),
                                         etPesoMaximoBrazo.getText().toString(),etGrupoMuscular.getText().toString(),etRepeticion.getText().toString(),etPorcentaje.getText().toString(),etPeso.getText().toString(),byteArray);
 
-                                id = dbOperations.addPerfil(perfil);
+                                iId = dbOperations.addPerfil(perfil);
 
                                 SharedPreferences settings = getPreferences(MODE_PRIVATE);
                                 SharedPreferences.Editor editor = settings.edit();
-                                editor.putLong(keys.KEY_ID, id);
+                                editor.putLong(keys.KEY_ID, iId);
                                 editor.commit();
 
                                 Toast.makeText(getApplicationContext(),"Perfil actualizado con exito",Toast.LENGTH_LONG).show();
@@ -258,9 +258,9 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         dpNacimiento = (DatePicker) findViewById(R.id.date_nacimiento);
 
         SharedPreferences settings = getPreferences(MODE_PRIVATE);
-        id = settings.getLong(keys.KEY_ID, -1);
+        iId = settings.getLong(keys.KEY_ID, -1);
 
-        if(id != -1){
+        if(iId != -1){
             setData();
         }
 

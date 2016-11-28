@@ -19,7 +19,7 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 public class Ejercicio {
-    private long id;
+    private long iId;
     private long idRutina;
     private String sNombreEjer;
     private String sTipoEjer;
@@ -51,7 +51,7 @@ public class Ejercicio {
     }
 
     public Ejercicio(String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE) {
-        this.id = -1;
+        this.iId = -1;
         this.sNombreEjer = sNombreEjer;
         this.sTipoEjer = sTipoEjer;
         this.sMusculo = sMusculo;
@@ -62,7 +62,7 @@ public class Ejercicio {
     }
 
     public Ejercicio(int id,String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
-        this.id = id;
+        this.iId = id;
         this.sNombreEjer = sNombreEjer;
         this.sTipoEjer = sTipoEjer;
         this.sMusculo = sMusculo;
@@ -73,7 +73,7 @@ public class Ejercicio {
     }
 
     public Ejercicio(int id, int idRutina,String sNombreEjer, String sTipoEjer, String sMusculo, int iSeries, int iRepeticiones, int idFotoE, String diaFin) {
-        this.id = id;
+        this.iId = id;
         this.idRutina = idRutina;
         this.sNombreEjer = sNombreEjer;
         this.sTipoEjer = sTipoEjer;
@@ -85,11 +85,11 @@ public class Ejercicio {
     }
 
     public long getId(){
-        return this.id;
+        return this.iId;
     }
 
     public void setId(long id){
-        this.id = id;
+        this.iId = id;
     }
 
     public String getsNombreEjer() {

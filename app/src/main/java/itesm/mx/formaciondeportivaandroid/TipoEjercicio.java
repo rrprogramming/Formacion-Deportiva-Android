@@ -19,56 +19,42 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 public class TipoEjercicio {
-    private long id;
-    private String tipo;
-    private String musculo;
-    private int idFotoRT;
+    private long iId;
+    private String sTipo;
+    private String sMusculo;
+    private int iIdFotoRT;
 
-    public TipoEjercicio() {
-        this.id = -1;
-        this.tipo = null;
-        this.musculo = null;
-        this.idFotoRT = -1;
-    }
-
-    public TipoEjercicio(String tipo,String musculo, int idFotoRT) {
-        this.tipo = tipo;
-        this.idFotoRT = idFotoRT;
-        this.musculo = musculo;
-    }
-
-    public TipoEjercicio(long id, String tipo,String musculo, int idFotoRT) {
-        this.id = id;
-        this.tipo = tipo;
-        this.idFotoRT = idFotoRT;
-        this.musculo = musculo;
+    public TipoEjercicio(String sTipo,String sMusculo, int iIdFotoRT) {
+        this.sTipo = sTipo;
+        this.iIdFotoRT = iIdFotoRT;
+        this.sMusculo = sMusculo;
     }
 
     public long getId(){
-        return this.id;
+        return this.iId;
     }
 
-    public void setId(long id){
-        this.id = id;
+    public void setId(long iId){
+        this.iId = iId;
     }
 
     public String getTipo() {
-        return tipo;
+        return sTipo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipo(String sTipo) {
+        this.sTipo = sTipo;
     }
 
     public int getIdFotoRT() {
-        return idFotoRT;
+        return iIdFotoRT;
     }
 
-    public void setIdFotoRT(int idFoto) {
-        this.idFotoRT = idFoto;
+    public void setIdFotoRT(int iIdFoto) {
+        this.iIdFotoRT = iIdFoto;
     }
 
-    public String getTMusculo() { return musculo;}
+    public String getTMusculo() { return sMusculo;}
 
-    public void setTMusculo(String musculo) {this.musculo = musculo;}
+    public void setTMusculo(String sMusculo) {this.sMusculo = sMusculo;}
 }

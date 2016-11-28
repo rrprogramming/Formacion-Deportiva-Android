@@ -43,19 +43,21 @@ import java.util.ArrayList;
 public class SeleccionActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener{
 
     ArrayList<TipoEjercicio> listSelec;
-    ArrayList<Ejercicio> listEjer = new ArrayList<Ejercicio>();
+    ArrayList<Ejercicio> listEjer = new ArrayList<>();
     TipoEjercicioAdapter adapterR;
     Rutina rutina;
-    private Button btnRegresarAct;
-    private Button btnGuardarAct;
+    
     private DBOperations dao;
 
     String sTipo;
-    Button home;
-    Button rutinas;
-    Button sesion;
-    Button historia;
-    Button perfil;
+    
+    Button btnRegresarAct;
+    Button btnGuardarAct;
+    Button btnHome;
+    Button btnRutinas;
+    Button btnSesion;
+    Button btnHistoria;
+    Button btnPerfil;
     TextView tvTipo;
 
     @Override
@@ -64,10 +66,18 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         setContentView(R.layout.activity_seleccion);
         dao = new DBOperations(this);
         dao.open();
+
         btnRegresarAct = (Button) findViewById(R.id.button_rutinasAct);
         btnGuardarAct = (Button) findViewById(R.id.button_guardarR);
+        btnHome = (Button) findViewById(R.id.button_home);
+        btnRutinas = (Button) findViewById(R.id.button_rutinas);
+        btnSesion = (Button) findViewById(R.id.button_sesion);
+        btnHistoria = (Button) findViewById(R.id.button_history);
+        btnPerfil = (Button) findViewById(R.id.button_perfil);
+        tvTipo = (TextView) findViewById(R.id.text_title);
+
         ArrayList<TipoEjercicio> arrayListEjercicio;
-        sTipo=getIntent().getStringExtra("tipo");
+        sTipo = getIntent().getStringExtra("tipo");
         Gson gson = new Gson();
         rutina = gson.fromJson(getIntent().getStringExtra("json"),Rutina.class);
 
@@ -75,23 +85,16 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
 
         adapterR = new TipoEjercicioAdapter(this, arrayListEjercicio);
         setListAdapter(adapterR);
+
+        btnHome.setOnClickListener(this);
+        btnRutinas.setOnClickListener(this);
+        btnSesion.setOnClickListener(this);
+        btnHistoria.setOnClickListener(this);
+        btnPerfil.setOnClickListener(this);
         btnRegresarAct.setOnClickListener(this);
         btnGuardarAct.setOnClickListener(this);
 
         getListView().setOnItemClickListener(this);
-
-        home = (Button) findViewById(R.id.button_home);
-        rutinas = (Button) findViewById(R.id.button_rutinas);
-        sesion = (Button) findViewById(R.id.button_sesion);
-        historia = (Button) findViewById(R.id.button_history);
-        perfil = (Button) findViewById(R.id.button_perfil);
-        tvTipo = (TextView) findViewById(R.id.text_title);
-
-        home.setOnClickListener(this);
-        rutinas.setOnClickListener(this);
-        sesion.setOnClickListener(this);
-        historia.setOnClickListener(this);
-        perfil.setOnClickListener(this);
 
         tvTipo.setText(sTipo);
     }
@@ -271,10 +274,6 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button_rutinas:
-                //Intent intent = new Intent(this, RutinasActivity.class);
-                //startActivity(intent);
-                break;
             case R.id.button_home:
                 Intent intent2 = new Intent(this,MainActivity.class);
                 intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -305,15 +304,11 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
                 Intent intentjson = new Intent();
                 intentjson.putExtra("json",json);
                 setResult(TiposRutinaActivity.RESULT_OK,intentjson);
-                //Toast.makeText(this, "Regreso a la Rutina 1", Toast.LENGTH_SHORT).show();
                 finish();
-                //Intent intent6 = new Intent(this, TiposRutinaActivity.class);
-                //startActivity(intent6);
                 break;
 
             case R.id.button_guardarR:
-                //rutina = new Rutina(getIntent().getStringExtra("nombre"), listEjer, R.mipmap.ic_launcher);
-                ArrayList<Ejercicio> ArrEjercicio = new ArrayList<>();
+                ArrayList<Ejercicio> ArrEjercicio;
                 ArrEjercicio=rutina.getEjercicio();
                 if(ArrEjercicio.size()==0){
                     Toast.makeText(this, "Favor de seleccionar ejercicios antes de guardar una rutina", Toast.LENGTH_SHORT).show();
@@ -338,10 +333,7 @@ public class SeleccionActivity extends ListActivity implements View.OnClickListe
         Intent intentjson = new Intent();
         intentjson.putExtra("json",json);
         setResult(TiposRutinaActivity.RESULT_OK,intentjson);
-        //Toast.makeText(this, "Regreso a la Rutina 1", Toast.LENGTH_SHORT).show();
         finish();
-        //Intent intent6 = new Intent(this, TiposRutinaActivity.class);
-        //startActivity(intent6);
     }
 
     @Override

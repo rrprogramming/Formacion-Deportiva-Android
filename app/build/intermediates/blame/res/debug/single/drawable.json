@@ -172,12 +172,12 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7131.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sesion_icon.png",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\sesion_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dsc_5810.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5810.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sesion_icon.png",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\sesion_icon.png"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6368.jpg",
@@ -240,12 +240,12 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6340.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0503.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0503.jpg"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0502.jpg",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0502.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0503.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0503.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
