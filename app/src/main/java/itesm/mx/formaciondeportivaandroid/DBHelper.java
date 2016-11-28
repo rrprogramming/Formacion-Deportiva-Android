@@ -61,9 +61,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 DatabaseSchema.PerfilTable.COLUMN_NAME_NOMBRE+" TEXT, "+
                 DatabaseSchema.PerfilTable.COLUMN_NAME_MATRICULA+" TEXT, "+
                 DatabaseSchema.PerfilTable.COLUMN_NAME_GENERO+" TEXT, "+
-                DatabaseSchema.PerfilTable.COLUMN_NAME_DIA_NACIMEINTO+" TEXT, "+
-                DatabaseSchema.PerfilTable.COLUMN_NAME_MES_NACIMIENTO+" TEXT, "+
-                DatabaseSchema.PerfilTable.COLUMN_NAME_ANO_NACIMIENTO+" TEXT, "+
+                DatabaseSchema.PerfilTable.COLUMN_NAME_FECHANAC+" TEXT, "+
                 DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_ACTUAL+" TEXT, "+
                 DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_META+" TEXT, "+
                 DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_PIERNA+" TEXT, "+

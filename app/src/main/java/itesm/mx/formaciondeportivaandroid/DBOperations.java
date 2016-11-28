@@ -85,14 +85,12 @@ public class DBOperations {
         boolean result = false;
         String query = "Select * FROM " + DatabaseSchema.RutinaTable.TABLE_NAME +
                 " WHERE " + DatabaseSchema.RutinaTable._ID +
-                " = " + id;
+                " = \'"+id+"\'";
         try {
             Cursor cursor = db.rawQuery(query, null);
             if(cursor.moveToFirst()){
                 id = Integer.parseInt(cursor.getString(0));
-                db.delete(DatabaseSchema.RutinaTable.TABLE_NAME,
-                        DatabaseSchema.RutinaTable._ID + " = ?",
-                        new String[]{String.valueOf(id)});
+                db.delete(DatabaseSchema.RutinaTable.TABLE_NAME, DatabaseSchema.RutinaTable._ID + " =?", new String[]{String.valueOf(id)});
                 result = true;
             }
             cursor.close();
@@ -112,9 +110,7 @@ public class DBOperations {
                 values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_NOMBRE, perfil.getNombre());
                 values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_MATRICULA,perfil.getMatricula());
                 values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_GENERO,perfil.getGenero());
-                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_DIA_NACIMEINTO, perfil.getDiaNaciemiento());
-                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_MES_NACIMIENTO, perfil.getMesNaciemiento());
-                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_ANO_NACIMIENTO, perfil.getAnoNaciemiento());
+                values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_FECHANAC, perfil.getFechaNacimiento());
                 values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_ACTUAL, perfil.getPesoActual());
                 values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_META, perfil.getPesoMeta());
                 values.put(DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_PIERNA, perfil.getPesoMaximoPierna());
@@ -135,9 +131,7 @@ public class DBOperations {
                     " SET "+ DatabaseSchema.PerfilTable.COLUMN_NAME_NOMBRE +"="+"\'"+perfil.getNombre()+"\'"+","+
                     DatabaseSchema.PerfilTable.COLUMN_NAME_MATRICULA +"="+"\'"+perfil.getMatricula()+"\'"+","+
                     DatabaseSchema.PerfilTable.COLUMN_NAME_GENERO +"="+"\'"+perfil.getGenero()+"\'"+","+
-                    DatabaseSchema.PerfilTable.COLUMN_NAME_DIA_NACIMEINTO +"="+"\'"+perfil.getDiaNaciemiento()+"\'"+","+
-                    DatabaseSchema.PerfilTable.COLUMN_NAME_MES_NACIMIENTO +"="+"\'"+perfil.getMesNaciemiento()+"\'"+","+
-                    DatabaseSchema.PerfilTable.COLUMN_NAME_ANO_NACIMIENTO +"="+"\'"+perfil.getAnoNaciemiento()+"\'"+","+
+                    DatabaseSchema.PerfilTable.COLUMN_NAME_FECHANAC +"="+"\'"+perfil.getFechaNacimiento()+"\'"+","+
                     DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_ACTUAL +"="+"\'"+perfil.getPesoActual()+"\'"+","+
                     DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_META +"="+"\'"+perfil.getPesoMeta()+"\'"+","+
                     DatabaseSchema.PerfilTable.COLUMN_NAME_PESO_MAXIMO_PIERNA +"="+"\'"+perfil.getPesoMaximoPierna()+"\'"+","+
@@ -177,9 +171,7 @@ public class DBOperations {
                         cursor.getString(10),
                         cursor.getString(11),
                         cursor.getString(12),
-                        cursor.getString(13),
-                        cursor.getString(14),
-                        cursor.getBlob(15));
+                        cursor.getBlob(13));
             }
         }catch (SQLException e){
             Log.e("GET PERFIL", e.toString());

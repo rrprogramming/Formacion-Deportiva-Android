@@ -5,5 +5,6 @@ package itesm.mx.formaciondeportivaandroid;
  */
 public class Keys {
     public final String KEY_ID = "KEY_ID";
+    public final String KEY_NOMBRE = "nombre";
     public final int REQUEST_CODE = 1;
 }

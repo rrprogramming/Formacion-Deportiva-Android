@@ -23,9 +23,7 @@ public class Perfil {
     private String nombre;
     private String matricula;
     private String genero;
-    private String diaNaciemiento;
-    private String mesNaciemiento;
-    private String anoNaciemiento;
+    private String fechaNacimiento;
     private String pesoActual;
     private String pesoMeta;
     private String pesoMaximoPierna;
@@ -41,9 +39,7 @@ public class Perfil {
         this.id = -1;
         this.nombre = null;
         this.matricula = null;
-        this.diaNaciemiento= null;
-        this.mesNaciemiento= null;
-        this.anoNaciemiento= null;
+        this.fechaNacimiento = null;
         this.pesoActual= null;
         this.pesoMeta= null;
         this.pesoMaximoPierna= null;
@@ -55,14 +51,12 @@ public class Perfil {
         this.foto = null;
     }
 
-    public Perfil(String nombre, String matricula, String genero, String diaNaciemiento, String mesNaciemiento, String anoNaciemiento, String pesoActual, String pesoMeta, String pesoMaximoPierna, String pesoMaximoBrazo, String grupoMuscular, String repeticion,String porcentaje, String peso, byte[] foto){
+    public Perfil(String nombre, String matricula, String genero, String fechaNacimiento, String pesoActual, String pesoMeta, String pesoMaximoPierna, String pesoMaximoBrazo, String grupoMuscular, String repeticion,String porcentaje, String peso, byte[] foto){
         this.id = -1;
         this.nombre = nombre;
         this.matricula = matricula;
         this.genero = genero;
-        this.diaNaciemiento= diaNaciemiento;
-        this.mesNaciemiento= mesNaciemiento;
-        this.anoNaciemiento= anoNaciemiento;
+        this.fechaNacimiento = fechaNacimiento;
         this.pesoActual= pesoActual;
         this.pesoMeta= pesoMeta;
         this.pesoMaximoPierna= pesoMaximoPierna;
@@ -74,14 +68,12 @@ public class Perfil {
         this.foto = foto;
     }
 
-    public Perfil(long id, String nombre, String matricula, String genero, String diaNaciemiento, String mesNaciemiento, String anoNaciemiento, String pesoActual, String pesoMeta, String pesoMaximoPierna, String pesoMaximoBrazo, String grupoMuscular, String repeticion, String porcentaje, String peso, byte[] foto){
+    public Perfil(long id, String nombre, String matricula, String genero, String fechaNacimiento, String pesoActual, String pesoMeta, String pesoMaximoPierna, String pesoMaximoBrazo, String grupoMuscular, String repeticion, String porcentaje, String peso, byte[] foto){
         this.id = id;
         this.nombre = nombre;
         this.matricula = matricula;
         this.genero = genero;
-        this.diaNaciemiento= diaNaciemiento;
-        this.mesNaciemiento= mesNaciemiento;
-        this.anoNaciemiento= anoNaciemiento;
+        this.fechaNacimiento = fechaNacimiento;
         this.pesoActual= pesoActual;
         this.pesoMeta= pesoMeta;
         this.pesoMaximoPierna= pesoMaximoPierna;
@@ -125,28 +117,12 @@ public class Perfil {
         this.genero = genero;
     }
 
-    public String getDiaNaciemiento() {
-        return diaNaciemiento;
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setDiaNaciemiento(String diaNaciemiento) {
-        this.diaNaciemiento = diaNaciemiento;
-    }
-
-    public String getMesNaciemiento() {
-        return mesNaciemiento;
-    }
-
-    public void setMesNaciemiento(String mesNaciemiento) {
-        this.mesNaciemiento = mesNaciemiento;
-    }
-
-    public String getAnoNaciemiento() {
-        return anoNaciemiento;
-    }
-
-    public void setAnoNaciemiento(String anoNaciemiento) {
-        this.anoNaciemiento = anoNaciemiento;
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getPesoActual() {

@@ -135,10 +135,11 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                 }
 
                 email.putExtra(Intent.EXTRA_EMAIL,recipients);
-                email.putExtra(Intent.EXTRA_SUBJECT,"Rutinas dia "+fechaInicio+" al "+fechaFin+" "+arrEjer.size());
+                email.putExtra(Intent.EXTRA_SUBJECT,"Ejercicio del dia "+fechaInicio+" al "+fechaFin);
                 email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(sCorreo));
                 try{
                     startActivity(Intent.createChooser(email,"Selecciona un cliente de correo.."));
+                    sCorreo="";
                 }catch(android.content.ActivityNotFoundException ex){
                     Toast.makeText(HistorialActivity.this,"No esta instalado ese cliente de correo.",
                             Toast.LENGTH_LONG).show();

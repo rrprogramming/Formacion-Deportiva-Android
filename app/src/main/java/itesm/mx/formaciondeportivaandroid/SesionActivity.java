@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -108,10 +109,15 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.btn_comenzar:
-                Intent myIntent6 = new Intent(this, EjercicioActivity.class);
-                myIntent6.putExtra("ID", Long.toString(arrRutina.get(spinnerRutinas.getSelectedItemPosition()).getid()));
-                Log.i("ID EXTRA", Long.toString(arrRutina.get(spinnerRutinas.getSelectedItemPosition()).getid()));
-                startActivity(myIntent6);
+                if(arrRutina.size()==0){
+                    Toast.makeText(this, "No hay rutinas creadas", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Intent myIntent6 = new Intent(this, EjercicioActivity.class);
+                    myIntent6.putExtra("ID", Long.toString(arrRutina.get(spinnerRutinas.getSelectedItemPosition()).getid()));
+                    Log.i("ID EXTRA", Long.toString(arrRutina.get(spinnerRutinas.getSelectedItemPosition()).getid()));
+                    startActivity(myIntent6);
+                }
                 break;
         }
     }

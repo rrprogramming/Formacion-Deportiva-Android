@@ -76,6 +76,22 @@
          *Se prohíbe el manejo y/o consumo de bebidas ergogénicas nutricionales dentro de las instalaciones deportivas. Sera sancionado quien no respete alguna de las reglas.\n\n
 
     </string>
+
+    <string name="credios">
+        TransformaTEC ha sido desrrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto-Diciembre de 2016 como parte del curso Proyectos de desarrllo para dispositivos
+        móviles impartido por la maestra Martha Sordia Salidas. Esta aplicación es una adaptación de la versión de iOS que fue desarrollada en el semestre Enero-Mayo
+        del mismo año.\n\n
+
+        Desarrolladores:\n
+        Armando Aguilar Muñiz A01196064\n
+        Rolando Ruiz Guerrero A01280151\n
+        Cesar de la Barreda Martínez A01195359\n\n
+
+        TransformaTEC se distribuye como está de manera gratuita y se prohibe su dsitribución y uso con fines de lucro.\n\n
+
+        Íconos usados bajo licencia Creative Commons Attribution-NoDerivs 3.0 Unported por parte de Icons8\n
+        www.icons8.com
+    </string>
     <string name="btnHorario">Horario</string>
     <string name="btnReglamento">Reglamento</string>
     <string name="email">Complete los campos para mandar el correo</string>

@@ -45,6 +45,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:datePickerMode="spinner"
+        android:padding="-100dp"
+        android:scaleY="0.8"
+        android:scaleX="0.8"
         android:id="@+id/dp_fechain"
         android:calendarViewShown="false"
         android:layout_below="@+id/tv_fechain"
@@ -65,7 +68,9 @@
         android:text="@string/tv_fechain"
         android:id="@+id/tv_fechain"
         android:layout_below="@+id/layout_title"
-        android:layout_alignStart="@+id/tv_fechafin" />
+        android:layout_alignStart="@+id/tv_fechafin"
+        android:textColor="@color/black"
+        android:textSize="8pt"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,7 +78,9 @@
         android:text="@string/tv_fechafin"
         android:id="@+id/tv_fechafin"
         android:layout_below="@+id/dp_fechain"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="8pt"/>
 
     <LinearLayout
         android:layout_width="match_parent"

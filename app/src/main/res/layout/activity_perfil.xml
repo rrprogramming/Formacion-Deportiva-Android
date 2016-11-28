@@ -135,26 +135,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spinner_dia"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content">
-
-                </Spinner>
-
-                <Spinner
-                    android:id="@+id/spinner_mes"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content">
-
-                </Spinner>
-
-                <Spinner
-                    android:id="@+id/spinner_año"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content">
-
-                </Spinner>
+                <DatePicker
+                    android:id="@+id/date_nacimiento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:padding="-100dp"
+                    android:scaleY="0.8"
+                    android:scaleX="0.8"/>
 
             </LinearLayout>
 

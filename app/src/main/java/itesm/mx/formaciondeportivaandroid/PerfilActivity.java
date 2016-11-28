@@ -18,7 +18,9 @@ package itesm.mx.formaciondeportivaandroid;
 * along with this program.  If not, see <http://www.gnu.org/licenses.
 */
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -27,12 +29,16 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -44,6 +50,8 @@ import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class PerfilActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -52,9 +60,8 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
     long id = -1;
 
     Spinner spGenero;
-    Spinner spDia;
-    Spinner spAño;
-    Spinner spMes;
+
+    DatePicker dpNacimiento;
 
     Button btnHome;
     Button btnRutinas;
@@ -95,9 +102,6 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         }else {
             spGenero.setSelection(3);
         }
-        spDia.setSelection(Integer.parseInt(perfil.getDiaNaciemiento()));
-        spAño.setSelection(Integer.parseInt(perfil.getAnoNaciemiento()));
-        spMes.setSelection(Integer.parseInt(perfil.getMesNaciemiento()));
         etGrupoMuscular.setText(perfil.getGrupoMuscular());
         etPeso.setText(perfil.getPeso());
         etRepeticion.setText(perfil.getRepeticion());
@@ -109,6 +113,22 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         etPesoMaximoPierna.setText(perfil.getPesoMaximoPierna());
         etPesoMaximoBrazo.setText(perfil.getPesoMaximoBrazo());
 
+        byte[] image=perfil.getFoto();
+
+        if(image!=null){
+            Bitmap bmimage = BitmapFactory.decodeByteArray(image,0,image.length);
+            ivFoto.setImageBitmap(bmimage);
+        }
+
+        String sFecha = perfil.getFechaNacimiento();
+        Log.i("FECHA", sFecha);
+        int iAño = Integer.parseInt(sFecha.substring(0,sFecha.indexOf("-")));
+        int iMes = Integer.parseInt(sFecha.substring(sFecha.indexOf("-")+1,sFecha.lastIndexOf("-")));
+        int iDia = Integer.parseInt(sFecha.substring(sFecha.lastIndexOf("-")+1));
+
+        Log.i("DATOS FECHA",iAño+" / "+iMes+" / "+iDia);
+
+        dpNacimiento.updateDate(iAño,iMes-1,iDia);
 
         ivFoto = (ImageView)findViewById(R.id.image_perfil);
     }
@@ -142,12 +162,6 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(intent);
                 break;
 
-            case R.id.button_perfil:
-                //intent = new Intent(this,PerfilActivity.class);
-                //finishAffinity();
-                //startActivity(intent);
-                break;
-
             case R.id.button_tomarFoto:
                 intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
@@ -159,18 +173,60 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.button_guardar:
 
-                Perfil perfil = new Perfil(etNombre.getText().toString(),etMatricula.getText().toString(),spGenero.getSelectedItem().toString(),Integer.toString(spDia.getSelectedItemPosition()),
-                        Integer.toString(spMes.getSelectedItemPosition()),Integer.toString(spAño.getSelectedItemPosition()),etPesoActual.getText().toString(),etPesoMeta.getText().toString(),etPesoMaximoPierna.getText().toString(),
-                        etPesoMaximoBrazo.getText().toString(),etGrupoMuscular.getText().toString(),etRepeticion.getText().toString(),etPorcentaje.getText().toString(),etPeso.getText().toString(),byteArray);
+                AlertDialog.Builder dialogorutina = new AlertDialog.Builder(this);
+                final EditText etContraseña = new EditText(this);
 
-                id = dbOperations.addPerfil(perfil);
+                LinearLayout lila= new LinearLayout(this);
+                lila.setOrientation(LinearLayout.VERTICAL);
 
-                SharedPreferences settings = getPreferences(MODE_PRIVATE);
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putLong(keys.KEY_ID, id);
-                editor.commit();
+                dialogorutina.setTitle("Favor de ir con su instructor para modificar el perfil");
+                etContraseña.setHint("Contraseña");
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+                etContraseña.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
-                Toast.makeText(this,"Perfil actualizado con exito",Toast.LENGTH_LONG).show();
+                lila.addView(etContraseña);
+
+                dialogorutina.setView(lila);
+                dialogorutina.setPositiveButton("Crear", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(etContraseña.getText().length()==0) {
+                            Toast.makeText(getApplication(), "Favor de completar todos los campos de texto", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            if(etContraseña.getText().toString().equals("gymsport")) {
+                                GregorianCalendar cal1=new GregorianCalendar(dpNacimiento.getYear(),
+                                        dpNacimiento.getMonth(),dpNacimiento.getDayOfMonth());
+                                Date nac=cal1.getTime();
+                                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                                String fecha = sdf.format(nac);
+
+                                Perfil perfil = new Perfil(etNombre.getText().toString(),etMatricula.getText().toString(),spGenero.getSelectedItem().toString(),fecha,etPesoActual.getText().toString(),etPesoMeta.getText().toString(),etPesoMaximoPierna.getText().toString(),
+                                        etPesoMaximoBrazo.getText().toString(),etGrupoMuscular.getText().toString(),etRepeticion.getText().toString(),etPorcentaje.getText().toString(),etPeso.getText().toString(),byteArray);
+
+                                id = dbOperations.addPerfil(perfil);
+
+                                SharedPreferences settings = getPreferences(MODE_PRIVATE);
+                                SharedPreferences.Editor editor = settings.edit();
+                                editor.putLong(keys.KEY_ID, id);
+                                editor.commit();
+
+                                Toast.makeText(getApplicationContext(),"Perfil actualizado con exito",Toast.LENGTH_LONG).show();
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(), "La contraseña es incorrecta", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }
+                });
+                dialogorutina.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                dialogorutina.show();
 
                 break;
         }
@@ -185,9 +241,6 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         dbOperations.open();
 
         spGenero = (Spinner)findViewById(R.id.spinner_genero);
-        spDia = (Spinner)findViewById(R.id.spinner_dia);
-        spAño = (Spinner)findViewById(R.id.spinner_año);
-        spMes = (Spinner)findViewById(R.id.spinner_mes);
 
         ivFoto = (ImageView)findViewById(R.id.image_perfil);
 
@@ -202,6 +255,8 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         etPesoMaximoPierna = (EditText) findViewById(R.id.edit_pesoMaximoPierna);
         etPesoMaximoBrazo = (EditText) findViewById(R.id.edit_pesoMaximoBrazo);
 
+        dpNacimiento = (DatePicker) findViewById(R.id.date_nacimiento);
+
         SharedPreferences settings = getPreferences(MODE_PRIVATE);
         id = settings.getLong(keys.KEY_ID, -1);
 
@@ -209,17 +264,10 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
             setData();
         }
 
+        etNombre.requestFocus();
+
         ArrayAdapter<CharSequence> adapterGenero = ArrayAdapter.createFromResource(this,R.array.genero,R.layout.support_simple_spinner_dropdown_item);
         spGenero.setAdapter(adapterGenero);
-
-        ArrayAdapter<CharSequence> adapterDia = ArrayAdapter.createFromResource(this,R.array.dia,R.layout.support_simple_spinner_dropdown_item);
-        spDia.setAdapter(adapterDia);
-
-        ArrayAdapter<CharSequence> adapterMes = ArrayAdapter.createFromResource(this,R.array.mes,R.layout.support_simple_spinner_dropdown_item);
-        spMes.setAdapter(adapterMes);
-
-        ArrayAdapter<CharSequence> adapterAño = ArrayAdapter.createFromResource(this,R.array.año,R.layout.support_simple_spinner_dropdown_item);
-        spAño.setAdapter(adapterAño);
 
         btnHome = (Button) findViewById(R.id.button_home);
         btnRutinas = (Button) findViewById(R.id.button_rutinas);

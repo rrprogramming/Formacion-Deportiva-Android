@@ -55,9 +55,7 @@ public class DatabaseSchema {
         public static final String COLUMN_NAME_NOMBRE = "nombre";
         public static final String COLUMN_NAME_MATRICULA = "matricula";
         public static final String COLUMN_NAME_GENERO = "genero";
-        public static final String COLUMN_NAME_DIA_NACIMEINTO = "diaNacimiento";
-        public static final String COLUMN_NAME_MES_NACIMIENTO = "mesNacimiento";
-        public static final String COLUMN_NAME_ANO_NACIMIENTO = "anoNacimiento";
+        public static final String COLUMN_NAME_FECHANAC = "fechaNacimiento";
         public static final String COLUMN_NAME_PESO_ACTUAL = "pesoActual";
         public static final String COLUMN_NAME_PESO_META = "pesoMeta";
         public static final String COLUMN_NAME_PESO_MAXIMO_PIERNA = "pesoMaximoPierna";

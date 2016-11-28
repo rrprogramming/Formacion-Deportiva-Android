@@ -474,6 +474,21 @@
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="correo">harmando_52@hotmail.com</string>
     <string name="crear">+</string>
+    <string name="credios">
+        TransformaTEC ha sido desrrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto-Diciembre de 2016 como parte del curso Proyectos de desarrllo para dispositivos
+        móviles impartido por la maestra Martha Sordia Salidas. Esta aplicación es una adaptación de la versión de iOS que fue desarrollada en el semestre Enero-Mayo
+        del mismo año.\n\n
+
+        Desarrolladores:\n
+        Armando Aguilar Muñiz A01196064\n
+        Rolando Ruiz Guerrero A01280151\n
+        Cesar de la Barreda Martínez A01195359\n\n
+
+        TransformaTEC se distribuye como está de manera gratuita y se prohibe su dsitribución y uso con fines de lucro.\n\n
+
+        Íconos usados bajo licencia Creative Commons Attribution-NoDerivs 3.0 Unported por parte de Icons8\n
+        www.icons8.com
+    </string>
     <string name="destinatario">Destinatario</string>
     <string name="ejercicio_tipo">Tipo de Ejercicio</string>
     <string name="eliminar">¿Desea eliminar esta rutina?</string>

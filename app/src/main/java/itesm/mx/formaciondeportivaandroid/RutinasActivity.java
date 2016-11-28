@@ -41,7 +41,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class RutinasActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
+public class RutinasActivity extends ListActivity implements View.OnClickListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
 
     public String [] sRutinas;
     private Button btnAgregar;
@@ -71,6 +71,7 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         RutinaAdapter rutinaAdapter = new RutinaAdapter(this,arrayListRutina);
         setListAdapter(rutinaAdapter);
         getListView().setOnItemClickListener(this);
+        getListView().setOnItemLongClickListener(this);
 
         btnAgregar.setOnClickListener(this);
 
@@ -85,7 +86,7 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         sesion.setOnClickListener(this);
         historia.setOnClickListener(this);
         perfil.setOnClickListener(this);
-        registerForContextMenu(this.getListView());
+        //registerForContextMenu(this.getListView());
     }
 
 
@@ -178,6 +179,37 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
     }
 
     @Override
+    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        final Rutina rutina = (Rutina)parent.getItemAtPosition(position);
+        new AlertDialog.Builder(this)
+                .setTitle("Eliminar rutina")
+                .setMessage("¿Deseas eliminar permanentemente esta rutina?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        long id = rutina.getid();
+                        boolean result = dao.deleteRutina(id);
+
+                        if(result){
+                            Toast.makeText(getApplicationContext(), "Operación Exitosa", Toast.LENGTH_SHORT).show();
+                            Intent intent5 = new Intent(getApplicationContext(),RutinasActivity.class);
+                            intent5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent5);
+                        }else {
+                            Toast.makeText(getApplicationContext(), "La rutina no existe", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+                return true;
+    }
+
+    /*@Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.menu_context,menu);
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -190,7 +222,7 @@ public class RutinasActivity extends ListActivity implements View.OnClickListene
         int id = item.getItemId();
         //info.position;
         return super.onContextItemSelected(item);
-    }
+    }*/
 
     @Override
     public void onPause(){
