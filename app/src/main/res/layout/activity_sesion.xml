@@ -25,6 +25,7 @@
             android:textColor="@color/black"/>
 
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -47,6 +48,7 @@
             android:layout_marginTop="60dp"
             android:background="@color/white"
             android:textColor="@color/black"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -93,4 +95,5 @@
             android:background="@drawable/perfil_icon"/>
 
     </LinearLayout>
+
 </LinearLayout>
