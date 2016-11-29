@@ -32,12 +32,12 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_7088.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0509.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0509.jpg"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0509.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0509.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0525.jpg",
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6345.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0574.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0574.jpg"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_0574.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_0574.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_7125.jpg",
@@ -104,12 +104,12 @@
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\dsc_5751.jpg"
     },
     {
-        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6918.jpg",
-        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6918.jpg"
-    },
-    {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degradado.xml",
         "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\degradado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_6918.jpg",
+        "source": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\src\\main\\res\\drawable\\img_6918.jpg"
     },
     {
         "merged": "C:\\Users\\Rolando\\Documents\\FormacionDeportivaAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
