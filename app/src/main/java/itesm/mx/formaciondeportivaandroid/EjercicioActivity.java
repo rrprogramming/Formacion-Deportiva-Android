@@ -83,10 +83,12 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
         tvRutina.setText(rutina.getsNombre());
         pos=0;
         mostrarEjercicio();
+        dbo.close();
 
         swTerminado.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
+                    dbo.open();
                     Date date = new Date();
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                     String sdate = sdf.format(date);
@@ -96,6 +98,7 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
                         pos+=1;
                         mostrarEjercicio();
                     }
+                    dbo.close();
                 }
             }
         });
@@ -152,15 +155,5 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
         }
     }
 
-    @Override
-    public void onPause(){
-        super.onPause();
-        dbo.close();
-    }
 
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        dbo.close();
-    }
 }
