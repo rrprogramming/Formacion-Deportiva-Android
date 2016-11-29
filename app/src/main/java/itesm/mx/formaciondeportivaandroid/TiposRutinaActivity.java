@@ -144,9 +144,7 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
 
             case R.id.button_regresar:
                 Toast.makeText(this, "Operacion cancelada ", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, RutinasActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                finish();
         }
     }
 
@@ -187,5 +185,11 @@ public class TiposRutinaActivity extends ListActivity implements View.OnClickLis
             Gson gson = new Gson();
             RJson = gson.fromJson(data.getStringExtra("json"),Rutina.class);
         }
+    }
+
+    @Override
+    public void onBackPressed(){
+        Toast.makeText(this, "Operacion cancelada ", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }
