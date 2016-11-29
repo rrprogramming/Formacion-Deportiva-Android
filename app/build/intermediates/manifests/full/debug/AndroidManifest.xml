@@ -16,7 +16,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="itesm.mx.formaciondeportivaandroid.MainActivity" >
+        <activity
+            android:name="itesm.mx.formaciondeportivaandroid.MainActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,7 +57,6 @@
         <activity
             android:name="itesm.mx.formaciondeportivaandroid.ReglamentoActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="itesm.mx.formaciondeportivaandroid.EmailActivity" />
         <activity
             android:name="itesm.mx.formaciondeportivaandroid.InformacionActivity"
             android:label="@string/title_activity_informacion"
