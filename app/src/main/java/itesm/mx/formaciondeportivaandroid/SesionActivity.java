@@ -105,7 +105,7 @@ public class SesionActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.button_comenzar:
                 if(arrRutina.size()==0){
-                    Toast.makeText(this, "No hay btnRutinas creadas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "No hay Rutinas creadas", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Intent myIntent6 = new Intent(this, EjercicioActivity.class);
