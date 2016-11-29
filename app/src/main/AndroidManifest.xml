@@ -10,7 +10,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,7 +51,6 @@
         <activity
             android:name=".ReglamentoActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".EmailActivity" />
         <activity
             android:name=".InformacionActivity"
             android:screenOrientation="portrait"
