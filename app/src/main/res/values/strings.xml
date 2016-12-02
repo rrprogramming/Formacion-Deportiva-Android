@@ -42,6 +42,7 @@
     <string name="tv_fechafin">Fecha Final</string>
     <string name="titulo_inicio">Bienvenido al Gimnasio de Pesas del Tecnologico de Monterrey, Campus Monterrey</string>
     <string name="bienvenido_inicio">Bienvenido</string>
+    <string name="sesion">Sesión</string>
     <string name="seleccion_sesion">Seleccciona una Rutina</string>
     <string name="btn_comenzar">Comenzar</string>
     <string name="rutina">Rutina 1</string>

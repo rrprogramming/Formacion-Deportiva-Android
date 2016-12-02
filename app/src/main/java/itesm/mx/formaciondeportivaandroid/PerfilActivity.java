@@ -192,7 +192,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if(etContraseña.getText().length()==0) {
-                            Toast.makeText(getApplication(), "Favor de completar todos los campos de texto", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplication(), "La contraseña es incorrecta", Toast.LENGTH_SHORT).show();
                         }
                         else{
                             if(etContraseña.getText().toString().equals("gymsport")) {

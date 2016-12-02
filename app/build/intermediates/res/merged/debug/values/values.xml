@@ -543,6 +543,7 @@
     <string name="rutina">Rutina 1</string>
     <string name="seleccion_sesion">Seleccciona una Rutina</string>
     <string name="series">Series:</string>
+    <string name="sesion">Sesión</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="subject">Subject</string>
     <string name="terminado">Terminado</string>

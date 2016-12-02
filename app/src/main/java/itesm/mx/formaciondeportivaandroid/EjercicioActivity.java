@@ -28,6 +28,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -97,6 +98,8 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
                     if(pos<(arrEjercicio.size()-1)){
                         pos+=1;
                         mostrarEjercicio();
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Rutina terminada",Toast.LENGTH_LONG).show();
                     }
                     dbo.close();
                 }
