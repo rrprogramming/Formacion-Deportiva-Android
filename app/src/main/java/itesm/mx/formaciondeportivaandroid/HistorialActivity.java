@@ -123,7 +123,8 @@ public class HistorialActivity extends AppCompatActivity implements View.OnClick
                         "tony.gymsport@gmail.com"};
 
                 for(int i=0; i<arrEjer.size();i++){
-                    sCorreo+="<b>Ejercicio: </b>"+arrEjer.get(i).getsNombreEjer()+"<br>"+
+                    sCorreo+="<b>Fecha: </b>"+arrEjer.get(i).getDiaFin()+"<br>"+
+                            "<b>Ejercicio: </b>"+arrEjer.get(i).getsNombreEjer()+"<br>"+
                             "<b>Tipo de Ejercicio: </b>"+arrEjer.get(i).getsTipoEjer()+"<br>"+
                             "<b>Numero de Series: </b>"+arrEjer.get(i).getiSeries()+"<br>"+
                             "<b>Numero de Repeticiones: </b>"+arrEjer.get(i).getiRepeticiones()+"<br><br>";

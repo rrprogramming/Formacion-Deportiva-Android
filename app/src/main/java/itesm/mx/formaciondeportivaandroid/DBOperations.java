@@ -331,7 +331,7 @@ public class DBOperations {
                                         Integer.parseInt(cursor2.getString(5)),
                                         Integer.parseInt(cursor2.getString(6)),
                                         Integer.parseInt(cursor2.getString(7)),
-                                        cursor2.getString(8));
+                                        cursor.getString(2));
 
                                 listEjercicio.add(ejercicio);
                             }while (cursor2.moveToNext());
