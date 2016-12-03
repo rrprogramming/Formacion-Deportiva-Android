@@ -19,9 +19,11 @@ package itesm.mx.formaciondeportivaandroid;
 */
 
 import android.content.Intent;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -34,7 +36,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class EjercicioActivity extends AppCompatActivity implements  View.OnClickListener{
+public class EjercicioActivity extends AppCompatActivity implements  View.OnClickListener, View.OnTouchListener{
     private Button btnListo;
 
     Button btnHome;
@@ -52,8 +54,15 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
     ImageView ivEjercicio;
     DBOperations dbo;
 
+    GestureDetectorCompat mDetector;
+
     private int pos;
     private ArrayList<Ejercicio> arrEjercicio;
+
+    public boolean onTouch(View v, MotionEvent event){
+        mDetector.onTouchEvent(event);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +73,7 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
         btnHome = (Button) findViewById(R.id.button_home);
         btnRutinas = (Button) findViewById(R.id.button_rutinas);
         btnSome = (Button) findViewById(R.id.button_sesion);
-       btnHistoria = (Button) findViewById(R.id.button_history);
+        btnHistoria = (Button) findViewById(R.id.button_history);
         btnperfil = (Button) findViewById(R.id.button_perfil);
 
         tvRutina = (TextView) findViewById(R.id.text_rutina);
@@ -105,6 +114,11 @@ public class EjercicioActivity extends AppCompatActivity implements  View.OnClic
                 }
             }
         });
+
+        MyGestureListener myGestureListener = new MyGestureListener(this, arrEjercicio, pos, tvnomEjercicio, tvMusculo, tvRepeticiones, tvSeries, swTerminado, ivEjercicio);
+        mDetector = new GestureDetectorCompat(this, myGestureListener);
+
+        ivEjercicio.setOnTouchListener(this);
         
         btnHome.setOnClickListener(this);
         btnRutinas.setOnClickListener(this);
